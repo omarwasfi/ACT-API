@@ -13,6 +13,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
+using Serilog;
 
 namespace ACT
 {
@@ -74,6 +75,9 @@ namespace ACT
             });
 
             app.UseHttpsRedirection();
+            app.UseStaticFiles();
+
+            app.UseSerilogRequestLogging();
 
             app.UseRouting();
 

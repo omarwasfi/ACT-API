@@ -1,8 +1,12 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
+using Serilog;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace ACT.Controllers
@@ -15,22 +19,19 @@ namespace ACT.Controllers
         /// Get all the logs 
         /// </summary>
         [HttpGet]
-        public List<string> Get()
+        public string Get()
         {
-            return new List<string>(){"Dummy Data", "Dummy Data"};
+            string logs;
+
+            using (var fs = new FileStream("wwwroot/App_Data/Log.json", FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+            using (var sr = new StreamReader(fs, Encoding.Default))
+            {
+                logs = sr.ReadToEnd();
+            }
+
+            return logs;
         }
 
-        /// <summary>
-        /// Filter logs by from to date
-        /// </summary>
-        /// <param name="from">Start date</param>
-        /// <param name="To">End date</param>
-        /// <returns></returns>
-        [HttpGet( "{From}/{To}")]
-
-        public List<string> GetLogsWithDate(DateTime from, DateTime To)
-        {
-            return new List<string>(){"Dummy Data", "Dummy Data"};
-        }
+      
     }
 }
