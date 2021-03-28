@@ -36,13 +36,14 @@ namespace ACT
                 {
                     Version = "v1",
                     Title = "ACT API",
-                    Description = "A simple example ASP.NET Core Web API",
+                    Description = "Integration between opera and hrms with sun",
                     TermsOfService = new Uri("https://example.com/terms"),
                     Contact = new OpenApiContact
                     {
-                        Name = "Shayne Boyer",
-                        Email = string.Empty,
+                        Name = "omar wasfi",
+                        Email = "contact@omarwasfi.com",
                         Url = new Uri("https://twitter.com/spboyer"),
+                        
                     },
                     License = new OpenApiLicense
                     {
