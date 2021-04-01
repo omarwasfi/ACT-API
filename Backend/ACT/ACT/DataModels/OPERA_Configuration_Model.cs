@@ -1,0 +1,24 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace ACT.DataModels
+{
+    public class OPERA_Configuration_Model
+    {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int Id { get; set; }
+        [Required]
+        public string  FilePath { get; set; }
+        /// <summary>
+        /// Daily Based
+        /// We care about Hour and Min
+        /// </summary>
+        [Required]
+        public DateTime CycleTime { get; set; }
+    }
+}
