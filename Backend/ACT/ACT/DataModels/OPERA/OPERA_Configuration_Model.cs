@@ -20,5 +20,8 @@ namespace ACT.DataModels
         /// </summary>
         [Required]
         public DateTime CycleTime { get; set; }
+
+        [Required]
+        public List<OPERA_Column_Model> Columns { get; set; }
     }
 }

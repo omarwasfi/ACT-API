@@ -7,23 +7,18 @@ using System.Threading.Tasks;
 
 namespace ACT.DataModels
 {
-    public class HRMS_Configuration_Model
+    public class SUN_Column_Model
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        /// <summary>
-        /// The Connections string of the HRMS Database
-        /// </summary>
         [Required]
-        public string ConnectionsString { get; set; }
-        
-        /// <summary>
-        /// Monthly based
-        /// We care about day , Hour and Min
-        /// </summary>
+        public string ColumnName { get; set; }
+
         [Required]
-        public DateTime CycleTime { get; set; }
+        public string Type { get; set; }
+
+        public SUN_Configuration_Model SUN_Configuration { get; set; }
 
     }
 }

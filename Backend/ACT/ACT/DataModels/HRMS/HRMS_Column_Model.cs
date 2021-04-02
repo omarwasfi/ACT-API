@@ -7,12 +7,17 @@ using System.Threading.Tasks;
 
 namespace ACT.DataModels
 {
-    public class SUN_Configuration_Model
+    public class HRMS_Column_Model
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         [Required]
-        public string ConnectionsString { get; set; }
+        public string ColumnName { get; set; }
+
+        [Required]
+        public string Type { get; set; }
+
+        public HRMS_Configuration_Model HRMS_Configuration { get; set; }
     }
 }
