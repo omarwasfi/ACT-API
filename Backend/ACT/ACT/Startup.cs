@@ -16,6 +16,7 @@ using System.Threading.Tasks;
 using Serilog;
 using ACT.DBContext;
 using Microsoft.EntityFrameworkCore;
+using ACT.Services.ApiDbAccess.SUN;
 
 namespace ACT
 {
@@ -35,6 +36,8 @@ namespace ACT
               options
               .UseSqlite(
                    Configuration.GetConnectionString("ApiDbContextConnection")));
+
+            services.AddScoped<ISUN_Configuration, SUN_Configuration>();
 
             services.AddControllers();
 

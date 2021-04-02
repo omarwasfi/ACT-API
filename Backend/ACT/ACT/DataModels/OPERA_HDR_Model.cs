@@ -30,6 +30,6 @@ namespace ACT.DataModels
 
         public decimal? DecimalValue { get; set; }
 
-        public string MapWithHRMS { get; set; }
+        public string MapWithOPERA { get; set; }
     }
 }

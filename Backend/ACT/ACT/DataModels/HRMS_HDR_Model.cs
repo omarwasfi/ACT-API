@@ -30,5 +30,19 @@ namespace ACT.DataModels
         public decimal? DecimalValue { get; set; }
 
         public string MapWithHRMS { get; set; }
+
+        // sunHDRInsert         - sun HDR Column names 
+        // SunHDRDBInsert       - Get matched
+        // SunHDRCopyRemove     - Values
+        // SunHDRDET            - sun HDR Column names will get values
+
+        // SunHdrColumnName_Mateched
+        // OtherTabelColumnNames
+
+        // SunHdrColumnName_Values
+        // Values
+
+
+
     }
 }

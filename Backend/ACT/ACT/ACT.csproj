@@ -11,6 +11,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNet.WebApi.Core" Version="5.2.7" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.4">
       <PrivateAssets>all</PrivateAssets>
@@ -28,6 +29,15 @@
     <PackageReference Include="Serilog.Enrichers.Thread" Version="3.1.0" />
     <PackageReference Include="Serilog.Settings.Configuration" Version="3.1.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Services\ApiDbAccess\SUN_HRMS\" />
+    <Folder Include="Services\ApiDbAccess\SUN_OPERA\" />
+    <Folder Include="Services\HRMS\Mapper\" />
+    <Folder Include="Services\HRMS\Reader\" />
+    <Folder Include="Services\OPERA\Mapper\" />
+    <Folder Include="Services\OPERA\Reader\" />
   </ItemGroup>
 
 </Project>
