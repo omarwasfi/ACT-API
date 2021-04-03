@@ -25,6 +25,6 @@ namespace ACT.DataModels
         [Required]
         public int EndPOS { get; set; }
 
-        public OPERA_Configuration_Model OPERA_Configuration { get; set; }
+        public virtual OPERA_Configuration_Model OPERA_Configuration { get; set; }
     }
 }

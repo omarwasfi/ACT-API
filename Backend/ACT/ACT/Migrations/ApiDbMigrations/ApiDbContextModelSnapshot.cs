@@ -262,7 +262,22 @@ namespace ACT.Migrations.ApiDbMigrations
                     b.ToTable("OPERA_HDR_Models");
                 });
 
-            modelBuilder.Entity("ACT.DataModels.SUN_Column_Model", b =>
+            modelBuilder.Entity("ACT.DataModels.SUN_Configuration_Model", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("ConnectionsString")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("SUN_Configuration_Models");
+                });
+
+            modelBuilder.Entity("ACT.DataModels.SUN_DETAIL_Column_Model", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -283,22 +298,31 @@ namespace ACT.Migrations.ApiDbMigrations
 
                     b.HasIndex("SUN_ConfigurationId");
 
-                    b.ToTable("SUN_Columns");
+                    b.ToTable("SUN_DETAIL_Columns");
                 });
 
-            modelBuilder.Entity("ACT.DataModels.SUN_Configuration_Model", b =>
+            modelBuilder.Entity("ACT.DataModels.SUN_HDR_Column_Model", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("ConnectionsString")
+                    b.Property<string>("ColumnName")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<int?>("SUN_ConfigurationId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Type")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 
-                    b.ToTable("SUN_Configuration_Models");
+                    b.HasIndex("SUN_ConfigurationId");
+
+                    b.ToTable("SUN_HDR_Columns");
                 });
 
             modelBuilder.Entity("ACT.DataModels.HRMS_Column_Model", b =>
@@ -321,10 +345,20 @@ namespace ACT.Migrations.ApiDbMigrations
                     b.Navigation("OPERA_Configuration");
                 });
 
-            modelBuilder.Entity("ACT.DataModels.SUN_Column_Model", b =>
+            modelBuilder.Entity("ACT.DataModels.SUN_DETAIL_Column_Model", b =>
                 {
                     b.HasOne("ACT.DataModels.SUN_Configuration_Model", "SUN_Configuration")
-                        .WithMany("Columns")
+                        .WithMany("DETAIL_Columns")
+                        .HasForeignKey("SUN_ConfigurationId")
+                        .OnDelete(DeleteBehavior.SetNull);
+
+                    b.Navigation("SUN_Configuration");
+                });
+
+            modelBuilder.Entity("ACT.DataModels.SUN_HDR_Column_Model", b =>
+                {
+                    b.HasOne("ACT.DataModels.SUN_Configuration_Model", "SUN_Configuration")
+                        .WithMany("HDR_Columns")
                         .HasForeignKey("SUN_ConfigurationId")
                         .OnDelete(DeleteBehavior.SetNull);
 
@@ -343,7 +377,9 @@ namespace ACT.Migrations.ApiDbMigrations
 
             modelBuilder.Entity("ACT.DataModels.SUN_Configuration_Model", b =>
                 {
-                    b.Navigation("Columns");
+                    b.Navigation("DETAIL_Columns");
+
+                    b.Navigation("HDR_Columns");
                 });
 #pragma warning restore 612, 618
         }

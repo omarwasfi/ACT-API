@@ -17,6 +17,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="5.0.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="5.0.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite.Core" Version="5.0.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.4">
@@ -32,8 +33,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Services\ApiDbAccess\SUN_HRMS\" />
-    <Folder Include="Services\ApiDbAccess\SUN_OPERA\" />
     <Folder Include="Services\HRMS\Mapper\" />
     <Folder Include="Services\HRMS\Reader\" />
     <Folder Include="Services\OPERA\Mapper\" />

@@ -7,21 +7,18 @@ using System.Threading.Tasks;
 
 namespace ACT.DataModels
 {
-    public class OPERA_Configuration_Model
+    public class SUN_HDR_Column_Model
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         [Required]
-        public string  FilePath { get; set; }
-        /// <summary>
-        /// Daily Based
-        /// We care about Hour and Min
-        /// </summary>
-        [Required]
-        public DateTime CycleTime { get; set; }
+        public string ColumnName { get; set; }
 
         [Required]
-        public virtual List<OPERA_Column_Model> Columns { get; set; }
+        public string Type { get; set; }
+
+        public virtual SUN_Configuration_Model SUN_Configuration { get; set; }
+
     }
 }

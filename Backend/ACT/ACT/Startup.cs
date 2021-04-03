@@ -17,6 +17,8 @@ using Serilog;
 using ACT.DBContext;
 using Microsoft.EntityFrameworkCore;
 using ACT.Services.ApiDbAccess.SUN;
+using ACT.Services.ApiDbAccess.SUN_HDR;
+using ACT.Services.ApiDbAccess.SUN_DETAIL;
 
 namespace ACT
 {
@@ -38,6 +40,10 @@ namespace ACT
                    Configuration.GetConnectionString("ApiDbContextConnection")));
 
             services.AddScoped<ISUN_Configuration, SUN_Configuration>();
+            services.AddScoped<ISUN_HDR_Configuration, SUN_HDR_Configuration>();
+            services.AddScoped<ISUN_DETAIL_Configuration, SUN_DETAIL_Configuration>();
+
+
 
             services.AddControllers();
 

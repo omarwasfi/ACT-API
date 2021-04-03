@@ -9,14 +9,38 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ACT.Migrations.ApiDbMigrations
 {
     [DbContext(typeof(ApiDbContext))]
-    [Migration("20210401085523_EditsInTheDataModel")]
-    partial class EditsInTheDataModel
+    [Migration("20210403100200_SupportBothHDRAndDetailTable")]
+    partial class SupportBothHDRAndDetailTable
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "5.0.4");
+
+            modelBuilder.Entity("ACT.DataModels.HRMS_Column_Model", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("ColumnName")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<int?>("HRMS_ConfigurationId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Type")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("HRMS_ConfigurationId");
+
+                    b.ToTable("HRMS_Columns");
+                });
 
             modelBuilder.Entity("ACT.DataModels.HRMS_Configuration_Model", b =>
                 {
@@ -114,6 +138,36 @@ namespace ACT.Migrations.ApiDbMigrations
                     b.ToTable("HRMS_HDR_Models");
                 });
 
+            modelBuilder.Entity("ACT.DataModels.OPERA_Column_Model", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("ColumnName")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("EndPOS")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int?>("OPERA_ConfigurationId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("StartPOS")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Type")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("OPERA_ConfigurationId");
+
+                    b.ToTable("OPERA_Columns");
+                });
+
             modelBuilder.Entity("ACT.DataModels.OPERA_Configuration_Model", b =>
                 {
                     b.Property<int>("Id")
@@ -150,7 +204,7 @@ namespace ACT.Migrations.ApiDbMigrations
                     b.Property<bool>("IsConst")
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("MapWithHRMS")
+                    b.Property<string>("MapWithOPERA")
                         .HasColumnType("TEXT");
 
                     b.Property<short?>("ShortValue")
@@ -189,7 +243,7 @@ namespace ACT.Migrations.ApiDbMigrations
                     b.Property<bool>("IsConst")
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("MapWithHRMS")
+                    b.Property<string>("MapWithOPERA")
                         .HasColumnType("TEXT");
 
                     b.Property<short?>("ShortValue")
@@ -223,6 +277,111 @@ namespace ACT.Migrations.ApiDbMigrations
                     b.HasKey("Id");
 
                     b.ToTable("SUN_Configuration_Models");
+                });
+
+            modelBuilder.Entity("ACT.DataModels.SUN_DETAIL_Column_Model", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("ColumnName")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<int?>("SUN_ConfigurationId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Type")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("SUN_ConfigurationId");
+
+                    b.ToTable("SUN_DETAIL_Columns");
+                });
+
+            modelBuilder.Entity("ACT.DataModels.SUN_HDR_Column_Model", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("ColumnName")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<int?>("SUN_ConfigurationId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Type")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("SUN_ConfigurationId");
+
+                    b.ToTable("SUN_HDR_Columns");
+                });
+
+            modelBuilder.Entity("ACT.DataModels.HRMS_Column_Model", b =>
+                {
+                    b.HasOne("ACT.DataModels.HRMS_Configuration_Model", "HRMS_Configuration")
+                        .WithMany("Columns")
+                        .HasForeignKey("HRMS_ConfigurationId")
+                        .OnDelete(DeleteBehavior.SetNull);
+
+                    b.Navigation("HRMS_Configuration");
+                });
+
+            modelBuilder.Entity("ACT.DataModels.OPERA_Column_Model", b =>
+                {
+                    b.HasOne("ACT.DataModels.OPERA_Configuration_Model", "OPERA_Configuration")
+                        .WithMany("Columns")
+                        .HasForeignKey("OPERA_ConfigurationId")
+                        .OnDelete(DeleteBehavior.SetNull);
+
+                    b.Navigation("OPERA_Configuration");
+                });
+
+            modelBuilder.Entity("ACT.DataModels.SUN_DETAIL_Column_Model", b =>
+                {
+                    b.HasOne("ACT.DataModels.SUN_Configuration_Model", "SUN_Configuration")
+                        .WithMany("DETAIL_Columns")
+                        .HasForeignKey("SUN_ConfigurationId")
+                        .OnDelete(DeleteBehavior.SetNull);
+
+                    b.Navigation("SUN_Configuration");
+                });
+
+            modelBuilder.Entity("ACT.DataModels.SUN_HDR_Column_Model", b =>
+                {
+                    b.HasOne("ACT.DataModels.SUN_Configuration_Model", "SUN_Configuration")
+                        .WithMany("HDR_Columns")
+                        .HasForeignKey("SUN_ConfigurationId")
+                        .OnDelete(DeleteBehavior.SetNull);
+
+                    b.Navigation("SUN_Configuration");
+                });
+
+            modelBuilder.Entity("ACT.DataModels.HRMS_Configuration_Model", b =>
+                {
+                    b.Navigation("Columns");
+                });
+
+            modelBuilder.Entity("ACT.DataModels.OPERA_Configuration_Model", b =>
+                {
+                    b.Navigation("Columns");
+                });
+
+            modelBuilder.Entity("ACT.DataModels.SUN_Configuration_Model", b =>
+                {
+                    b.Navigation("DETAIL_Columns");
+
+                    b.Navigation("HDR_Columns");
                 });
 #pragma warning restore 612, 618
         }

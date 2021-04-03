@@ -18,29 +18,32 @@ namespace ACT.Services.ApiDbAccess.SUN
 
         public SUN_Configuration_Model GetSunConfiguration()
         {
-            Log.Information("Sun's ConnectionString Has been Returned Successfully.");
+            Log.Information("Returning sun's ConnectionString.");
 
             return _apiDbContext.SUN_Configuration_Models.First();
         }
 
-        public void UpdateConnectionString(string ConnectionString)
+        public async Task UpdateConnectionString(string ConnectionString)
         {
             if(_apiDbContext.SUN_Configuration_Models.Count() > 0)
             {
                 SUN_Configuration_Model sUN_Configuration_Model = _apiDbContext.SUN_Configuration_Models.First();
                 sUN_Configuration_Model.ConnectionsString = ConnectionString;
                 _apiDbContext.SUN_Configuration_Models.Update(sUN_Configuration_Model);
-                _apiDbContext.SaveChanges();
+                await _apiDbContext.SaveChangesAsync();
                 Log.Information("Sun's ConnectionString Has been Updated Successfully.");
             }
             else
             {
                 SUN_Configuration_Model sUN_Configuration_Model = new SUN_Configuration_Model() { ConnectionsString = ConnectionString };
-                _apiDbContext.SUN_Configuration_Models.Add(sUN_Configuration_Model);
-                _apiDbContext.SaveChanges();
+                await _apiDbContext.SUN_Configuration_Models.AddAsync(sUN_Configuration_Model);
+                await _apiDbContext.SaveChangesAsync();
                 Log.Information("Sun's ConnectionString Has been Added Successfully.");
 
             }
         }
+
+     
+       
     }
 }

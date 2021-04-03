@@ -12,7 +12,7 @@ namespace ACT.Services.ApiDbAccess.SUN
         /// Sun database connection string
         /// </summary>
         /// <param name="ConnectionString"></param>
-        public void UpdateConnectionString(string ConnectionString);
+        public Task UpdateConnectionString(string ConnectionString);
 
         public SUN_Configuration_Model GetSunConfiguration();
 

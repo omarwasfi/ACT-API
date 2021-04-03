@@ -18,6 +18,6 @@ namespace ACT.DataModels
         [Required]
         public string Type { get; set; }
 
-        public HRMS_Configuration_Model HRMS_Configuration { get; set; }
+        public virtual HRMS_Configuration_Model HRMS_Configuration { get; set; }
     }
 }

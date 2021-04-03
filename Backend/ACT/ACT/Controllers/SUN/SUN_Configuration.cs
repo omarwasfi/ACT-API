@@ -1,6 +1,4 @@
-﻿using ACT.DataModels;
-using ACT.DBContext;
-using ACT.Services.ApiDbAccess.SUN;
+﻿using ACT.Services.ApiDbAccess.SUN;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -11,11 +9,12 @@ using System.Threading.Tasks;
 namespace ACT.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
-    public class SunConfigration : ControllerBase
+    [Route("Sun")]
+    public class SUN_Configuration : ControllerBase
     {
         private readonly ISUN_Configuration _sun_Configuration;
-        public SunConfigration(ISUN_Configuration sun_Configuration)
+
+        public SUN_Configuration(ISUN_Configuration sun_Configuration)
         {
             _sun_Configuration = sun_Configuration;
         }
@@ -27,11 +26,11 @@ namespace ACT.Controllers
         }
 
         [HttpPost("UpdateConnectionString")]
-        public void UpdateConnectionString(string ConnectionString)
+        public async Task UpdateConnectionString(string ConnectionString)
         {
             if (!string.IsNullOrEmpty(ConnectionString))
             {
-                _sun_Configuration.UpdateConnectionString(ConnectionString);
+                await _sun_Configuration.UpdateConnectionString(ConnectionString);
             }
             else
             {

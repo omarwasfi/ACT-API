@@ -17,8 +17,10 @@ namespace ACT.DataModels
         public string ConnectionsString { get; set; }
 
         [Required]
-        public List<SUN_Column_Model> Columns { get; set; }
+        public virtual List<SUN_HDR_Column_Model> HDR_Columns { get; set; }
 
+        [Required]
+        public virtual List<SUN_DETAIL_Column_Model> DETAIL_Columns { get; set; }
 
 
 

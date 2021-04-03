@@ -11,6 +11,7 @@ namespace ACT.DBContext
     {
         public ApiDbContext(DbContextOptions options) : base(options)
         {
+            
         }
 
 
@@ -31,8 +32,15 @@ namespace ACT.DBContext
 
 
         public DbSet<SUN_Configuration_Model> SUN_Configuration_Models { get; set; }
-        public DbSet<SUN_Column_Model> SUN_Columns { get; set; }
+        public DbSet<SUN_HDR_Column_Model> SUN_HDR_Columns { get; set; }
+        public DbSet<SUN_DETAIL_Column_Model> SUN_DETAIL_Columns { get; set; }
 
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder
+                .UseLazyLoadingProxies(true);
+        }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -50,10 +58,17 @@ namespace ACT.DBContext
                .OnDelete(DeleteBehavior.SetNull);
 
             builder.Entity<SUN_Configuration_Model>()
-              .HasMany(o => o.Columns)
+              .HasMany(o => o.HDR_Columns)
               .WithOne(s => s.SUN_Configuration)
               .OnDelete(DeleteBehavior.SetNull);
+
+            builder.Entity<SUN_Configuration_Model>()
+            .HasMany(o => o.DETAIL_Columns)
+            .WithOne(s => s.SUN_Configuration)
+            .OnDelete(DeleteBehavior.SetNull);
         }
+
+
 
     }
 }

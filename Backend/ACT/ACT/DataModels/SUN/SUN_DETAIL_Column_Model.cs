@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ACT.DataModels
 {
-    public class SUN_Column_Model
+    public class SUN_DETAIL_Column_Model
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -18,7 +18,6 @@ namespace ACT.DataModels
         [Required]
         public string Type { get; set; }
 
-        public SUN_Configuration_Model SUN_Configuration { get; set; }
-
+        public virtual SUN_Configuration_Model SUN_Configuration { get; set; }
     }
 }
