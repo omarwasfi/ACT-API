@@ -7,17 +7,24 @@ using System.Threading.Tasks;
 
 namespace ACT.DataModels
 {
-    public class HRMS_Column_Model
+    public class OPERA_REPORT_Column_Model
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
+        
         [Required]
         public string ColumnName { get; set; }
 
         [Required]
         public string Type { get; set; }
+        
+        [Required]
+        public int StartPOS { get; set; }
+        
+        [Required]
+        public int EndPOS { get; set; }
 
-        public virtual HRMS_Configuration_Model HRMS_Configuration { get; set; }
+        public virtual OPERA_Configuration_Model OPERA_Configuration { get; set; }
     }
 }

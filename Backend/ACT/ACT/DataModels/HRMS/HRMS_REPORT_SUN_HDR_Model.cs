@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ACT.DataModels
 {
-    public class HRMS_HDR_Model
+    public class HRMS_REPORT_SUN_HDR_Model
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

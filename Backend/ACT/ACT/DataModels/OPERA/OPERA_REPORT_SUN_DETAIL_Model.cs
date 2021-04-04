@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ACT.DataModels
 {
-    public class HRMS_DETAIL_Model
+    public class OPERA_REPORT_SUN_DETAIL_Model
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -30,6 +30,6 @@ namespace ACT.DataModels
 
         public decimal? DecimalValue { get; set; }
 
-        public string MapWithHRMS { get; set; }
+        public string MapWithOPERA { get; set; }
     }
 }

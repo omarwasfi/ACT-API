@@ -15,23 +15,23 @@ namespace ACT.DBContext
         }
 
 
-        public DbSet<HRMS_Configuration_Model> HRMS_Configuration_Models { get; set; }
+        public DbSet<HRMS_Configuration_Model> HRMS_Configurations { get; set; }
+         
+        public DbSet<HRMS_REPORT_SUN_DETAIL_Model> HRMS_REPORT_SUN_DETAILS { get; set; }
 
-        public DbSet<HRMS_DETAIL_Model> HRMS_DETAIL_Models { get; set; }
-
-        public DbSet<HRMS_HDR_Model> HRMS_HDR_Models { get; set; }
-        public DbSet<HRMS_Column_Model> HRMS_Columns { get; set; }
-
-
-        public DbSet<OPERA_Configuration_Model> OPERA_Configuration_Models { get; set; }
-
-        public DbSet<OPERA_DETAIL_Model> OPERA_DETAIL_Models { get; set; }
-
-        public DbSet<OPERA_HDR_Model> OPERA_HDR_Models { get; set; }
-        public DbSet<OPERA_Column_Model> OPERA_Columns { get; set; }
+        public DbSet<HRMS_REPORT_SUN_HDR_Model> HRMS_REPORT_SUN_HDRS { get; set; }
+        public DbSet<HRMS_REPORT_Column_Model> HRMS_REPORT_Columns { get; set; }
 
 
-        public DbSet<SUN_Configuration_Model> SUN_Configuration_Models { get; set; }
+        public DbSet<OPERA_Configuration_Model> OPERA_Configurations { get; set; }
+
+        public DbSet<OPERA_REPORT_SUN_DETAIL_Model> OPERA_REPORT_SUN_DETAILS { get; set; }
+
+        public DbSet<OPERA_REPORT_SUN_HDR_Model> OPERA_REPORT_SUN_HDRS { get; set; }
+        public DbSet<OPERA_REPORT_Column_Model> OPERA_REPORT_Columns { get; set; }
+
+
+        public DbSet<SUN_Configuration_Model> SUN_Configurations { get; set; }
         public DbSet<SUN_HDR_Column_Model> SUN_HDR_Columns { get; set; }
         public DbSet<SUN_DETAIL_Column_Model> SUN_DETAIL_Columns { get; set; }
 
@@ -65,6 +65,16 @@ namespace ACT.DBContext
             builder.Entity<SUN_Configuration_Model>()
             .HasMany(o => o.DETAIL_Columns)
             .WithOne(s => s.SUN_Configuration)
+            .OnDelete(DeleteBehavior.SetNull);
+
+               builder.Entity<OPERA_Configuration_Model>()
+              .HasMany(o => o.Columns)
+              .WithOne(s => s.OPERA_Configuration)
+              .OnDelete(DeleteBehavior.SetNull);
+
+             builder.Entity<HRMS_Configuration_Model>()
+            .HasMany(o => o.Columns)
+            .WithOne(s => s.HRMS_Configuration)
             .OnDelete(DeleteBehavior.SetNull);
         }
 

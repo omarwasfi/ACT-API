@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ACT.DataModels
 {
-    public class OPERA_DETAIL_Model
+    public class OPERA_REPORT_SUN_HDR_Model
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

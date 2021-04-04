@@ -22,16 +22,16 @@ namespace ACT.Services.ApiDbAccess.SUN_HDR
              
         public async Task UpdateColumns(List<SUN_HDR_Column_Model> sUN_HDR_Columns)
         {
-            if (_apiDbContext.SUN_Configuration_Models.Count() > 0)
+            if (_apiDbContext.SUN_Configurations.Count() > 0)
             {
 
-                _apiDbContext.SUN_Configuration_Models.First().HDR_Columns = new List<SUN_HDR_Column_Model>();
+                _apiDbContext.SUN_Configurations.First().HDR_Columns = new List<SUN_HDR_Column_Model>();
 
                 Log.Information("Deleting all " + tableName + " Columns.");
 
                 _apiDbContext.SUN_HDR_Columns.RemoveRange(_apiDbContext.SUN_HDR_Columns);
 
-                _apiDbContext.SUN_Configuration_Models.First().HDR_Columns = sUN_HDR_Columns;
+                _apiDbContext.SUN_Configurations.First().HDR_Columns = sUN_HDR_Columns;
 
                 Log.Information("Saving the new " + tableName + " Columns.");
 
@@ -45,7 +45,7 @@ namespace ACT.Services.ApiDbAccess.SUN_HDR
 
                 SUN_Configuration_Model sUN_Configuration_Model = new SUN_Configuration_Model() {HDR_Columns = sUN_HDR_Columns, ConnectionsString="" } ;
 
-                await _apiDbContext.SUN_Configuration_Models.AddAsync(sUN_Configuration_Model);
+                await _apiDbContext.SUN_Configurations.AddAsync(sUN_Configuration_Model);
 
                 Log.Information("Saving the new " + tableName + " Columns.");
 

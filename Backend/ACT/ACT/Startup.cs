@@ -19,6 +19,8 @@ using Microsoft.EntityFrameworkCore;
 using ACT.Services.ApiDbAccess.SUN;
 using ACT.Services.ApiDbAccess.SUN_HDR;
 using ACT.Services.ApiDbAccess.SUN_DETAIL;
+using ACT.Services.ApiDbAccess.OPERA;
+using ACT.Services.ApiDbAccess.OPERA_REPORT;
 
 namespace ACT
 {
@@ -42,6 +44,9 @@ namespace ACT
             services.AddScoped<ISUN_Configuration, SUN_Configuration>();
             services.AddScoped<ISUN_HDR_Configuration, SUN_HDR_Configuration>();
             services.AddScoped<ISUN_DETAIL_Configuration, SUN_DETAIL_Configuration>();
+            
+            services.AddScoped<IOPERA_Configuration, OPERA_Configuration>();
+            services.AddScoped<IOPERA_REPORT_Configuration, OPERA_REPORT_Configuration>();
 
 
 

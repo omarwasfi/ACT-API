@@ -26,7 +26,7 @@ namespace ACT.DataModels
         public DateTime CycleTime { get; set; }
 
         [Required]
-        public virtual List<HRMS_Column_Model> Columns { get; set; }
+        public virtual List<HRMS_REPORT_Column_Model> Columns { get; set; }
 
 
     }

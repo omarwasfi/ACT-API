@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ACT.Migrations.ApiDbMigrations
 {
     [DbContext(typeof(ApiDbContext))]
-    [Migration("20210403100200_SupportBothHDRAndDetailTable")]
-    partial class SupportBothHDRAndDetailTable
+    [Migration("20210404112117_UpdateTableNames")]
+    partial class UpdateTableNames
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -18,7 +18,25 @@ namespace ACT.Migrations.ApiDbMigrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "5.0.4");
 
-            modelBuilder.Entity("ACT.DataModels.HRMS_Column_Model", b =>
+            modelBuilder.Entity("ACT.DataModels.HRMS_Configuration_Model", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("ConnectionsString")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("CycleTime")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("HRMS_Configurations");
+                });
+
+            modelBuilder.Entity("ACT.DataModels.HRMS_REPORT_Column_Model", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -39,106 +57,106 @@ namespace ACT.Migrations.ApiDbMigrations
 
                     b.HasIndex("HRMS_ConfigurationId");
 
-                    b.ToTable("HRMS_Columns");
+                    b.ToTable("HRMS_REPORT_Columns");
                 });
 
-            modelBuilder.Entity("ACT.DataModels.HRMS_Configuration_Model", b =>
+            modelBuilder.Entity("ACT.DataModels.HRMS_REPORT_SUN_DETAIL_Model", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("ConnectionsString")
+                    b.Property<DateTime?>("DateTimeValue")
+                        .HasColumnType("TEXT");
+
+                    b.Property<decimal?>("DecimalValue")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int?>("IntValue")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<bool>("IsConst")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("MapWithHRMS")
+                        .HasColumnType("TEXT");
+
+                    b.Property<short?>("ShortValue")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("StringValue")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("SunAttribute")
                         .IsRequired()
                         .HasColumnType("TEXT");
+
+                    b.Property<string>("ValueType")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("HRMS_REPORT_SUN_DETAILS");
+                });
+
+            modelBuilder.Entity("ACT.DataModels.HRMS_REPORT_SUN_HDR_Model", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime?>("DateTimeValue")
+                        .HasColumnType("TEXT");
+
+                    b.Property<decimal?>("DecimalValue")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int?>("IntValue")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<bool>("IsConst")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("MapWithHRMS")
+                        .HasColumnType("TEXT");
+
+                    b.Property<short?>("ShortValue")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("StringValue")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("SunAttribute")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("ValueType")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("HRMS_REPORT_SUN_HDRS");
+                });
+
+            modelBuilder.Entity("ACT.DataModels.OPERA_Configuration_Model", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("CycleTime")
                         .HasColumnType("TEXT");
 
-                    b.HasKey("Id");
-
-                    b.ToTable("HRMS_Configuration_Models");
-                });
-
-            modelBuilder.Entity("ACT.DataModels.HRMS_DETAIL_Model", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<DateTime?>("DateTimeValue")
-                        .HasColumnType("TEXT");
-
-                    b.Property<decimal?>("DecimalValue")
-                        .HasColumnType("TEXT");
-
-                    b.Property<int?>("IntValue")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<bool>("IsConst")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("MapWithHRMS")
-                        .HasColumnType("TEXT");
-
-                    b.Property<short?>("ShortValue")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("StringValue")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("SunAttribute")
+                    b.Property<string>("FilePath")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("ValueType")
-                        .HasColumnType("TEXT");
-
                     b.HasKey("Id");
 
-                    b.ToTable("HRMS_DETAIL_Models");
+                    b.ToTable("OPERA_Configurations");
                 });
 
-            modelBuilder.Entity("ACT.DataModels.HRMS_HDR_Model", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<DateTime?>("DateTimeValue")
-                        .HasColumnType("TEXT");
-
-                    b.Property<decimal?>("DecimalValue")
-                        .HasColumnType("TEXT");
-
-                    b.Property<int?>("IntValue")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<bool>("IsConst")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("MapWithHRMS")
-                        .HasColumnType("TEXT");
-
-                    b.Property<short?>("ShortValue")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("StringValue")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("SunAttribute")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("ValueType")
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("HRMS_HDR_Models");
-                });
-
-            modelBuilder.Entity("ACT.DataModels.OPERA_Column_Model", b =>
+            modelBuilder.Entity("ACT.DataModels.OPERA_REPORT_Column_Model", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -165,28 +183,10 @@ namespace ACT.Migrations.ApiDbMigrations
 
                     b.HasIndex("OPERA_ConfigurationId");
 
-                    b.ToTable("OPERA_Columns");
+                    b.ToTable("OPERA_REPORT_Columns");
                 });
 
-            modelBuilder.Entity("ACT.DataModels.OPERA_Configuration_Model", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<DateTime>("CycleTime")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("FilePath")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("OPERA_Configuration_Models");
-                });
-
-            modelBuilder.Entity("ACT.DataModels.OPERA_DETAIL_Model", b =>
+            modelBuilder.Entity("ACT.DataModels.OPERA_REPORT_SUN_DETAIL_Model", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -222,10 +222,10 @@ namespace ACT.Migrations.ApiDbMigrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("OPERA_DETAIL_Models");
+                    b.ToTable("OPERA_REPORT_SUN_DETAILS");
                 });
 
-            modelBuilder.Entity("ACT.DataModels.OPERA_HDR_Model", b =>
+            modelBuilder.Entity("ACT.DataModels.OPERA_REPORT_SUN_HDR_Model", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -261,7 +261,7 @@ namespace ACT.Migrations.ApiDbMigrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("OPERA_HDR_Models");
+                    b.ToTable("OPERA_REPORT_SUN_HDRS");
                 });
 
             modelBuilder.Entity("ACT.DataModels.SUN_Configuration_Model", b =>
@@ -276,7 +276,7 @@ namespace ACT.Migrations.ApiDbMigrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("SUN_Configuration_Models");
+                    b.ToTable("SUN_Configurations");
                 });
 
             modelBuilder.Entity("ACT.DataModels.SUN_DETAIL_Column_Model", b =>
@@ -327,7 +327,7 @@ namespace ACT.Migrations.ApiDbMigrations
                     b.ToTable("SUN_HDR_Columns");
                 });
 
-            modelBuilder.Entity("ACT.DataModels.HRMS_Column_Model", b =>
+            modelBuilder.Entity("ACT.DataModels.HRMS_REPORT_Column_Model", b =>
                 {
                     b.HasOne("ACT.DataModels.HRMS_Configuration_Model", "HRMS_Configuration")
                         .WithMany("Columns")
@@ -337,7 +337,7 @@ namespace ACT.Migrations.ApiDbMigrations
                     b.Navigation("HRMS_Configuration");
                 });
 
-            modelBuilder.Entity("ACT.DataModels.OPERA_Column_Model", b =>
+            modelBuilder.Entity("ACT.DataModels.OPERA_REPORT_Column_Model", b =>
                 {
                     b.HasOne("ACT.DataModels.OPERA_Configuration_Model", "OPERA_Configuration")
                         .WithMany("Columns")

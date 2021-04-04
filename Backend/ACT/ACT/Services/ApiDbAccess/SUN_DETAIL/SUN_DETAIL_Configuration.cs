@@ -20,16 +20,16 @@ namespace ACT.Services.ApiDbAccess.SUN_DETAIL
 
         public async Task UpdateColumns(List<SUN_DETAIL_Column_Model> sUN_DETAIL_Columns)
         {
-            if (_apiDbContext.SUN_Configuration_Models.Count() > 0)
+            if (_apiDbContext.SUN_Configurations.Count() > 0)
             {
 
-                _apiDbContext.SUN_Configuration_Models.First().DETAIL_Columns = new List<SUN_DETAIL_Column_Model>();
+                _apiDbContext.SUN_Configurations.First().DETAIL_Columns = new List<SUN_DETAIL_Column_Model>();
 
                 Log.Information("Deleting all "+ tableName + " Columns.");
 
                 _apiDbContext.SUN_DETAIL_Columns.RemoveRange(_apiDbContext.SUN_DETAIL_Columns);
 
-                _apiDbContext.SUN_Configuration_Models.First().DETAIL_Columns = sUN_DETAIL_Columns;
+                _apiDbContext.SUN_Configurations.First().DETAIL_Columns = sUN_DETAIL_Columns;
                 
 
                 await _apiDbContext.SaveChangesAsync();
@@ -43,7 +43,7 @@ namespace ACT.Services.ApiDbAccess.SUN_DETAIL
 
                 SUN_Configuration_Model sUN_Configuration_Model = new SUN_Configuration_Model() { DETAIL_Columns = sUN_DETAIL_Columns, ConnectionsString = "" };
 
-                await _apiDbContext.SUN_Configuration_Models.AddAsync(sUN_Configuration_Model);
+                await _apiDbContext.SUN_Configurations.AddAsync(sUN_Configuration_Model);
                 
                 Log.Information("Saving the new " + tableName + " Columns.");
 

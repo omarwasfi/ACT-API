@@ -3,12 +3,12 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace ACT.Migrations.ApiDbMigrations
 {
-    public partial class SupportBothHDRAndDetailTable : Migration
+    public partial class UpdateTableNames : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "HRMS_Configuration_Models",
+                name: "HRMS_Configurations",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
@@ -18,11 +18,11 @@ namespace ACT.Migrations.ApiDbMigrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_HRMS_Configuration_Models", x => x.Id);
+                    table.PrimaryKey("PK_HRMS_Configurations", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "HRMS_DETAIL_Models",
+                name: "HRMS_REPORT_SUN_DETAILS",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
@@ -39,11 +39,11 @@ namespace ACT.Migrations.ApiDbMigrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_HRMS_DETAIL_Models", x => x.Id);
+                    table.PrimaryKey("PK_HRMS_REPORT_SUN_DETAILS", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "HRMS_HDR_Models",
+                name: "HRMS_REPORT_SUN_HDRS",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
@@ -60,11 +60,11 @@ namespace ACT.Migrations.ApiDbMigrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_HRMS_HDR_Models", x => x.Id);
+                    table.PrimaryKey("PK_HRMS_REPORT_SUN_HDRS", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "OPERA_Configuration_Models",
+                name: "OPERA_Configurations",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
@@ -74,11 +74,11 @@ namespace ACT.Migrations.ApiDbMigrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_OPERA_Configuration_Models", x => x.Id);
+                    table.PrimaryKey("PK_OPERA_Configurations", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "OPERA_DETAIL_Models",
+                name: "OPERA_REPORT_SUN_DETAILS",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
@@ -95,11 +95,11 @@ namespace ACT.Migrations.ApiDbMigrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_OPERA_DETAIL_Models", x => x.Id);
+                    table.PrimaryKey("PK_OPERA_REPORT_SUN_DETAILS", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "OPERA_HDR_Models",
+                name: "OPERA_REPORT_SUN_HDRS",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
@@ -116,11 +116,11 @@ namespace ACT.Migrations.ApiDbMigrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_OPERA_HDR_Models", x => x.Id);
+                    table.PrimaryKey("PK_OPERA_REPORT_SUN_HDRS", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "SUN_Configuration_Models",
+                name: "SUN_Configurations",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
@@ -129,11 +129,11 @@ namespace ACT.Migrations.ApiDbMigrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_SUN_Configuration_Models", x => x.Id);
+                    table.PrimaryKey("PK_SUN_Configurations", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "HRMS_Columns",
+                name: "HRMS_REPORT_Columns",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
@@ -144,17 +144,17 @@ namespace ACT.Migrations.ApiDbMigrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_HRMS_Columns", x => x.Id);
+                    table.PrimaryKey("PK_HRMS_REPORT_Columns", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_HRMS_Columns_HRMS_Configuration_Models_HRMS_ConfigurationId",
+                        name: "FK_HRMS_REPORT_Columns_HRMS_Configurations_HRMS_ConfigurationId",
                         column: x => x.HRMS_ConfigurationId,
-                        principalTable: "HRMS_Configuration_Models",
+                        principalTable: "HRMS_Configurations",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.SetNull);
                 });
 
             migrationBuilder.CreateTable(
-                name: "OPERA_Columns",
+                name: "OPERA_REPORT_Columns",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
@@ -167,11 +167,11 @@ namespace ACT.Migrations.ApiDbMigrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_OPERA_Columns", x => x.Id);
+                    table.PrimaryKey("PK_OPERA_REPORT_Columns", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_OPERA_Columns_OPERA_Configuration_Models_OPERA_ConfigurationId",
+                        name: "FK_OPERA_REPORT_Columns_OPERA_Configurations_OPERA_ConfigurationId",
                         column: x => x.OPERA_ConfigurationId,
-                        principalTable: "OPERA_Configuration_Models",
+                        principalTable: "OPERA_Configurations",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.SetNull);
                 });
@@ -190,9 +190,9 @@ namespace ACT.Migrations.ApiDbMigrations
                 {
                     table.PrimaryKey("PK_SUN_DETAIL_Columns", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_SUN_DETAIL_Columns_SUN_Configuration_Models_SUN_ConfigurationId",
+                        name: "FK_SUN_DETAIL_Columns_SUN_Configurations_SUN_ConfigurationId",
                         column: x => x.SUN_ConfigurationId,
-                        principalTable: "SUN_Configuration_Models",
+                        principalTable: "SUN_Configurations",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.SetNull);
                 });
@@ -211,21 +211,21 @@ namespace ACT.Migrations.ApiDbMigrations
                 {
                     table.PrimaryKey("PK_SUN_HDR_Columns", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_SUN_HDR_Columns_SUN_Configuration_Models_SUN_ConfigurationId",
+                        name: "FK_SUN_HDR_Columns_SUN_Configurations_SUN_ConfigurationId",
                         column: x => x.SUN_ConfigurationId,
-                        principalTable: "SUN_Configuration_Models",
+                        principalTable: "SUN_Configurations",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.SetNull);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_HRMS_Columns_HRMS_ConfigurationId",
-                table: "HRMS_Columns",
+                name: "IX_HRMS_REPORT_Columns_HRMS_ConfigurationId",
+                table: "HRMS_REPORT_Columns",
                 column: "HRMS_ConfigurationId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_OPERA_Columns_OPERA_ConfigurationId",
-                table: "OPERA_Columns",
+                name: "IX_OPERA_REPORT_Columns_OPERA_ConfigurationId",
+                table: "OPERA_REPORT_Columns",
                 column: "OPERA_ConfigurationId");
 
             migrationBuilder.CreateIndex(
@@ -242,22 +242,22 @@ namespace ACT.Migrations.ApiDbMigrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "HRMS_Columns");
+                name: "HRMS_REPORT_Columns");
 
             migrationBuilder.DropTable(
-                name: "HRMS_DETAIL_Models");
+                name: "HRMS_REPORT_SUN_DETAILS");
 
             migrationBuilder.DropTable(
-                name: "HRMS_HDR_Models");
+                name: "HRMS_REPORT_SUN_HDRS");
 
             migrationBuilder.DropTable(
-                name: "OPERA_Columns");
+                name: "OPERA_REPORT_Columns");
 
             migrationBuilder.DropTable(
-                name: "OPERA_DETAIL_Models");
+                name: "OPERA_REPORT_SUN_DETAILS");
 
             migrationBuilder.DropTable(
-                name: "OPERA_HDR_Models");
+                name: "OPERA_REPORT_SUN_HDRS");
 
             migrationBuilder.DropTable(
                 name: "SUN_DETAIL_Columns");
@@ -266,13 +266,13 @@ namespace ACT.Migrations.ApiDbMigrations
                 name: "SUN_HDR_Columns");
 
             migrationBuilder.DropTable(
-                name: "HRMS_Configuration_Models");
+                name: "HRMS_Configurations");
 
             migrationBuilder.DropTable(
-                name: "OPERA_Configuration_Models");
+                name: "OPERA_Configurations");
 
             migrationBuilder.DropTable(
-                name: "SUN_Configuration_Models");
+                name: "SUN_Configurations");
         }
     }
 }
