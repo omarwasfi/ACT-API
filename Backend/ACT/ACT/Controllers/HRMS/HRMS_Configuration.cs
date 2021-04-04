@@ -59,6 +59,7 @@ namespace ACT.Controllers
             return cycleTimeViewModel;
         }
 
+
         [HttpPost("UpdateCycleTime")]
         public async Task UpdateCycleTime(hrmsCycleTimeViewModel cycleTimeViewModel)
         {

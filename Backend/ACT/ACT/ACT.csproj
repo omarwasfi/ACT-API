@@ -35,8 +35,6 @@
   <ItemGroup>
     <Folder Include="Services\HRMS\Mapper\" />
     <Folder Include="Services\HRMS\Reader\" />
-    <Folder Include="Services\OPERA\Mapper\" />
-    <Folder Include="Services\OPERA\Reader\" />
   </ItemGroup>
 
 </Project>
