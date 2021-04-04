@@ -21,6 +21,8 @@ using ACT.Services.ApiDbAccess.SUN_HDR;
 using ACT.Services.ApiDbAccess.SUN_DETAIL;
 using ACT.Services.ApiDbAccess.OPERA;
 using ACT.Services.ApiDbAccess.OPERA_REPORT;
+using ACT.Services.ApiDbAccess.HRMS;
+using ACT.Services.ApiDbAccess.HRMS_REPORT;
 
 namespace ACT
 {
@@ -47,6 +49,10 @@ namespace ACT
             
             services.AddScoped<IOPERA_Configuration, OPERA_Configuration>();
             services.AddScoped<IOPERA_REPORT_Configuration, OPERA_REPORT_Configuration>();
+
+            services.AddScoped<IHRMS_Configuration, HRMS_Configuration>();
+            services.AddScoped<IHRMS_REPORT_Configuration, HRMS_REPORT_Configuration>();
+
 
 
 

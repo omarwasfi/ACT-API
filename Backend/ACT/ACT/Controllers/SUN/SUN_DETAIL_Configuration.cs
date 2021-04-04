@@ -3,6 +3,7 @@ using ACT.Services.ApiDbAccess.SUN_DETAIL;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
@@ -16,7 +17,9 @@ namespace ACT.Controllers
         private readonly ISUN_DETAIL_Configuration _sUN_DETAIL_Configuration;
         public class SUN_DETAIL_ColumnViewModel
         {
+            [Required]
             public string Name { get; set; }
+            [Required]
             public string Type { get; set; }
         }
         public SUN_DETAIL_Configuration(ISUN_DETAIL_Configuration sun_Configuration)

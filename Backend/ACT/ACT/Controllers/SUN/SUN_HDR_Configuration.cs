@@ -4,6 +4,7 @@ using ACT.Services.ApiDbAccess.SUN_HDR;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
@@ -17,7 +18,9 @@ namespace ACT.Controllers
         private readonly ISUN_HDR_Configuration _sUN_HDR_Configuration;
         public class SUN_HDR_ColumnViewModel
         {
+            [Required]
             public string Name { get; set; }
+            [Required]
             public string Type { get; set; }
         }
         public SUN_HDR_Configuration(ISUN_HDR_Configuration sun_hdr_Configuration)

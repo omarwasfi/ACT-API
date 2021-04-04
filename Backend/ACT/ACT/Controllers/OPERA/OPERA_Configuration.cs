@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
@@ -15,9 +16,11 @@ namespace ACT.Controllers
 
         private readonly IOPERA_Configuration _opera_Configuration;
 
-        public class cycleTimeViewModel
+        public class operaCycleTimeViewModel
         {
+            [Required]
             public int Hour { get; set; }
+            [Required]
             public int Min { get; set; }
 
         }
@@ -47,15 +50,15 @@ namespace ACT.Controllers
         }
 
         [HttpGet("GetCycleTime")]
-        public cycleTimeViewModel GetCycleTime()
+        public operaCycleTimeViewModel GetCycleTime()
         {
             DateTime operaDateTime = _opera_Configuration.GetOperaConfiguration().CycleTime;
-            cycleTimeViewModel cycleTimeViewModel = new cycleTimeViewModel() { Hour = operaDateTime.Hour, Min = operaDateTime.Minute };
+            operaCycleTimeViewModel cycleTimeViewModel = new operaCycleTimeViewModel() { Hour = operaDateTime.Hour, Min = operaDateTime.Minute };
             return cycleTimeViewModel;
         }
 
         [HttpPost("UpdateCycleTime")]
-        public async Task UpdateCycleTime(cycleTimeViewModel cycleTimeViewModel)
+        public async Task UpdateCycleTime(operaCycleTimeViewModel cycleTimeViewModel)
         {
             if (cycleTimeViewModel.Hour != 0 && cycleTimeViewModel.Min != 0)
             {

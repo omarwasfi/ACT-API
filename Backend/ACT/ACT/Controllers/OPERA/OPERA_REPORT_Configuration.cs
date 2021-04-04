@@ -3,6 +3,7 @@ using ACT.Services.ApiDbAccess.OPERA_REPORT;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
@@ -15,9 +16,13 @@ namespace ACT.Controllers
         private readonly IOPERA_REPORT_Configuration _oPERA_REPORT_Configuration;
         public class OPERA_REPORT_ColumnViewModel
         {
+            [Required]
             public string Name { get; set; }
+            [Required]
             public string Type { get; set; }
+            [Required]
             public int StartPOS { get; set; }
+            [Required]
             public int EndPOS { get; set; }
         }
         public OPERA_REPORT_Configuration(IOPERA_REPORT_Configuration oPERA_REPORT_Configuration)
