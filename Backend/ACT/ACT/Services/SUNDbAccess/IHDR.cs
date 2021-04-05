@@ -9,6 +9,6 @@ namespace ACT.Services.SUNDbAccess
     public interface IHDR
     {
         
-        public int InsertToHDR(DataTable hdrDataTable);
+        public int InsertToHDR(DataRow hdrDataRow);
     }
 }

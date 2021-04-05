@@ -7,19 +7,21 @@ using System.Threading.Tasks;
 
 namespace ACT.Services.SUNDbAccess
 {
-    public class HDR : IHDR
+    public class DETAIL : IDETAIL
     {
         SUN_Configuration_Model _sUN_Configuration;
-        public HDR(SUN_Configuration_Model sUN_Configuration)
+        public DETAIL(SUN_Configuration_Model sUN_Configuration)
         {
             this._sUN_Configuration = sUN_Configuration;
         }
-        public int InsertToHDR(DataRow hdrDataRow)
+
+        public void InsertToDetail(DataTable sun_DETAIL_Rows)
         {
+            string connectionString = _sUN_Configuration.ConnectionsString;
 
-            // TODO - Insert the row to the databse and return the ID
+            // TODO - Insert the rows to the database
 
-            return 0;            
+            throw new NotImplementedException();
         }
     }
 }

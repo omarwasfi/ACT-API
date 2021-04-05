@@ -34,7 +34,7 @@ namespace ACT.Services.OPERA.Reader
             return OperaTable;
         }
 
-        private IEnumerable<string> readLines(string filePath, int numberOfLinesToIgnore)
+        private List<string> readLines(string filePath, int numberOfLinesToIgnore)
         {
             // TODO - add code to read txt file lines and ignore fisrt {numberOfLinesToIgnore}
             throw new NotImplementedException();
