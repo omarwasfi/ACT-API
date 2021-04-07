@@ -56,12 +56,12 @@ namespace ACT.Services.ApiDbAccess.SUN
             sUN_Configuration_Model.ConnectionsString = "Server=(localdb)\\mssqllocaldb;Database=SunSystemsData;Trusted_Connection=True;MultipleActiveResultSets=true";
             sUN_Configuration_Model.HDR_Columns = new List<SUN_HDR_Column_Model>() 
             {
-                new SUN_HDR_Column_Model(){ColumnName = "PstgHdrId" , Type ="int" },
-                new SUN_HDR_Column_Model(){ColumnName = "UpdateCount" , Type ="short" },
-                new SUN_HDR_Column_Model(){ColumnName = "LastChangeUserId" , Type ="string" },
-                new SUN_HDR_Column_Model(){ColumnName = "LastChangeDatetime" , Type ="DateTime" },
-                new SUN_HDR_Column_Model(){ColumnName = "CreatedBy" , Type ="string" },
-                new SUN_HDR_Column_Model(){ColumnName = "CreatedDatetime" , Type ="DateTime" }
+                new SUN_HDR_Column_Model(){ColumnName = "PSTG_HDR_ID" , Type ="int" },
+                new SUN_HDR_Column_Model(){ColumnName = "UPDATE_COUNT" , Type ="short" },
+                new SUN_HDR_Column_Model(){ColumnName = "LAST_CHANGE_USER_ID" , Type ="string" },
+                new SUN_HDR_Column_Model(){ColumnName = "LAST_CHANGE_DATETIME" , Type ="DateTime" },
+                new SUN_HDR_Column_Model(){ColumnName = "CREATED_BY" , Type ="string" },
+                new SUN_HDR_Column_Model(){ColumnName = "CREATED_DATETIME" , Type ="DateTime" }
 
             };
 
@@ -76,6 +76,7 @@ namespace ACT.Services.ApiDbAccess.SUN
                 _apiDbContext.SUN_HDR_Columns.Add(c);
             }
 
+            _apiDbContext.SUN_Configurations.Add(sUN_Configuration_Model);
             await _apiDbContext.SaveChangesAsync();
 
 
