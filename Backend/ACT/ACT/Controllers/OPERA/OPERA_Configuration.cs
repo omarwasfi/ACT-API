@@ -72,6 +72,25 @@ namespace ACT.Controllers
 
 
         }
+
+        [HttpGet("GetNumberOfLinesToBeIgnoredAtTheBeginning")]
+        public int GetNumberOfLinesToBeIgnoredAtTheBeginning()
+        {
+            return _opera_Configuration.GetOperaConfiguration().NumberOfLinesToBeIgnoredAtTheBeginning; 
+        }
+
+
+        [HttpPost("UpdateNumberOfLinesToBeIgnoredAtTheBeginning")]
+        public async Task UpdateNumberOfLinesToBeIgnoredAtTheBeginning(int NumberOfLinesToBeIgnoredAtTheBeginning)
+        {
+            await _opera_Configuration.UpdateNumberOfLinesToBeIgnoredAtTheBeggining(NumberOfLinesToBeIgnoredAtTheBeginning);
+        }
+
+        [HttpPost("LoadDefaults")]
+        public async Task LoadDefaults()
+        {
+           await _opera_Configuration.LoadDefault();
+        }
     }
 
 

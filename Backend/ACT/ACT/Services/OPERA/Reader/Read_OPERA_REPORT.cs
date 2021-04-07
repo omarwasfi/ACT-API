@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace ACT.Services.OPERA.Reader
@@ -15,29 +16,60 @@ namespace ACT.Services.OPERA.Reader
             // Read the textFile
             foreach (var o in oPERA_Configuration.Columns)
             {
-                OperaTable.Columns.Add(new DataColumn(columnName: o.ColumnName, dataType: System.Type.GetType(o.Type, true, true)));
+                switch (o.Type)
+                {
+                    case "int":
+                        OperaTable.Columns.Add(new DataColumn(columnName: o.ColumnName, dataType: typeof(int)));
+                        break;
+                    case "string":
+                        OperaTable.Columns.Add(new DataColumn(columnName: o.ColumnName, dataType: typeof(String) ));
+                        break;
+                    case "decimal":
+                        OperaTable.Columns.Add(new DataColumn(columnName: o.ColumnName, dataType: typeof(Decimal)));
+                        break;
+                    case "datetime":
+                        OperaTable.Columns.Add(new DataColumn(columnName: o.ColumnName, dataType: typeof(DateTime)));
+                        break;
+                    case "double":
+                        OperaTable.Columns.Add(new DataColumn(columnName: o.ColumnName, dataType: typeof(Double)));
+                        break;
+                }
             }
 
-            foreach (string line in readLines(oPERA_Configuration.FilePath, oPERA_Configuration.NumberOfLinesToIgnore))
+            foreach (string line in readLines(oPERA_Configuration.FilePath, oPERA_Configuration.NumberOfLinesToBeIgnoredAtTheBeginning,oPERA_Configuration.NumberOfLinesToBeIgnoredAtTheEnd))
             {
                 DataRow row = OperaTable.NewRow();
 
                 foreach (DataColumn column in OperaTable.Columns)
                 {
                     int startPOS = oPERA_Configuration.Columns.Find(x => x.ColumnName == column.ColumnName).StartPOS;
-                    int endPOS = oPERA_Configuration.Columns.Find(x => x.ColumnName == column.ColumnName).EndPOS;
+                    int endPOS =  oPERA_Configuration.Columns.Find(x => x.ColumnName == column.ColumnName).EndPOS - startPOS;
 
-                    row[column.ColumnName] = line.Substring(startPOS - 1, endPOS - 1);
+                    row[column.ColumnName] = line.Substring(startPOS - 1, endPOS );
                 }
+
+                OperaTable.Rows.Add(row);
             }
 
             return OperaTable;
         }
 
-        private List<string> readLines(string filePath, int numberOfLinesToIgnore)
+        private List<string> readLines(string filePath, int numberOfLinesToBeIgnoredAtTheBeginning, int numberOfLinesToBeIgnoredAtTheEnd)
         {
-            // TODO - add code to read txt file lines and ignore fisrt {numberOfLinesToIgnore}
-            throw new NotImplementedException();
+            IEnumerable<string> lines = System.IO.File.ReadLines(filePath, Encoding.UTF8);
+            List<string> LinesRead = lines.ToList<string>();
+            int count = 0;
+            for (int i = 0; i < numberOfLinesToBeIgnoredAtTheBeginning; i++)
+            {
+                LinesRead.RemoveAt(i - count);
+                count++;
+            }
+            for (int i = 0; i < numberOfLinesToBeIgnoredAtTheEnd; i++)
+            {
+                LinesRead.RemoveAt(LinesRead.Count - 1);
+            }
+
+            return LinesRead;
         }
     }
 }

@@ -7,6 +7,6 @@ namespace ACT.Services.Execute
 {
     public interface IExecuteOpera
     {
-        public void Execute();
+        public Task Execute();
     }
 }

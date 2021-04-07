@@ -55,9 +55,8 @@ namespace ACT.Services.Execute
         /// Call HDR And Get the id
         /// MapOperaToSunDETAIL(HDR_Id) - Get DataTable with the number of rows in the operaDataTable
         /// Call DETAIL To insert operaDataTable
-        /// 
         /// </summary>
-        public void Execute()
+        public async Task Execute()
         {
             DataTable operaReportTable = readOpera();
             

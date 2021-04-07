@@ -14,9 +14,12 @@ namespace ACT.DataModels
         public int Id { get; set; }
         [Required]
         public string  FilePath { get; set; }
-        
+
         [Required]
-        public int NumberOfLinesToIgnore { get; set; }
+        public int NumberOfLinesToBeIgnoredAtTheBeginning { get; set; } = 1 ;
+
+        [Required]
+        public int NumberOfLinesToBeIgnoredAtTheEnd { get; set; } = 1;
         /// <summary>
         /// Daily Based
         /// We care about Hour and Min

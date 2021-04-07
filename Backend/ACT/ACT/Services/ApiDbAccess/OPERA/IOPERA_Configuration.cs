@@ -14,5 +14,12 @@ namespace ACT.Services.ApiDbAccess.OPERA
 
         public Task UpdateCycleTime(DateTime cycleTime);
 
+        public Task UpdateNumberOfLinesToBeIgnoredAtTheBeggining(int numberOfLinesToBeIgnoredAtTheBeggining);
+
+        public Task UpdateNumberOfLinesToBeIgnoredAtTheEnd(int numberOfLinesToBeIgnoredAtTheEnd);
+
+        public Task LoadDefault();
+
+
     }
 }

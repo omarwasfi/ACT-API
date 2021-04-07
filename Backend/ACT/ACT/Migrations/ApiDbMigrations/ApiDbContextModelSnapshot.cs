@@ -73,6 +73,9 @@ namespace ACT.Migrations.ApiDbMigrations
                     b.Property<decimal?>("DecimalValue")
                         .HasColumnType("TEXT");
 
+                    b.Property<double?>("DoubleValue")
+                        .HasColumnType("REAL");
+
                     b.Property<int?>("IntValue")
                         .HasColumnType("INTEGER");
 
@@ -116,6 +119,9 @@ namespace ACT.Migrations.ApiDbMigrations
                     b.Property<decimal?>("DecimalValue")
                         .HasColumnType("TEXT");
 
+                    b.Property<double?>("DoubleValue")
+                        .HasColumnType("REAL");
+
                     b.Property<int?>("IntValue")
                         .HasColumnType("INTEGER");
 
@@ -157,7 +163,10 @@ namespace ACT.Migrations.ApiDbMigrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("NumberOfLinesToIgnore")
+                    b.Property<int>("NumberOfLinesToBeIgnoredAtTheBeginning")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("NumberOfLinesToBeIgnoredAtTheEnd")
                         .HasColumnType("INTEGER");
 
                     b.HasKey("Id");
@@ -210,6 +219,9 @@ namespace ACT.Migrations.ApiDbMigrations
                     b.Property<decimal?>("DecimalValue")
                         .HasColumnType("TEXT");
 
+                    b.Property<double?>("DoubleValue")
+                        .HasColumnType("REAL");
+
                     b.Property<int?>("IntValue")
                         .HasColumnType("INTEGER");
 
@@ -252,6 +264,9 @@ namespace ACT.Migrations.ApiDbMigrations
 
                     b.Property<decimal?>("DecimalValue")
                         .HasColumnType("TEXT");
+
+                    b.Property<double?>("DoubleValue")
+                        .HasColumnType("REAL");
 
                     b.Property<int?>("IntValue")
                         .HasColumnType("INTEGER");

@@ -33,6 +33,8 @@ namespace ACT.DataModels
         public string StringValue { get; set; }
 
         public decimal? DecimalValue { get; set; }
+        public double? DoubleValue { get; set; }
+
 
         public string MapWithHRMS { get; set; }
     }
