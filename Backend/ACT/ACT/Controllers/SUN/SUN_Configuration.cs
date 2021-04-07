@@ -41,6 +41,13 @@ namespace ACT.Controllers
 
         }
 
-       
+        [HttpPost("LoadDefaults")]
+        public async Task LoadDefaults()
+        {
+            await _sun_Configuration.LoadDefault();
+        }
+
+
+
     }
 }

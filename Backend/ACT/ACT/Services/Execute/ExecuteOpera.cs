@@ -77,7 +77,7 @@ namespace ACT.Services.Execute
 
         private DataRow mapOperaWithSunHDR(DataTable operaReportTable)
         {
-            return _map_OPERA_REPORT_SUN_HDR.Map(operaReportTable, _oPERA_REPORT_SUN_HDR.GetOPERA_REPORT_SUN_HDR_s());
+            return _map_OPERA_REPORT_SUN_HDR.Map(operaReportTable, _oPERA_REPORT_SUN_HDR.Get_OPERA_REPORT_SUN_HDR_s());
         }
 
         private DataTable mapOperaWithSunDETAIL(DataTable operaReportTable , int PSTG_HDR_ID)

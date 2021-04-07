@@ -33,6 +33,9 @@ namespace ACT.Services.OPERA.Reader
                     case "double":
                         OperaTable.Columns.Add(new DataColumn(columnName: o.ColumnName, dataType: typeof(Double)));
                         break;
+                    case "short":
+                        OperaTable.Columns.Add(new DataColumn(columnName: o.ColumnName, dataType: typeof(short)));
+                        break;
                 }
             }
 

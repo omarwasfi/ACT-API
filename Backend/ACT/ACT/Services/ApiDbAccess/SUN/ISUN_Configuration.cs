@@ -16,5 +16,7 @@ namespace ACT.Services.ApiDbAccess.SUN
 
         public SUN_Configuration_Model GetSunConfiguration();
 
+        public Task LoadDefault();
+
     }
 }

@@ -33,6 +33,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Controllers\Mapping\HrmsToSun\" />
     <Folder Include="Services\HRMS\Mapper\" />
     <Folder Include="Services\HRMS\Reader\" />
   </ItemGroup>
