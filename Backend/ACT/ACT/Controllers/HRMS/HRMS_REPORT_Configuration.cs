@@ -19,6 +19,7 @@ namespace ACT.Controllers
         private readonly IHRMS_REPORT_Configuration _hRMS_REPORT_Configuration;
         public class HRMS_REPORT_ColumnViewModel
         {
+            public int Id { get; set; }
             [Required]
             public string Name { get; set; }
             [Required]
@@ -40,7 +41,7 @@ namespace ACT.Controllers
             foreach (var c in hRMS_REPORT_Column_Models)
             {
                 hrmsRportColumnsResult.Add(
-                    new HRMS_REPORT_ColumnViewModel { Name = c.ColumnName, Type = c.Type }
+                    new HRMS_REPORT_ColumnViewModel {Id = c.Id, Name = c.ColumnName, Type = c.Type }
                     );
             }
 

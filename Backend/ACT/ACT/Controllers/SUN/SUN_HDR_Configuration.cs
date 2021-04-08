@@ -20,6 +20,7 @@ namespace ACT.Controllers
         private readonly ISUN_HDR_Configuration _sUN_HDR_Configuration;
         public class SUN_HDR_ColumnViewModel
         {
+            public int Id { get; set; }
             [Required]
             public string Name { get; set; }
             [Required]
@@ -40,7 +41,7 @@ namespace ACT.Controllers
             foreach (var c in sUN_Column_Models) 
             {
                 sunColumnsResult.Add(
-                    new SUN_HDR_ColumnViewModel { Name = c.ColumnName , Type =  c.Type }
+                    new SUN_HDR_ColumnViewModel {Id = c.Id, Name = c.ColumnName , Type =  c.Type }
                     );
             }
 

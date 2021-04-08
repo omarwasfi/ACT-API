@@ -53,7 +53,7 @@ namespace ACT.Services.ApiDbAccess.SUN
 
             SUN_Configuration_Model sUN_Configuration_Model = new SUN_Configuration_Model();
 
-            sUN_Configuration_Model.ConnectionsString = "Server=(localdb)\\mssqllocaldb;Database=SunSystemsData;Trusted_Connection=True;MultipleActiveResultSets=true";
+            sUN_Configuration_Model.ConnectionsString = "Data source=(local);Database=SunSystemsData;Trusted_Connection=True;user id=sa; password= fifinetech;";
             sUN_Configuration_Model.HDR_Columns = new List<SUN_HDR_Column_Model>() 
             {
                 new SUN_HDR_Column_Model(){ColumnName = "PSTG_HDR_ID" , Type ="int" },

@@ -19,6 +19,7 @@ namespace ACT.Controllers
         private readonly ISUN_DETAIL_Configuration _sUN_DETAIL_Configuration;
         public class SUN_DETAIL_ColumnViewModel
         {
+            public int Id { get; set; } 
             [Required]
             public string Name { get; set; }
             [Required]
@@ -39,7 +40,7 @@ namespace ACT.Controllers
             foreach (var c in sUN_Column_Models)
             {
                 sunColumnsResult.Add(
-                    new SUN_DETAIL_ColumnViewModel { Name = c.ColumnName, Type = c.Type }
+                    new SUN_DETAIL_ColumnViewModel {Id = c.Id, Name = c.ColumnName, Type = c.Type }
                     );
             }
 

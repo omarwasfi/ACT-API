@@ -18,6 +18,7 @@ namespace ACT.Controllers
         private readonly IOPERA_REPORT_Configuration _oPERA_REPORT_Configuration;
         public class OPERA_REPORT_ColumnViewModel
         {
+            public int Id { get; set; }
             [Required]
             public string Name { get; set; }
             [Required]
@@ -42,7 +43,7 @@ namespace ACT.Controllers
             foreach (var c in oPERA_REPORT_Column_Models)
             {
                 operaRportColumnsResult.Add(
-                    new OPERA_REPORT_ColumnViewModel { Name = c.ColumnName, Type = c.Type ,StartPOS = c.StartPOS , EndPOS = c.EndPOS}
+                    new OPERA_REPORT_ColumnViewModel {Id = c.Id, Name = c.ColumnName, Type = c.Type ,StartPOS = c.StartPOS , EndPOS = c.EndPOS}
                     );
             }
 
