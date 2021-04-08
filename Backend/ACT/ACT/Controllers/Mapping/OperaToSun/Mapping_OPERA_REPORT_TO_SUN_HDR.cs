@@ -1,5 +1,6 @@
 ﻿using ACT.DataModels;
 using ACT.Services.ApiDbAccess.OPERA_SUN;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,7 @@ namespace ACT.Controllers
 {
     [ApiController]
     [Route("Mapping/OperaToSun/ReportToHDR")]
+    [EnableCors("MyPolicy")]
     public class Mapping_OPERA_REPORT_TO_SUN_HDR : ControllerBase
     {
         private IOPERA_REPORT_SUN_HDR _oPERA_REPORT_SUN_HDR;

@@ -1,5 +1,6 @@
 ﻿using ACT.DataModels;
 using ACT.Services.ApiDbAccess.HRMS_REPORT;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -12,6 +13,7 @@ namespace ACT.Controllers
 {
     [ApiController]
     [Route("Hrms/Report")]
+    [EnableCors("MyPolicy")]
     public class HRMS_REPORT_Configuration : ControllerBase
     {
         private readonly IHRMS_REPORT_Configuration _hRMS_REPORT_Configuration;

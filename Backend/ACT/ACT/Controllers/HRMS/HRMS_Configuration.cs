@@ -1,4 +1,5 @@
 ﻿using ACT.Services.ApiDbAccess.HRMS;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -11,6 +12,7 @@ namespace ACT.Controllers
 {
     [ApiController]
     [Route("Hrms")]
+    [EnableCors("MyPolicy")]
     public class HRMS_Configuration : ControllerBase
     {
         private readonly IHRMS_Configuration _hrms_Configuration;

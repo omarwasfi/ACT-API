@@ -1,4 +1,5 @@
 ﻿using ACT.Services.ApiDbAccess.SUN;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Serilog;
 using System;
@@ -11,6 +12,8 @@ namespace ACT.Controllers
 {
     [ApiController]
     [Route("Sun")]
+    [EnableCors("MyPolicy")]
+
     public class SUN_Configuration : ControllerBase
     {
         private readonly ISUN_Configuration _sun_Configuration;

@@ -61,7 +61,42 @@ namespace ACT.Services.ApiDbAccess.SUN
                 new SUN_HDR_Column_Model(){ColumnName = "LAST_CHANGE_USER_ID" , Type ="string" },
                 new SUN_HDR_Column_Model(){ColumnName = "LAST_CHANGE_DATETIME" , Type ="DateTime" },
                 new SUN_HDR_Column_Model(){ColumnName = "CREATED_BY" , Type ="string" },
-                new SUN_HDR_Column_Model(){ColumnName = "CREATED_DATETIME" , Type ="DateTime" }
+                new SUN_HDR_Column_Model(){ColumnName = "CREATED_DATETIME" , Type ="DateTime" },
+                new SUN_HDR_Column_Model(){ColumnName = "CREATION_TYPE" , Type ="string" },
+                new SUN_HDR_Column_Model(){ColumnName = "DESCR" , Type ="string" },
+                new SUN_HDR_Column_Model(){ColumnName = "LAST_STATUS" , Type ="short" },
+                new SUN_HDR_Column_Model(){ColumnName = "POST_TYPE" , Type ="short" },
+                new SUN_HDR_Column_Model(){ColumnName = "POST_WRITE_TO_HOLD" , Type ="short" },
+                new SUN_HDR_Column_Model(){ColumnName = "POST_ROUGH_BOOK" , Type ="short" },
+                new SUN_HDR_Column_Model(){ColumnName = "POST_ALLOW_BAL_TRANS" , Type ="short" },
+                new SUN_HDR_Column_Model(){ColumnName = "POST_SUSPENSE_ACNT" , Type ="string" },
+                new SUN_HDR_Column_Model(){ColumnName = "POST_OTHER_ACNT" , Type ="string" },
+                new SUN_HDR_Column_Model(){ColumnName = "POST_BAL_BY" , Type ="string" },
+                new SUN_HDR_Column_Model(){ColumnName = "POST_DFLT_PERD" , Type ="int" },
+                new SUN_HDR_Column_Model(){ColumnName = "POST_RPT_ERR_ONLY" , Type ="short" },
+                new SUN_HDR_Column_Model(){ColumnName = "POST_SUPPRESS_SUB_MSG" , Type ="short" },
+                new SUN_HDR_Column_Model(){ColumnName = "POST_RPT_FMT" , Type ="string" },
+                new SUN_HDR_Column_Model(){ColumnName = "JRNL_TYPE" , Type ="string" },
+                new SUN_HDR_Column_Model(){ColumnName = "POST_RPT_ACNT" , Type ="string" },
+                new SUN_HDR_Column_Model(){ColumnName = "CNT_ORIG" , Type ="int" },
+                new SUN_HDR_Column_Model(){ColumnName = "CNT_REJECTED" , Type ="int" },
+                new SUN_HDR_Column_Model(){ColumnName = "CNT_BAL" , Type ="int" },
+                new SUN_HDR_Column_Model(){ColumnName = "CNT_REVERSALS" , Type ="int" },
+                new SUN_HDR_Column_Model(){ColumnName = "CNT_POSTED" , Type ="int" },
+                new SUN_HDR_Column_Model(){ColumnName = "CNT_SUBSTITUTED" , Type ="int" },
+                new SUN_HDR_Column_Model(){ColumnName = "CNT_PRINTED" , Type ="int" },
+                new SUN_HDR_Column_Model(){ColumnName = "POST_LDG" , Type ="string" },
+                new SUN_HDR_Column_Model(){ColumnName = "POST_ALLOW_OVER_BDGT" , Type ="short" },
+                new SUN_HDR_Column_Model(){ColumnName = "POST_ALLOW_SUSPNS_ACNT" , Type ="short" },
+                new SUN_HDR_Column_Model(){ColumnName = "CNT_ZERO_VAL_ENTRIES" , Type ="int" },
+                new SUN_HDR_Column_Model(){ColumnName = "JNL_NUM" , Type ="int" },
+                new SUN_HDR_Column_Model(){ColumnName = "NUM_OF_IMBALANCES" , Type ="short" },
+                new SUN_HDR_Column_Model(){ColumnName = "DR_AMT_POSTED" , Type ="decimal" },
+                new SUN_HDR_Column_Model(){ColumnName = "CR_AMT_POSTED" , Type ="decimal" },
+                new SUN_HDR_Column_Model(){ColumnName = "POST_TXN_REF_BAL" , Type ="short" }
+
+
+
 
             };
 

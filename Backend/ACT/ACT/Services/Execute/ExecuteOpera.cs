@@ -60,9 +60,9 @@ namespace ACT.Services.Execute
         {
             DataTable operaReportTable = readOpera();
             
-            DataRow sun_HDR_Row = mapOperaWithSunHDR(operaReportTable);
+            DataTable sun_HDR_Table = mapOperaWithSunHDR(operaReportTable);
 
-            int PSTG_HDR_ID = _hDR.InsertToHDR(sun_HDR_Row);
+            int PSTG_HDR_ID = _hDR.InsertToHDR(sun_HDR_Table);
 
             DataTable sun_DETAIL_Rows = mapOperaWithSunDETAIL(operaReportTable,PSTG_HDR_ID);
 
@@ -75,7 +75,7 @@ namespace ACT.Services.Execute
             return _read_OPERA_REPORT.ReadOpera(_opera_Configuration.GetOperaConfiguration());
         }
 
-        private DataRow mapOperaWithSunHDR(DataTable operaReportTable)
+        private DataTable mapOperaWithSunHDR(DataTable operaReportTable)
         {
             return _map_OPERA_REPORT_SUN_HDR.Map(operaReportTable, _oPERA_REPORT_SUN_HDR.Get_OPERA_REPORT_SUN_HDR_s());
         }

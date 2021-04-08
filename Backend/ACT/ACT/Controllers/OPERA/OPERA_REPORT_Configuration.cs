@@ -1,5 +1,6 @@
 ﻿using ACT.DataModels;
 using ACT.Services.ApiDbAccess.OPERA_REPORT;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -11,6 +12,7 @@ namespace ACT.Controllers
 {
     [ApiController]
     [Route("Opera/Report")]
+    [EnableCors("MyPolicy")]
     public class OPERA_REPORT_Configuration : ControllerBase
     {
         private readonly IOPERA_REPORT_Configuration _oPERA_REPORT_Configuration;

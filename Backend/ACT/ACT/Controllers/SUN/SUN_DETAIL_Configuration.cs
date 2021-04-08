@@ -1,5 +1,6 @@
 ﻿using ACT.DataModels;
 using ACT.Services.ApiDbAccess.SUN_DETAIL;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -12,6 +13,7 @@ namespace ACT.Controllers
 {
     [ApiController]
     [Route("Sun/Detail")]
+    [EnableCors("MyPolicy")]
     public class SUN_DETAIL_Configuration : ControllerBase
     {
         private readonly ISUN_DETAIL_Configuration _sUN_DETAIL_Configuration;

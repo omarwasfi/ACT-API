@@ -11,7 +11,7 @@ namespace ACT.Services.OPERA.Mapper
     public class Map_OPERA_REPORT_SUN_HDR : IMap_OPERA_REPORT_SUN_HDR
     {
        
-        public DataRow Map(DataTable operaReport, List<OPERA_REPORT_SUN_HDR_Model> oPERA_REPORT_SUN_HDR_s)
+        public DataTable Map(DataTable operaReport, List<OPERA_REPORT_SUN_HDR_Model> oPERA_REPORT_SUN_HDR_s)
         {
 
             DataTable sunHDRResult = new DataTable();
@@ -92,7 +92,7 @@ namespace ACT.Services.OPERA.Mapper
             sunHDRResult.Rows.Add(dataRow);
 
 
-            return dataRow;
+            return sunHDRResult;
 
         }
 

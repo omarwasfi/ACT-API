@@ -1,6 +1,7 @@
 ﻿using ACT.DataModels;
 using ACT.DBContext;
 using ACT.Services.ApiDbAccess.SUN_HDR;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,7 @@ namespace ACT.Controllers
 {
     [ApiController]
     [Route("Sun/HDR")]
+    [EnableCors("MyPolicy")]
     public class SUN_HDR_Configuration : ControllerBase
     {
         private readonly ISUN_HDR_Configuration _sUN_HDR_Configuration;

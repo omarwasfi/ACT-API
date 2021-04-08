@@ -40,6 +40,14 @@ namespace ACT
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+            services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
+            {
+                builder.AllowAnyOrigin()
+                       .AllowAnyMethod()
+                       .AllowAnyHeader();
+            }));
+
             services.AddDbContext<ApiDbContext>(options =>
               options
               .UseSqlite(
@@ -58,6 +66,8 @@ namespace ACT
             services.AddScoped<IOPERA_REPORT_SUN_HDR, OPERA_REPORT_SUN_HDR>();
 
             services.AddScoped<IExecuteOpera, ExecuteOpera>();
+
+            
 
 
             services.AddControllers();
@@ -92,10 +102,12 @@ namespace ACT
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
+
 
             app.UseSwagger();
 
@@ -113,6 +125,9 @@ namespace ACT
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseCors("MyPolicy");
+
 
             app.UseEndpoints(endpoints =>
             {

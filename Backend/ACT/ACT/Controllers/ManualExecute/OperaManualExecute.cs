@@ -1,4 +1,5 @@
 ﻿using ACT.Services.Execute;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Serilog;
 using System;
@@ -11,6 +12,7 @@ namespace ACT.Controllers
 {
     [ApiController]
     [Route("OperaManualExecute")]
+    [EnableCors("MyPolicy")]
     public class OperaManualExecute : ControllerBase
     {
         private IExecuteOpera _executeOpera;

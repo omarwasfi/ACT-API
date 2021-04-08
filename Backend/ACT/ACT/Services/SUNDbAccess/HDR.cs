@@ -14,7 +14,7 @@ namespace ACT.Services.SUNDbAccess
         {
             this._sUN_Configuration = sUN_Configuration;
         }
-        public int InsertToHDR(DataRow hdrDataRow)
+        public int InsertToHDR(DataTable hdrDataRow)
         {
 
             // TODO - Insert the row to the databse and return the ID

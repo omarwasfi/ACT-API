@@ -1,4 +1,5 @@
 ﻿using ACT.Services.ApiDbAccess.OPERA;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -11,6 +12,7 @@ namespace ACT.Controllers
 {
     [ApiController]
     [Route("Opera")]
+    [EnableCors("MyPolicy")]
     public class OPERA_Configuration : ControllerBase
     {
 
