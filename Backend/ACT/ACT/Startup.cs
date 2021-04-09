@@ -64,6 +64,7 @@ namespace ACT
             services.AddScoped<IHRMS_REPORT_Configuration, HRMS_REPORT_Configuration>();
 
             services.AddScoped<IOPERA_REPORT_SUN_HDR, OPERA_REPORT_SUN_HDR>();
+            services.AddScoped<IOPERA_REPORT_SUN_DETAIL, OPERA_REPORT_SUN_DETAIL>();
 
             services.AddScoped<IExecuteOpera, ExecuteOpera>();
 

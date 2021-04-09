@@ -56,9 +56,6 @@ namespace ACT.Services.SUNDbAccess
             }
 
            
-
-
-            //object[] values ;
             string InsertQuery = string.Format("insert into " + tablename + " ({0}) VALUES ({1}) ; Select SCOPE_IDENTITY() AS [SCOPE_IDENTITY] SELECT @@IDENTITY AS[@@IDENTITY];", string.Join(",", columnNames), string.Join(",", values));
             
             try
@@ -81,7 +78,6 @@ namespace ACT.Services.SUNDbAccess
                 Log.Error(ex.ToString());
             }
             return Id;
-            // TODO - Insert the row to the databse and return the ID
         }
     }
 }

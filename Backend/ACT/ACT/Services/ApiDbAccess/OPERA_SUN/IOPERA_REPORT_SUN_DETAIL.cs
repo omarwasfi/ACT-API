@@ -8,6 +8,10 @@ namespace ACT.Services.ApiDbAccess.OPERA_SUN
 {
     public interface IOPERA_REPORT_SUN_DETAIL
     {
-        public List<OPERA_REPORT_SUN_DETAIL_Model> GetOPERA_REPORT_SUN_DETAIL_s();
+        public List<OPERA_REPORT_SUN_DETAIL_Model> Get_OPERA_REPORT_SUN_DETAIL_s();
+
+        public Task Update_OPERA_REPORT_SUN_DETAIL(List<OPERA_REPORT_SUN_DETAIL_Model> oPERA_REPORT_SUN_DETAIL_s);
+
+        public Task LoadDefaults();
     }
 }

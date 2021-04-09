@@ -82,7 +82,7 @@ namespace ACT.Services.Execute
 
         private DataTable mapOperaWithSunDETAIL(DataTable operaReportTable , int PSTG_HDR_ID)
         {
-            return _map_OPERA_REPORT_SUN_DERAIL.Map(operaReportTable, _oPERA_REPORT_SUN_DETAIL.GetOPERA_REPORT_SUN_DETAIL_s(), PSTG_HDR_ID);
+            return _map_OPERA_REPORT_SUN_DERAIL.Map(operaReportTable, _oPERA_REPORT_SUN_DETAIL.Get_OPERA_REPORT_SUN_DETAIL_s(), PSTG_HDR_ID);
         }
 
     }

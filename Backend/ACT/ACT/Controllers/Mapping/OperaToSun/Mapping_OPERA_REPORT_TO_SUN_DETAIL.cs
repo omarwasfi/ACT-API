@@ -11,12 +11,12 @@ using System.Threading.Tasks;
 namespace ACT.Controllers
 {
     [ApiController]
-    [Route("Mapping/OperaToSun/ReportToHDR")]
+    [Route("Mapping/OperaToSun/ReportToDetail")]
     [EnableCors("MyPolicy")]
-    public class Mapping_OPERA_REPORT_TO_SUN_HDR : ControllerBase
+    public class Mapping_OPERA_REPORT_TO_SUN_DETAIL : ControllerBase
     {
-        private IOPERA_REPORT_SUN_HDR _oPERA_REPORT_SUN_HDR;
-        public class OPERA_REPORT_SUN_HDR_ViewModel
+        private IOPERA_REPORT_SUN_DETAIL _oPERA_REPORT_SUN_DETAIL;
+        public class OPERA_REPORT_SUN_DETAIL_ViewModel
         {
             public int Id { get; set; }
 
@@ -40,20 +40,20 @@ namespace ACT.Controllers
 
             public string MapWithOPERA { get; set; }
         }
-        public Mapping_OPERA_REPORT_TO_SUN_HDR(IOPERA_REPORT_SUN_HDR oPERA_REPORT_SUN_HDR)
+
+        public Mapping_OPERA_REPORT_TO_SUN_DETAIL(IOPERA_REPORT_SUN_DETAIL oPERA_REPORT_SUN_DETAIL)
         {
-            this._oPERA_REPORT_SUN_HDR = oPERA_REPORT_SUN_HDR;
+            this._oPERA_REPORT_SUN_DETAIL = oPERA_REPORT_SUN_DETAIL;
         }
 
-
-        [HttpGet("GetOperaReportSunHdr")]
-        public List<OPERA_REPORT_SUN_HDR_ViewModel> GetOperaReportSunHdr()
+        [HttpGet("GetOperaReportSunDetail")]
+        public List<OPERA_REPORT_SUN_DETAIL_ViewModel> GetOperaReportSunDetail()
         {
-            List<OPERA_REPORT_SUN_HDR_ViewModel> oPERA_REPORT_SUN_HDR_ViewModels = new List<OPERA_REPORT_SUN_HDR_ViewModel>();
+            List<OPERA_REPORT_SUN_DETAIL_ViewModel> oPERA_REPORT_SUN_DETAIL_ViewModels = new List<OPERA_REPORT_SUN_DETAIL_ViewModel>();
 
-            foreach (OPERA_REPORT_SUN_HDR_Model o in _oPERA_REPORT_SUN_HDR.Get_OPERA_REPORT_SUN_HDR_s())
+            foreach (OPERA_REPORT_SUN_DETAIL_Model o in _oPERA_REPORT_SUN_DETAIL.Get_OPERA_REPORT_SUN_DETAIL_s())
             {
-                OPERA_REPORT_SUN_HDR_ViewModel oPERA_REPORT_SUN_HDR_ViewModel = new OPERA_REPORT_SUN_HDR_ViewModel()
+                OPERA_REPORT_SUN_DETAIL_ViewModel oPERA_REPORT_SUN_DETAIL_ViewModel = new OPERA_REPORT_SUN_DETAIL_ViewModel()
                 {
                     Id = o.Id,
                     SunAttribute = o.SunAttribute,
@@ -66,21 +66,22 @@ namespace ACT.Controllers
                     DecimalValue = o.DecimalValue,
                     DoubleValue = o.DoubleValue,
                     MapWithOPERA = o.MapWithOPERA
+
                 };
-                oPERA_REPORT_SUN_HDR_ViewModels.Add(oPERA_REPORT_SUN_HDR_ViewModel);
+                oPERA_REPORT_SUN_DETAIL_ViewModels.Add(oPERA_REPORT_SUN_DETAIL_ViewModel);
             }
 
-            return oPERA_REPORT_SUN_HDR_ViewModels;
+            return oPERA_REPORT_SUN_DETAIL_ViewModels;
         }
 
-        [HttpPost("UpdateOperaReportSunHdr")]
-        public async Task UpdateOperaReportSunHdr(List<OPERA_REPORT_SUN_HDR_ViewModel> oPERA_REPORT_SUN_HDR_ViewModels)
+        [HttpPost("UpdateOperaReportSunDetail")]
+        public async Task UpdateOperaReportSunDetail(List<OPERA_REPORT_SUN_DETAIL_ViewModel> oPERA_REPORT_SUN_DETAIL_ViewModels)
         {
-            List<OPERA_REPORT_SUN_HDR_Model> oPERA_REPORT_SUN_HDR_s = new List<OPERA_REPORT_SUN_HDR_Model>();
-            
-            foreach (OPERA_REPORT_SUN_HDR_ViewModel o in oPERA_REPORT_SUN_HDR_ViewModels)
+            List<OPERA_REPORT_SUN_DETAIL_Model> oPERA_REPORT_SUN_DETAIL_s = new List<OPERA_REPORT_SUN_DETAIL_Model>();
+
+            foreach (OPERA_REPORT_SUN_DETAIL_ViewModel o in oPERA_REPORT_SUN_DETAIL_ViewModels)
             {
-                OPERA_REPORT_SUN_HDR_Model oPERA_REPORT_SUN_HDR = new OPERA_REPORT_SUN_HDR_Model()
+                OPERA_REPORT_SUN_DETAIL_Model oPERA_REPORT_SUN_HDR = new OPERA_REPORT_SUN_DETAIL_Model()
                 {
                     SunAttribute = o.SunAttribute,
                     IsConst = o.IsConst,
@@ -92,21 +93,19 @@ namespace ACT.Controllers
                     DecimalValue = o.DecimalValue,
                     DoubleValue = o.DoubleValue,
                     MapWithOPERA = o.MapWithOPERA
+
                 };
-                oPERA_REPORT_SUN_HDR_s.Add(oPERA_REPORT_SUN_HDR);
+                oPERA_REPORT_SUN_DETAIL_s.Add(oPERA_REPORT_SUN_HDR);
             }
-            await _oPERA_REPORT_SUN_HDR.Update_OPERA_REPORT_SUN_HDR(oPERA_REPORT_SUN_HDR_s);
+            await _oPERA_REPORT_SUN_DETAIL.Update_OPERA_REPORT_SUN_DETAIL(oPERA_REPORT_SUN_DETAIL_s);
         }
 
 
         [HttpPost("LoadDefaults")]
         public async Task LoadDefaults()
         {
-           
-            await _oPERA_REPORT_SUN_HDR.LoadDefaults();
+
+            await _oPERA_REPORT_SUN_DETAIL.LoadDefaults();
         }
-
-
     }
 }
-
