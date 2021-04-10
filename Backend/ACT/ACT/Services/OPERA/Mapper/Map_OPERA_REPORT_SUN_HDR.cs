@@ -42,8 +42,6 @@ namespace ACT.Services.OPERA.Mapper
 
             }
 
-            // get fitst row of the operaReport
-            // Create the HDR Row
 
             DataRow firstOperaRow = operaReport.Rows[0];
 

@@ -1,7 +1,9 @@
 ﻿using ACT.DataModels;
+using Serilog;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -17,11 +19,68 @@ namespace ACT.Services.SUNDbAccess
 
         public void InsertToDetail(DataTable sun_DETAIL_Rows)
         {
-            string connectionString = _sUN_Configuration.ConnectionsString;
+            int Id = new int();
+            string tablename = "PK1_PSTG_DETAIL";
+            List<string> columnNames = new List<string>();
+            List<string> multiInsertion = new List<string>();
 
-            // TODO - Insert the rows to the database
+            //string nInsert = string.Join(",", values);
 
-            throw new NotImplementedException();
+
+            foreach (DataRow dataRow in sun_DETAIL_Rows.Rows)
+            {
+                List<object> values = new List<object>();
+
+                foreach (DataColumn dataColumn in sun_DETAIL_Rows.Columns)
+                {
+
+                    if(dataRow == sun_DETAIL_Rows.Rows[0]) { columnNames.Add(dataColumn.ColumnName); }
+                    
+
+                    object v = dataRow[dataColumn];
+
+                    if (v.GetType() == typeof(String))
+                    {
+                        string currentValue = (string)v;
+                        if (currentValue.Contains("GETDATE()"))
+                        {
+                            values.Add(currentValue);
+                        }
+                        else
+                        {
+                            currentValue = "'" + currentValue + "'";
+                            values.Add(currentValue);
+                        }
+
+                    }
+                    else
+                    {
+                        values.Add(v);
+                    }
+
+                }
+
+                string rowInsertion = string.Format(string.Join(",", values));
+                multiInsertion.Add(rowInsertion);
+            }
+
+           
+
+
+
+            string InsertQuery = string.Format("insert into " + tablename + " ({0}) VALUES ({1})  ;", string.Join(",", columnNames), string.Join("),(",multiInsertion));
+
+            using (SqlConnection con = new SqlConnection(_sUN_Configuration.ConnectionsString))
+            {
+                using (SqlCommand cmd = new SqlCommand(InsertQuery, con))
+                {
+
+                    con.Open();
+                    cmd.ExecuteScalar();
+                    con.Close();
+                }
+
+            }
         }
     }
 }

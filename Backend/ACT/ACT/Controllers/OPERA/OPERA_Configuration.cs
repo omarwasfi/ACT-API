@@ -88,6 +88,18 @@ namespace ACT.Controllers
             await _opera_Configuration.UpdateNumberOfLinesToBeIgnoredAtTheBeggining(NumberOfLinesToBeIgnoredAtTheBeginning);
         }
 
+        [HttpGet("GetNumberOfLinesToBeIgnoredAtTheEnd")]
+        public int GetNumberOfLinesToBeIgnoredAtTheEnd()
+        {
+            return _opera_Configuration.GetOperaConfiguration().NumberOfLinesToBeIgnoredAtTheEnd;
+        }
+
+        [HttpPost("UpdateNumberOfLinesToBeIgnoredAtTheEnd")]
+        public async Task UpdateNumberOfLinesToBeIgnoredAtTheEnd(int NumberOfLinesToBeIgnoredAtTheEnd)
+        {
+            await _opera_Configuration.UpdateNumberOfLinesToBeIgnoredAtTheEnd(NumberOfLinesToBeIgnoredAtTheEnd);
+        }
+
         [HttpPost("LoadDefaults")]
         public async Task LoadDefaults()
         {
