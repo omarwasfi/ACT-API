@@ -24,7 +24,7 @@ namespace ACT.Controllers
         [HttpPost("Execute")]
         public async Task Execute()
         {
-           await _executeOpera.Execute();
+           await _executeOpera.ManualExecute();
         }
     }
 }

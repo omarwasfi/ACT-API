@@ -25,6 +25,9 @@ using ACT.Services.ApiDbAccess.HRMS;
 using ACT.Services.ApiDbAccess.HRMS_REPORT;
 using ACT.Services.Execute;
 using ACT.Services.ApiDbAccess.OPERA_SUN;
+using Quartz;
+using System.Collections.Specialized;
+using Quartz.Impl;
 
 namespace ACT
 {
@@ -48,6 +51,9 @@ namespace ACT
                        .AllowAnyHeader();
             }));
 
+            services.AddSingleton(provider => GetScheduler());
+
+
             services.AddDbContext<ApiDbContext>(options =>
               options
               .UseSqlite(
@@ -68,7 +74,8 @@ namespace ACT
 
             services.AddScoped<IExecuteOpera, ExecuteOpera>();
 
-            
+            //services.AddHostedService<ExecuteOperaWorker>();
+
 
 
             services.AddControllers();
@@ -134,6 +141,21 @@ namespace ACT
             {
                 endpoints.MapControllers();
             });
+        }
+
+        private IScheduler GetScheduler()
+        {
+            var properties = new NameValueCollection
+            {
+                ["quartz.scheduler.instanceName"] = "QuartzWithCore",
+                ["quartz.threadPool.type"] = "Quartz.Simpl.SimpleThreadPool, Quartz",
+                ["quartz.threadPool.threadCount"] = "3",
+                ["quartz.jobStore.type"] = "Quartz.Simpl.RAMJobStore, Quartz",
+            };
+            var schedulerFactory = new StdSchedulerFactory();
+            var scheduler = schedulerFactory.GetScheduler().Result;
+            scheduler.Start();
+            return scheduler;
         }
     }
 }

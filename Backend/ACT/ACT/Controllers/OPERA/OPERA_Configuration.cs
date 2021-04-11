@@ -62,16 +62,9 @@ namespace ACT.Controllers
         [HttpPost("UpdateCycleTime")]
         public async Task UpdateCycleTime(operaCycleTimeViewModel cycleTimeViewModel)
         {
-            if (cycleTimeViewModel.Hour != 0 && cycleTimeViewModel.Min != 0)
-            {
-                DateTime cycleTime = new DateTime(1,1,1,hour: cycleTimeViewModel.Hour, minute: cycleTimeViewModel.Min,1);
-                await _opera_Configuration.UpdateCycleTime(cycleTime);
-            }
-            else
-            {
-                throw new System.Web.Http.HttpResponseException(HttpStatusCode.BadRequest);
-            }
-
+            DateTime cycleTime = new DateTime(1, 1, 1, hour: cycleTimeViewModel.Hour, minute: cycleTimeViewModel.Min, 1);
+            await _opera_Configuration.UpdateCycleTime(cycleTime);
+         
 
         }
 

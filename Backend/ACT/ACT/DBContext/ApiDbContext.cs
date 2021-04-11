@@ -47,7 +47,7 @@ namespace ACT.DBContext
             base.OnModelCreating(builder);
 
 
-            builder.Entity<HRMS_Configuration_Model>()
+            builder.Entity<HRMS_Configuration_Model>() 
                .HasMany(o => o.Columns)
                .WithOne(s => s.HRMS_Configuration)
                .OnDelete(DeleteBehavior.SetNull);

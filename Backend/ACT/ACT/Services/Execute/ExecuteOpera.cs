@@ -6,15 +6,21 @@ using ACT.Services.ApiDbAccess.SUN;
 using ACT.Services.OPERA.Mapper;
 using ACT.Services.OPERA.Reader;
 using ACT.Services.SUNDbAccess;
+using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.Extensions.Hosting;
+using Quartz;
+using Quartz.Spi;
+using Serilog;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace ACT.Services.Execute
 {
-    public class ExecuteOpera : IExecuteOpera
+    public class ExecuteOpera : IExecuteOpera 
     {
         private ApiDbContext _apiDbContext;
 
@@ -30,6 +36,7 @@ namespace ACT.Services.Execute
 
         private IHDR _hDR;
         private IDETAIL _dETAIL;
+
 
 
         public ExecuteOpera(ApiDbContext apiDbContext)
@@ -56,7 +63,7 @@ namespace ACT.Services.Execute
         /// MapOperaToSunDETAIL(HDR_Id) - Get DataTable with the number of rows in the operaDataTable
         /// Call DETAIL To insert operaDataTable
         /// </summary>
-        public async Task Execute()
+        public async Task ManualExecute()
         {
             DataTable operaReportTable = readOpera();
             
@@ -69,6 +76,76 @@ namespace ACT.Services.Execute
             _dETAIL.InsertToDetail(sun_DETAIL_Rows);
 
         }
+
+        public async Task WorkerExecute()
+        {
+            
+                Log.Information("Executing opera.......");
+                //await ManualExecute();
+            
+            
+        }
+
+        public DateTime GetOperaNextStartTime()
+        {
+            DateTime startAt = new DateTime(
+              year: DateTime.Now.Year,
+              month: DateTime.Now.Month,
+              day: DateTime.Now.Day,
+              hour: _opera_Configuration.GetOperaConfiguration().CycleTime.Hour,
+              minute: _opera_Configuration.GetOperaConfiguration().CycleTime.Minute,
+              0
+              );
+            
+            int result = DateTime.Compare(startAt, DateTime.Now);
+
+            if (result < 0 )
+            {
+                startAt = startAt.AddDays(1);
+            }
+            else if (result == 0)
+            {
+                startAt = startAt.AddSeconds(5);
+            }
+
+                return startAt;
+        }
+
+        //public async Task StartAsync(CancellationToken cancellationToken)
+        //{
+        //    while (!cancellationToken.IsCancellationRequested)
+        //    {
+        //        Log.Information("Executing opera.......");
+
+        //    }
+        //}
+
+        //public async Task StopAsync(CancellationToken cancellationToken)
+        //{
+        //    throw new NotImplementedException();
+        //}
+
+
+        /*public Task StartAsync(CancellationToken cancellationToken)
+        {
+            timer = new Timer(o =>
+            {
+                Log.Information("Executing Opera");
+            }
+            ,null,TimeSpan.Zero,TimeSpan.FromSeconds(5)
+                );
+
+            return Task.CompletedTask;
+        }
+
+     
+
+        public void Dispose()
+        {
+            throw new NotImplementedException();
+        }*/
+
+
 
         private DataTable readOpera()
         {
@@ -85,5 +162,6 @@ namespace ACT.Services.Execute
             return _map_OPERA_REPORT_SUN_DERAIL.Map(operaReportTable, _oPERA_REPORT_SUN_DETAIL.Get_OPERA_REPORT_SUN_DETAIL_s(), PSTG_HDR_ID);
         }
 
+       
     }
 }
