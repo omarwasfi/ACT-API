@@ -7,6 +7,7 @@ using ACT.Services.OPERA.Mapper;
 using ACT.Services.OPERA.Reader;
 using ACT.Services.SUNDbAccess;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Quartz;
 using Quartz.Spi;
@@ -56,6 +57,9 @@ namespace ACT.Services.Execute
             _dETAIL = new DETAIL(_sun_Configuration.GetSunConfiguration());
         }
 
+     
+
+
         /// <summary>
         /// ReadOpera - get operaDataTable
         /// MapOperaToSunHDR - Get DataTable with one row 
@@ -65,24 +69,29 @@ namespace ACT.Services.Execute
         /// </summary>
         public async Task ManualExecute()
         {
+            Log.Information("Reading Opera file.");
             DataTable operaReportTable = readOpera();
+            
             
             DataTable sun_HDR_Table = mapOperaWithSunHDR(operaReportTable);
 
+            Log.Information("Inserting to Sun HDR.");
             int PSTG_HDR_ID = _hDR.InsertToHDR(sun_HDR_Table);
 
             DataTable sun_DETAIL_Rows = mapOperaWithSunDETAIL(operaReportTable,PSTG_HDR_ID);
 
+            Log.Information("Inserting to Sun DETAIL.");
             _dETAIL.InsertToDetail(sun_DETAIL_Rows);
 
         }
 
         public async Task WorkerExecute()
         {
-            
-                Log.Information("Executing opera.......");
-                //await ManualExecute();
-            
+           
+
+            await ManualExecute();
+
+            Log.Information("Opera has been executed successfully.");
             
         }
 

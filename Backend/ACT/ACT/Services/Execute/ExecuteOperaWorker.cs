@@ -33,31 +33,37 @@ namespace ACT.Services.Execute
         public Task StartAsync(CancellationToken cancellationToken)
         {
 
-            DateTime startAt = new DateTime();
             using (IServiceScope scope = _provider.CreateScope())
             {
                 _executeOpera = new ExecuteOpera(scope.ServiceProvider.GetRequiredService<ApiDbContext>());
-                startAt = _executeOpera.GetOperaNextStartTime();
+
+                DateTime startAt = _executeOpera.GetOperaNextStartTime();
+                TimeSpan timeLeftToStart = startAt.Subtract(DateTime.Now);
+                Log.Information("Time Left to execute opera is : " + timeLeftToStart.ToString());
+
+                _timer = new Timer(DoWork, null, TimeSpan.Zero,
+                 TimeSpan.FromDays(1));
+
+                return Task.CompletedTask;
             }
            
          
-            TimeSpan timeLeftToStart = startAt.Subtract(DateTime.Now);
-            Log.Information("Time Left to execute opera is : " + timeLeftToStart.ToString());
-
-            _timer = new Timer(DoWork, null, timeLeftToStart,
-             TimeSpan.FromDays(1));
-
-            return Task.CompletedTask;
+       
 
         }
 
         private void DoWork(object state)
         {
-           
+            using (IServiceScope scope = _provider.CreateScope())
+            {
+                Log.Information("Executing Opera..");
+               
+                _executeOpera = new ExecuteOpera(scope.ServiceProvider.GetRequiredService<ApiDbContext>());
 
-            Log.Information("Executing Opera..");
+                _executeOpera.WorkerExecute();
+            }
 
-            _executeOpera.WorkerExecute();
+
         }
 
 
