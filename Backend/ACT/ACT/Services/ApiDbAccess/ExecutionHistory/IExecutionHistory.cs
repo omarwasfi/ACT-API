@@ -11,5 +11,7 @@ namespace ACT.Services.ApiDbAccess
         public Task<List<ExecutionHistory_Model>> GetExecutionHistory();
 
         public Task AddAnExecutionHistory(ExecutionHistory_Model executionHistory);
+
+        public Task DeleteExecution(int executionHistoryId);
     }
 }

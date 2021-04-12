@@ -9,5 +9,8 @@ namespace ACT.Services.SUNDbAccess
     public interface IDETAIL
     {
         public void InsertToDetail(DataTable sun_DETAIL_Rows);
+
+        public Task DeleteRecords(int hdrId);
+
     }
 }

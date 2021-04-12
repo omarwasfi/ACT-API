@@ -82,5 +82,30 @@ namespace ACT.Services.SUNDbAccess
 
             }
         }
+
+        public async Task DeleteRecords(int hdrId)
+        {
+            string InsertQuery = "Delete from PK1_PSTG_DETAIL where PSTG_HDR_ID = " + hdrId + ";";
+            try
+            {
+                using (SqlConnection con = new SqlConnection(_sUN_Configuration.ConnectionsString))
+                {
+                    using (SqlCommand cmd = new SqlCommand(InsertQuery, con))
+                    {
+
+                        con.Open();
+                        cmd.ExecuteScalar();
+                        con.Close();
+                    }
+
+                }
+                Log.Information("All PK1_PSTG_DETAIL records with the PSTG_HDR_ID : " + hdrId + " Has been deleted");
+
+            }
+            catch (SqlException ex)
+            {
+                Log.Error(ex.ToString());
+            }
+        }
     }
 }

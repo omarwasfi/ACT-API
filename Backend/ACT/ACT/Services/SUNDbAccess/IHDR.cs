@@ -10,5 +10,8 @@ namespace ACT.Services.SUNDbAccess
     {
         
         public int InsertToHDR(DataTable hdrDataRow);
+
+        public Task DeleteRecords(int hdrId);
+
     }
 }

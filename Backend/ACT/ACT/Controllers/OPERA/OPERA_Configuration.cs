@@ -75,11 +75,6 @@ namespace ACT.Controllers
         }
 
 
-        [HttpPost("UpdateNumberOfLinesToBeIgnoredAtTheBeginning")]
-        public async Task UpdateNumberOfLinesToBeIgnoredAtTheBeginning(int NumberOfLinesToBeIgnoredAtTheBeginning)
-        {
-            await _opera_Configuration.UpdateNumberOfLinesToBeIgnoredAtTheBeggining(NumberOfLinesToBeIgnoredAtTheBeginning);
-        }
 
         [HttpGet("GetNumberOfLinesToBeIgnoredAtTheEnd")]
         public int GetNumberOfLinesToBeIgnoredAtTheEnd()
@@ -87,11 +82,15 @@ namespace ACT.Controllers
             return _opera_Configuration.GetOperaConfiguration().NumberOfLinesToBeIgnoredAtTheEnd;
         }
 
-        [HttpPost("UpdateNumberOfLinesToBeIgnoredAtTheEnd")]
-        public async Task UpdateNumberOfLinesToBeIgnoredAtTheEnd(int NumberOfLinesToBeIgnoredAtTheEnd)
+
+        [HttpPost("UpdateNumberOfLinesToBeIgnored")]
+        public async Task UpdateNumberOfLinesToBeIgnored(int NumberOfLinesToBeIgnoredAtTheBeginning, int NumberOfLinesToBeIgnoredAtTheEnd)
         {
+            await _opera_Configuration.UpdateNumberOfLinesToBeIgnoredAtTheBeggining(NumberOfLinesToBeIgnoredAtTheBeginning);
             await _opera_Configuration.UpdateNumberOfLinesToBeIgnoredAtTheEnd(NumberOfLinesToBeIgnoredAtTheEnd);
+
         }
+
 
         [HttpPost("LoadDefaults")]
         public async Task LoadDefaults()
