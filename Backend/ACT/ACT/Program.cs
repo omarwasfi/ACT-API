@@ -54,6 +54,7 @@ namespace ACT
                 }).ConfigureServices(services =>
                 {
                     services.AddHostedService<ExecuteOperaWorker>();
+                    services.AddHostedService<ExecuteHRMSWorker>();
                 });
     }
 

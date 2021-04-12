@@ -2105,3 +2105,95 @@
 {"Timestamp":"2021-04-12T12:51:33.0922916+02:00","Level":"Information","MessageTemplate":"Inserting to Sun DETAIL."}
 {"Timestamp":"2021-04-12T12:51:56.5053078+02:00","Level":"Information","MessageTemplate":"HRMS has been executed successfully."}
 {"Timestamp":"2021-04-12T12:51:56.5065811+02:00","Level":"Information","MessageTemplate":"HTTP {RequestMethod} {RequestPath} responded {StatusCode} in {Elapsed:0.0000} ms","Properties":{"RequestMethod":"POST","RequestPath":"/HrmsManualExecute/Execute","StatusCode":200,"Elapsed":104141.6821,"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware"},"Renderings":{"Elapsed":[{"Format":"0.0000","Rendering":"104141.6821"}]}}
+{"Timestamp":"2021-04-12T14:33:00.0223980+02:00","Level":"Information","MessageTemplate":"API Starting up"}
+{"Timestamp":"2021-04-12T14:33:01.2408470+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-12T14:33:02.8569148+02:00","Level":"Warning","MessageTemplate":"The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.","Properties":{"EventId":{"Id":10103,"Name":"Microsoft.EntityFrameworkCore.Query.FirstWithoutOrderByAndFilterWarning"},"SourceContext":"Microsoft.EntityFrameworkCore.Query"}}
+{"Timestamp":"2021-04-12T14:33:03.2479677+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-12T14:33:03.2822649+02:00","Level":"Information","MessageTemplate":"Returning OPERA's Configurations."}
+{"Timestamp":"2021-04-12T14:33:03.2873438+02:00","Level":"Warning","MessageTemplate":"The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.","Properties":{"EventId":{"Id":10103,"Name":"Microsoft.EntityFrameworkCore.Query.FirstWithoutOrderByAndFilterWarning"},"SourceContext":"Microsoft.EntityFrameworkCore.Query"}}
+{"Timestamp":"2021-04-12T14:33:03.3239875+02:00","Level":"Information","MessageTemplate":"Returning OPERA's Configurations."}
+{"Timestamp":"2021-04-12T14:33:03.3294034+02:00","Level":"Information","MessageTemplate":"Time Left to execute opera is : 07:02:56.6710158"}
+{"Timestamp":"2021-04-12T14:33:03.7440660+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-12T14:33:03.7820817+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-12T14:33:03.7877093+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-12T14:33:03.7893208+02:00","Level":"Warning","MessageTemplate":"The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.","Properties":{"EventId":{"Id":10103,"Name":"Microsoft.EntityFrameworkCore.Query.FirstWithoutOrderByAndFilterWarning"},"SourceContext":"Microsoft.EntityFrameworkCore.Query"}}
+{"Timestamp":"2021-04-12T14:33:03.8061931+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-12T14:33:03.8103969+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-12T14:33:03.8142285+02:00","Level":"Information","MessageTemplate":"Time Left to execute Hrms is : 18.10:27:56.1857946"}
+{"Timestamp":"2021-04-12T14:35:12.8653837+02:00","Level":"Information","MessageTemplate":"API Starting up"}
+{"Timestamp":"2021-04-12T14:35:14.1377022+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-12T14:35:15.2931517+02:00","Level":"Warning","MessageTemplate":"The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.","Properties":{"EventId":{"Id":10103,"Name":"Microsoft.EntityFrameworkCore.Query.FirstWithoutOrderByAndFilterWarning"},"SourceContext":"Microsoft.EntityFrameworkCore.Query"}}
+{"Timestamp":"2021-04-12T14:35:15.6122041+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-12T14:35:15.6181979+02:00","Level":"Information","MessageTemplate":"Returning OPERA's Configurations."}
+{"Timestamp":"2021-04-12T14:35:15.6195339+02:00","Level":"Warning","MessageTemplate":"The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.","Properties":{"EventId":{"Id":10103,"Name":"Microsoft.EntityFrameworkCore.Query.FirstWithoutOrderByAndFilterWarning"},"SourceContext":"Microsoft.EntityFrameworkCore.Query"}}
+{"Timestamp":"2021-04-12T14:35:15.6471901+02:00","Level":"Information","MessageTemplate":"Returning OPERA's Configurations."}
+{"Timestamp":"2021-04-12T14:35:15.6521228+02:00","Level":"Information","MessageTemplate":"Time Left to execute opera is : 07:00:44.3480566"}
+{"Timestamp":"2021-04-12T14:35:15.9741409+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-12T14:35:16.0112570+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-12T14:35:16.0167527+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-12T14:35:16.0181930+02:00","Level":"Warning","MessageTemplate":"The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.","Properties":{"EventId":{"Id":10103,"Name":"Microsoft.EntityFrameworkCore.Query.FirstWithoutOrderByAndFilterWarning"},"SourceContext":"Microsoft.EntityFrameworkCore.Query"}}
+{"Timestamp":"2021-04-12T14:35:16.0456332+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-12T14:35:16.0487408+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-12T14:35:16.0537743+02:00","Level":"Information","MessageTemplate":"Time Left to execute Hrms is : 18 Days , 10 Hours And 25"}
+{"Timestamp":"2021-04-12T14:36:06.3470309+02:00","Level":"Information","MessageTemplate":"OPERA's CycleTime Has been Updated Successfully."}
+{"Timestamp":"2021-04-12T14:36:06.3521237+02:00","Level":"Information","MessageTemplate":"HTTP {RequestMethod} {RequestPath} responded {StatusCode} in {Elapsed:0.0000} ms","Properties":{"RequestMethod":"POST","RequestPath":"/Hrms/UpdateCycleTime","StatusCode":200,"Elapsed":497.5327,"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware"},"Renderings":{"Elapsed":[{"Format":"0.0000","Rendering":"497.5327"}]}}
+{"Timestamp":"2021-04-12T14:36:09.1803237+02:00","Level":"Information","MessageTemplate":"auto Execute Hrms stoped"}
+{"Timestamp":"2021-04-12T14:36:09.2125939+02:00","Level":"Information","MessageTemplate":"auto Execute opera stoped"}
+{"Timestamp":"2021-04-12T14:36:12.5609099+02:00","Level":"Information","MessageTemplate":"API Starting up"}
+{"Timestamp":"2021-04-12T14:36:13.7411386+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-12T14:36:14.8728076+02:00","Level":"Warning","MessageTemplate":"The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.","Properties":{"EventId":{"Id":10103,"Name":"Microsoft.EntityFrameworkCore.Query.FirstWithoutOrderByAndFilterWarning"},"SourceContext":"Microsoft.EntityFrameworkCore.Query"}}
+{"Timestamp":"2021-04-12T14:36:15.2316434+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-12T14:36:15.2394032+02:00","Level":"Information","MessageTemplate":"Returning OPERA's Configurations."}
+{"Timestamp":"2021-04-12T14:36:15.2410980+02:00","Level":"Warning","MessageTemplate":"The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.","Properties":{"EventId":{"Id":10103,"Name":"Microsoft.EntityFrameworkCore.Query.FirstWithoutOrderByAndFilterWarning"},"SourceContext":"Microsoft.EntityFrameworkCore.Query"}}
+{"Timestamp":"2021-04-12T14:36:15.2684547+02:00","Level":"Information","MessageTemplate":"Returning OPERA's Configurations."}
+{"Timestamp":"2021-04-12T14:36:15.2718432+02:00","Level":"Information","MessageTemplate":"Time Left to execute opera is : 06:59:44.7283484"}
+{"Timestamp":"2021-04-12T14:36:15.5890059+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-12T14:36:15.6167339+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-12T14:36:15.6208014+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-12T14:36:15.6219828+02:00","Level":"Warning","MessageTemplate":"The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.","Properties":{"EventId":{"Id":10103,"Name":"Microsoft.EntityFrameworkCore.Query.FirstWithoutOrderByAndFilterWarning"},"SourceContext":"Microsoft.EntityFrameworkCore.Query"}}
+{"Timestamp":"2021-04-12T14:36:15.6351876+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-12T14:36:15.6378060+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-12T14:36:15.6403875+02:00","Level":"Information","MessageTemplate":"Time Left to execute Hrms is : 29 Days , 23 Hours And 59"}
+{"Timestamp":"2021-04-12T14:37:06.1012644+02:00","Level":"Information","MessageTemplate":"OPERA's CycleTime Has been Updated Successfully."}
+{"Timestamp":"2021-04-12T14:37:06.1055600+02:00","Level":"Information","MessageTemplate":"HTTP {RequestMethod} {RequestPath} responded {StatusCode} in {Elapsed:0.0000} ms","Properties":{"RequestMethod":"POST","RequestPath":"/Hrms/UpdateCycleTime","StatusCode":200,"Elapsed":472.4011,"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware"},"Renderings":{"Elapsed":[{"Format":"0.0000","Rendering":"472.4011"}]}}
+{"Timestamp":"2021-04-12T14:37:09.5243580+02:00","Level":"Information","MessageTemplate":"auto Execute Hrms stoped"}
+{"Timestamp":"2021-04-12T14:37:09.5475327+02:00","Level":"Information","MessageTemplate":"auto Execute opera stoped"}
+{"Timestamp":"2021-04-12T14:37:13.0726858+02:00","Level":"Information","MessageTemplate":"API Starting up"}
+{"Timestamp":"2021-04-12T14:37:14.1938159+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-12T14:37:15.2995525+02:00","Level":"Warning","MessageTemplate":"The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.","Properties":{"EventId":{"Id":10103,"Name":"Microsoft.EntityFrameworkCore.Query.FirstWithoutOrderByAndFilterWarning"},"SourceContext":"Microsoft.EntityFrameworkCore.Query"}}
+{"Timestamp":"2021-04-12T14:37:15.6450647+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-12T14:37:15.6495569+02:00","Level":"Information","MessageTemplate":"Returning OPERA's Configurations."}
+{"Timestamp":"2021-04-12T14:37:15.6508278+02:00","Level":"Warning","MessageTemplate":"The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.","Properties":{"EventId":{"Id":10103,"Name":"Microsoft.EntityFrameworkCore.Query.FirstWithoutOrderByAndFilterWarning"},"SourceContext":"Microsoft.EntityFrameworkCore.Query"}}
+{"Timestamp":"2021-04-12T14:37:15.6797062+02:00","Level":"Information","MessageTemplate":"Returning OPERA's Configurations."}
+{"Timestamp":"2021-04-12T14:37:15.6835603+02:00","Level":"Information","MessageTemplate":"Time Left to execute opera is : 06:58:44.3166402"}
+{"Timestamp":"2021-04-12T14:37:16.0302418+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-12T14:37:16.0734338+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-12T14:37:16.0766086+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-12T14:37:16.0791126+02:00","Level":"Warning","MessageTemplate":"The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.","Properties":{"EventId":{"Id":10103,"Name":"Microsoft.EntityFrameworkCore.Query.FirstWithoutOrderByAndFilterWarning"},"SourceContext":"Microsoft.EntityFrameworkCore.Query"}}
+{"Timestamp":"2021-04-12T14:37:16.1034187+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-12T14:37:16.1094011+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-12T14:37:16.1154415+02:00","Level":"Information","MessageTemplate":"Time Left to execute Hrms is : 0 Days , 0 Hours And 0"}
+{"Timestamp":"2021-04-12T14:38:02.4789130+02:00","Level":"Information","MessageTemplate":"Executing Hrms.."}
+{"Timestamp":"2021-04-12T14:38:10.1737626+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-12T14:38:14.9337003+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-12T14:38:24.4545041+02:00","Level":"Information","MessageTemplate":"Reading HRMS Table."}
+{"Timestamp":"2021-04-12T14:38:25.8391940+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-12T14:38:36.6418733+02:00","Level":"Information","MessageTemplate":"Inserting to Sun HDR."}
+{"Timestamp":"2021-04-12T14:38:41.0360748+02:00","Level":"Information","MessageTemplate":"Inserting to Sun DETAIL."}
+{"Timestamp":"2021-04-12T14:38:42.9485054+02:00","Level":"Information","MessageTemplate":"HRMS has been executed successfully."}
+{"Timestamp":"2021-04-12T14:38:42.9495402+02:00","Level":"Information","MessageTemplate":"HRMS has been executed successfully."}
+{"Timestamp":"2021-04-12T14:40:51.6664276+02:00","Level":"Information","MessageTemplate":"API Starting up"}
+{"Timestamp":"2021-04-12T14:40:53.0959322+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-12T14:40:54.1852752+02:00","Level":"Warning","MessageTemplate":"The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.","Properties":{"EventId":{"Id":10103,"Name":"Microsoft.EntityFrameworkCore.Query.FirstWithoutOrderByAndFilterWarning"},"SourceContext":"Microsoft.EntityFrameworkCore.Query"}}
+{"Timestamp":"2021-04-12T14:40:54.5251347+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-12T14:40:54.5301736+02:00","Level":"Information","MessageTemplate":"Returning OPERA's Configurations."}
+{"Timestamp":"2021-04-12T14:40:54.5314799+02:00","Level":"Warning","MessageTemplate":"The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.","Properties":{"EventId":{"Id":10103,"Name":"Microsoft.EntityFrameworkCore.Query.FirstWithoutOrderByAndFilterWarning"},"SourceContext":"Microsoft.EntityFrameworkCore.Query"}}
+{"Timestamp":"2021-04-12T14:40:54.5582818+02:00","Level":"Information","MessageTemplate":"Returning OPERA's Configurations."}
+{"Timestamp":"2021-04-12T14:40:54.5624491+02:00","Level":"Information","MessageTemplate":"Time Left to execute opera is : 06:55:05.4379282"}
+{"Timestamp":"2021-04-12T14:40:54.8913816+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-12T14:40:54.9351101+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-12T14:40:54.9394424+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-12T14:40:54.9419393+02:00","Level":"Warning","MessageTemplate":"The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.","Properties":{"EventId":{"Id":10103,"Name":"Microsoft.EntityFrameworkCore.Query.FirstWithoutOrderByAndFilterWarning"},"SourceContext":"Microsoft.EntityFrameworkCore.Query"}}
+{"Timestamp":"2021-04-12T14:40:54.9595180+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-12T14:40:54.9648129+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-12T14:40:54.9687611+02:00","Level":"Information","MessageTemplate":"Time Left to execute Hrms is : 29 Days , 23 Hours And 57 Minutes."}
