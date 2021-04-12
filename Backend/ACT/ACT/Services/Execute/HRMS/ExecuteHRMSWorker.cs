@@ -34,14 +34,27 @@ namespace ACT.Services.Execute
 
             using (IServiceScope scope = _provider.CreateScope())
             {
-                _executeHrms = new ExecuteHRMS(scope.ServiceProvider.GetRequiredService<ApiDbContext>());
+                DateTime startAt;
+                try
+                {
+                    _executeHrms = new ExecuteHRMS(scope.ServiceProvider.GetRequiredService<ApiDbContext>());
 
-                DateTime startAt = _executeHrms.GetHRMSNextStartTime();
-                TimeSpan timeLeftToStart = startAt.Subtract(DateTime.Now);
-                Log.Information("Time Left to execute Hrms is : " + timeLeftToStart.Days.ToString() + " Days , " + timeLeftToStart.Hours.ToString() + " Hours And " + timeLeftToStart.Minutes.ToString() + " Minutes.");
+                    startAt = _executeHrms.GetHRMSNextStartTime();
 
-                _timer = new Timer(DoWork, null, timeLeftToStart,
-                 TimeSpan.FromDays(28));
+                    TimeSpan timeLeftToStart = startAt.Subtract(DateTime.Now);
+                    Log.Information("Time Left to execute Hrms is : " + timeLeftToStart.Days.ToString() + " Days , " + timeLeftToStart.Hours.ToString() + " Hours And " + timeLeftToStart.Minutes.ToString() + " Minutes.");
+
+                    _timer = new Timer(DoWork, null, timeLeftToStart,
+                     TimeSpan.FromDays(28));
+                }
+                catch
+                {
+                    //startAt = DateTime.Now.AddYears(100);
+
+                    Log.Error("The Configurations has not completed.. ");
+                    Log.Information("Please Complete the configurations and restart the API.");
+                }
+
 
                 return Task.CompletedTask;
             }
@@ -55,11 +68,20 @@ namespace ACT.Services.Execute
         {
             using (IServiceScope scope = _provider.CreateScope())
             {
-                Log.Information("Executing Hrms..");
+                try
+                {
+                    Log.Information("Executing Opera..");
 
-                _executeHrms = new ExecuteHRMS(scope.ServiceProvider.GetRequiredService<ApiDbContext>());
+                    _executeHrms = new ExecuteHRMS(scope.ServiceProvider.GetRequiredService<ApiDbContext>());
 
-                _executeHrms.WorkerExecute();
+                    _executeHrms.WorkerExecute();
+                }
+                catch
+                {
+
+                    Log.Error("Configutaions error !! ");
+                    Log.Information("Please setup the configurations again and restart the API.");
+                }
             }
 
 

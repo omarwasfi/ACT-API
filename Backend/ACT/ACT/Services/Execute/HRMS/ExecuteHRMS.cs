@@ -1,4 +1,6 @@
-﻿using ACT.DBContext;
+﻿using ACT.DataModels;
+using ACT.DBContext;
+using ACT.Services.ApiDbAccess;
 using ACT.Services.ApiDbAccess.HRMS;
 using ACT.Services.ApiDbAccess.HRMS_SUN;
 using ACT.Services.ApiDbAccess.SUN;
@@ -26,6 +28,7 @@ namespace ACT.Services.Execute
         private IHRMS_REPORT_SUN_HDR _hRMS_REPORT_SUN_HDR;
         private IHRMS_REPORT_SUN_DETAIL _hRMS_REPORT_SUN_DETAIL;
 
+        private IExecutionHistory _executionHistory;
 
 
         private IHDR _hDR;
@@ -43,7 +46,7 @@ namespace ACT.Services.Execute
             _map_HRMS_REPORT_SUN_DETAIL = new Map_HRMS_REPORT_SUN_DETAIL();
             _map_HRMS_REPORT_SUN_HDR = new Map_HRMS_REPORT_SUN_HDR();
 
-
+            _executionHistory = new ExecutionHistory(apiDbContext);
 
             _hDR = new HDR(_sun_Configuration.GetSunConfiguration());
             _dETAIL = new DETAIL(_sun_Configuration.GetSunConfiguration());
@@ -75,19 +78,23 @@ namespace ACT.Services.Execute
 
         public async Task ManualExecute()
         {
-            Log.Information("Reading HRMS Table.");
+            Log.Information("Reading HRMS Table..");
             DataTable hrmsDataTable = _read_HRMS_REPORT.ReadHRMS(_hRMS_Configuration.GetHRMSConfiguration());
 
             DataTable sun_HDR_Table = mapHrmsWithSunHDR(hrmsDataTable);
 
-            Log.Information("Inserting to Sun HDR.");
+            Log.Information("Inserting to Sun HDR..");
             int PSTG_HDR_ID = _hDR.InsertToHDR(sun_HDR_Table);
 
             DataTable sun_DETAIL_Rows = mapHrmsWithSunDETAIL(hrmsDataTable, PSTG_HDR_ID);
 
-            Log.Information("Inserting to Sun DETAIL.");
+            Log.Information("Inserting to Sun DETAIL..");
 
             _dETAIL.InsertToDetail(sun_DETAIL_Rows);
+            
+            Log.Information("Saving the operation..");
+
+            await _executionHistory.AddAnExecutionHistory(new ExecutionHistory_Model() { HDRId = PSTG_HDR_ID, Type = "HRMS", DateTime = DateTime.Now });
 
             Log.Information("HRMS has been executed successfully.");
 

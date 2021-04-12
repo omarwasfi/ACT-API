@@ -35,14 +35,25 @@ namespace ACT.Services.Execute
 
             using (IServiceScope scope = _provider.CreateScope())
             {
-                _executeOpera = new ExecuteOpera(scope.ServiceProvider.GetRequiredService<ApiDbContext>());
+                DateTime startAt;
+                try
+                {
+                    _executeOpera = new ExecuteOpera(scope.ServiceProvider.GetRequiredService<ApiDbContext>());
 
-                DateTime startAt = _executeOpera.GetOperaNextStartTime();
-                TimeSpan timeLeftToStart = startAt.Subtract(DateTime.Now);
-                Log.Information("Time Left to execute opera is : " + timeLeftToStart.ToString());
+                    startAt = _executeOpera.GetOperaNextStartTime();
 
-                _timer = new Timer(DoWork, null, timeLeftToStart,
-                 TimeSpan.FromDays(1));
+                    TimeSpan timeLeftToStart = startAt.Subtract(DateTime.Now);
+                    Log.Information("Time Left to execute Hrms is : " + timeLeftToStart.Days.ToString() + " Days , " + timeLeftToStart.Hours.ToString() + " Hours And " + timeLeftToStart.Minutes.ToString() + " Minutes.");
+
+                    _timer = new Timer(DoWork, null, timeLeftToStart,
+                     TimeSpan.FromDays(28));
+                }
+                catch
+                {
+
+                    Log.Error("The Configurations has not been completed.. ");
+                    Log.Information("Please Complete the configurations and restart the API.");
+                }
 
                 return Task.CompletedTask;
             }
@@ -56,11 +67,21 @@ namespace ACT.Services.Execute
         {
             using (IServiceScope scope = _provider.CreateScope())
             {
-                Log.Information("Executing Opera..");
-               
-                _executeOpera = new ExecuteOpera(scope.ServiceProvider.GetRequiredService<ApiDbContext>());
+                try
+                {
+                    Log.Information("Executing Opera..");
 
-                _executeOpera.WorkerExecute();
+                    _executeOpera = new ExecuteOpera(scope.ServiceProvider.GetRequiredService<ApiDbContext>());
+
+                    _executeOpera.WorkerExecute();
+                }
+                catch
+                {
+
+                    Log.Error("Configutaions error !! ");
+                    Log.Information("Please setup the configurations again and restart the API.");
+                }
+              
             }
 
 

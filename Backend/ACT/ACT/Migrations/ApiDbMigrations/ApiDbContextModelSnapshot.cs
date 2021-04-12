@@ -16,6 +16,26 @@ namespace ACT.Migrations.ApiDbMigrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "5.0.4");
 
+            modelBuilder.Entity("ACT.DataModels.ExecutionHistory_Model", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("DateTime")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("HDRId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Type")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ExecutionHistories");
+                });
+
             modelBuilder.Entity("ACT.DataModels.HRMS_Configuration_Model", b =>
                 {
                     b.Property<int>("Id")

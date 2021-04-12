@@ -27,6 +27,7 @@ using ACT.Services.Execute;
 using ACT.Services.ApiDbAccess.OPERA_SUN;
 using System.Collections.Specialized;
 using ACT.Services.ApiDbAccess.HRMS_SUN;
+using ACT.Services.ApiDbAccess;
 
 namespace ACT
 {
@@ -76,6 +77,8 @@ namespace ACT
 
             services.AddScoped<IExecuteOpera, ExecuteOpera>();
             services.AddScoped<IExecuteHRMS, ExecuteHRMS>();
+
+            services.AddScoped<IExecutionHistory, ExecutionHistory>();
 
             services.AddSingleton<IHostedService, ExecuteOperaWorker>();
 

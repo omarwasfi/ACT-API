@@ -34,8 +34,7 @@ namespace ACT.DBContext
         public DbSet<SUN_Configuration_Model> SUN_Configurations { get; set; }
         public DbSet<SUN_HDR_Column_Model> SUN_HDR_Columns { get; set; }
         public DbSet<SUN_DETAIL_Column_Model> SUN_DETAIL_Columns { get; set; }
-
-
+        public DbSet<ExecutionHistory_Model> ExecutionHistories { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder

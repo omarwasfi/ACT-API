@@ -1,5 +1,6 @@
 ﻿using ACT.DataModels;
 using ACT.DBContext;
+using ACT.Services.ApiDbAccess;
 using ACT.Services.ApiDbAccess.OPERA;
 using ACT.Services.ApiDbAccess.OPERA_SUN;
 using ACT.Services.ApiDbAccess.SUN;
@@ -33,6 +34,9 @@ namespace ACT.Services.Execute
         private IOPERA_REPORT_SUN_HDR _oPERA_REPORT_SUN_HDR;
         private IOPERA_REPORT_SUN_DETAIL _oPERA_REPORT_SUN_DETAIL;
 
+        private IExecutionHistory _executionHistory;
+
+
         private IHDR _hDR;
         private IDETAIL _dETAIL;
 
@@ -50,7 +54,10 @@ namespace ACT.Services.Execute
             
             _oPERA_REPORT_SUN_HDR = new OPERA_REPORT_SUN_HDR(apiDbContext);
             _oPERA_REPORT_SUN_DETAIL = new OPERA_REPORT_SUN_DETAIL(apiDbContext);
-            
+
+            _executionHistory = new ExecutionHistory(apiDbContext);
+
+
             _hDR = new HDR(_sun_Configuration.GetSunConfiguration());
             _dETAIL = new DETAIL(_sun_Configuration.GetSunConfiguration());
         }
@@ -60,21 +67,28 @@ namespace ACT.Services.Execute
 
         public async Task ManualExecute()
         {
-            Log.Information("Reading Opera file.");
+            Log.Information("Reading Opera file..");
             DataTable operaReportTable = readOpera();
             
             
             DataTable sun_HDR_Table = mapOperaWithSunHDR(operaReportTable);
 
-            Log.Information("Inserting to Sun HDR.");
+            Log.Information("Inserting to Sun HDR..");
             int PSTG_HDR_ID = _hDR.InsertToHDR(sun_HDR_Table);
 
             DataTable sun_DETAIL_Rows = mapOperaWithSunDETAIL(operaReportTable,PSTG_HDR_ID);
 
-            Log.Information("Inserting to Sun DETAIL.");
+            Log.Information("Inserting to Sun DETAIL..");
             _dETAIL.InsertToDetail(sun_DETAIL_Rows);
 
+            Log.Information("Saving the operation..");
+
+            await _executionHistory.AddAnExecutionHistory(new ExecutionHistory_Model() { HDRId = PSTG_HDR_ID, Type = "OPERA", DateTime = DateTime.Now });
+
             Log.Information("Opera has been executed successfully.");
+
+
+
 
         }
 
