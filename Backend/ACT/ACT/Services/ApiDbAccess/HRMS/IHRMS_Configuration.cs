@@ -18,5 +18,8 @@ namespace ACT.Services.ApiDbAccess.HRMS
 
         public Task UpdateCycleTime(DateTime cycleTime);
 
+        public Task LoadDefault();
+
+
     }
 }

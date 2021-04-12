@@ -77,5 +77,12 @@ namespace ACT.Controllers
 
 
         }
+
+
+        [HttpPost("LoadDefaults")]
+        public async Task LoadDefaults()
+        {
+            await _hrms_Configuration.LoadDefault();
+        }
     }
 }
