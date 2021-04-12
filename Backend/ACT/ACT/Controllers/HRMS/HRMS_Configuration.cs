@@ -65,7 +65,7 @@ namespace ACT.Controllers
         [HttpPost("UpdateCycleTime")]
         public async Task UpdateCycleTime(hrmsCycleTimeViewModel cycleTimeViewModel)
         {
-            if (cycleTimeViewModel.Day != 0 && cycleTimeViewModel.Hour != 0 && cycleTimeViewModel.Min != 0)
+            if (cycleTimeViewModel.Day != 0)
             {
                 DateTime cycleTime = new DateTime(1, 1, day: cycleTimeViewModel.Day, hour: cycleTimeViewModel.Hour, minute: cycleTimeViewModel.Min, 1);
                 await _hrms_Configuration.UpdateCycleTime(cycleTime);

@@ -25,9 +25,8 @@ using ACT.Services.ApiDbAccess.HRMS;
 using ACT.Services.ApiDbAccess.HRMS_REPORT;
 using ACT.Services.Execute;
 using ACT.Services.ApiDbAccess.OPERA_SUN;
-using Quartz;
 using System.Collections.Specialized;
-using Quartz.Impl;
+using ACT.Services.ApiDbAccess.HRMS_SUN;
 
 namespace ACT
 {
@@ -51,7 +50,6 @@ namespace ACT
                        .AllowAnyHeader();
             }));
 
-            services.AddSingleton(provider => GetScheduler());
 
 
             services.AddDbContext<ApiDbContext>(options =>
@@ -71,10 +69,15 @@ namespace ACT
 
             services.AddScoped<IOPERA_REPORT_SUN_HDR, OPERA_REPORT_SUN_HDR>();
             services.AddScoped<IOPERA_REPORT_SUN_DETAIL, OPERA_REPORT_SUN_DETAIL>();
+           
+            services.AddScoped<IHRMS_REPORT_SUN_HDR, HRMS_REPORT_SUN_HDR>();
+            services.AddScoped<IHRMS_REPORT_SUN_DETAIL, HRMS_REPORT_SUN_DETAIL>();
+
 
             services.AddScoped<IExecuteOpera, ExecuteOpera>();
+            services.AddScoped<IExecuteHRMS, ExecuteHRMS>();
 
-            //services.AddHostedService<ExecuteOperaWorker>();
+            services.AddSingleton<IHostedService, ExecuteOperaWorker>();
 
 
 
@@ -143,19 +146,6 @@ namespace ACT
             });
         }
 
-        private IScheduler GetScheduler()
-        {
-            var properties = new NameValueCollection
-            {
-                ["quartz.scheduler.instanceName"] = "QuartzWithCore",
-                ["quartz.threadPool.type"] = "Quartz.Simpl.SimpleThreadPool, Quartz",
-                ["quartz.threadPool.threadCount"] = "3",
-                ["quartz.jobStore.type"] = "Quartz.Simpl.RAMJobStore, Quartz",
-            };
-            var schedulerFactory = new StdSchedulerFactory();
-            var scheduler = schedulerFactory.GetScheduler().Result;
-            scheduler.Start();
-            return scheduler;
-        }
+      
     }
 }

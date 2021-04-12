@@ -41,7 +41,7 @@ namespace ACT.Services.Execute
                 TimeSpan timeLeftToStart = startAt.Subtract(DateTime.Now);
                 Log.Information("Time Left to execute opera is : " + timeLeftToStart.ToString());
 
-                _timer = new Timer(DoWork, null, TimeSpan.Zero,
+                _timer = new Timer(DoWork, null, timeLeftToStart,
                  TimeSpan.FromDays(1));
 
                 return Task.CompletedTask;

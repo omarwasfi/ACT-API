@@ -9,8 +9,6 @@ using ACT.Services.SUNDbAccess;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Quartz;
-using Quartz.Spi;
 using Serilog;
 using System;
 using System.Collections.Generic;
@@ -60,13 +58,6 @@ namespace ACT.Services.Execute
      
 
 
-        /// <summary>
-        /// ReadOpera - get operaDataTable
-        /// MapOperaToSunHDR - Get DataTable with one row 
-        /// Call HDR And Get the id
-        /// MapOperaToSunDETAIL(HDR_Id) - Get DataTable with the number of rows in the operaDataTable
-        /// Call DETAIL To insert operaDataTable
-        /// </summary>
         public async Task ManualExecute()
         {
             Log.Information("Reading Opera file.");
@@ -82,6 +73,8 @@ namespace ACT.Services.Execute
 
             Log.Information("Inserting to Sun DETAIL.");
             _dETAIL.InsertToDetail(sun_DETAIL_Rows);
+
+            Log.Information("Opera has been executed successfully.");
 
         }
 
@@ -120,42 +113,7 @@ namespace ACT.Services.Execute
                 return startAt;
         }
 
-        //public async Task StartAsync(CancellationToken cancellationToken)
-        //{
-        //    while (!cancellationToken.IsCancellationRequested)
-        //    {
-        //        Log.Information("Executing opera.......");
-
-        //    }
-        //}
-
-        //public async Task StopAsync(CancellationToken cancellationToken)
-        //{
-        //    throw new NotImplementedException();
-        //}
-
-
-        /*public Task StartAsync(CancellationToken cancellationToken)
-        {
-            timer = new Timer(o =>
-            {
-                Log.Information("Executing Opera");
-            }
-            ,null,TimeSpan.Zero,TimeSpan.FromSeconds(5)
-                );
-
-            return Task.CompletedTask;
-        }
-
-     
-
-        public void Dispose()
-        {
-            throw new NotImplementedException();
-        }*/
-
-
-
+        
         private DataTable readOpera()
         {
             return _read_OPERA_REPORT.ReadOpera(_opera_Configuration.GetOperaConfiguration());
