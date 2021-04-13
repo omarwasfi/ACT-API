@@ -2896,3 +2896,373 @@
 {"Timestamp":"2021-04-12T19:57:13.0146070+02:00","Level":"Information","MessageTemplate":"All PK1_PSTG_DETAIL records with the PSTG_HDR_ID : 56 Has been deleted"}
 {"Timestamp":"2021-04-12T19:57:13.0203974+02:00","Level":"Information","MessageTemplate":"All PK1_PSTG_HDR records with the Id : 56 Has been deleted"}
 {"Timestamp":"2021-04-12T19:57:13.2015817+02:00","Level":"Information","MessageTemplate":"HTTP {RequestMethod} {RequestPath} responded {StatusCode} in {Elapsed:0.0000} ms","Properties":{"RequestMethod":"POST","RequestPath":"/ExecutionHistory/Delete?executionHistoryId=10","StatusCode":200,"Elapsed":9826.2268,"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware"},"Renderings":{"Elapsed":[{"Format":"0.0000","Rendering":"9826.2268"}]}}
+{"Timestamp":"2021-04-13T08:17:07.1026859+02:00","Level":"Information","MessageTemplate":"API Starting up"}
+{"Timestamp":"2021-04-13T08:17:08.5866272+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:17:10.1122718+02:00","Level":"Warning","MessageTemplate":"The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.","Properties":{"EventId":{"Id":10103,"Name":"Microsoft.EntityFrameworkCore.Query.FirstWithoutOrderByAndFilterWarning"},"SourceContext":"Microsoft.EntityFrameworkCore.Query"}}
+{"Timestamp":"2021-04-13T08:17:10.7991025+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:17:10.8056674+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:17:10.8096572+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:17:10.8130083+02:00","Level":"Information","MessageTemplate":"Returning OPERA's Configurations."}
+{"Timestamp":"2021-04-13T08:17:10.8156159+02:00","Level":"Warning","MessageTemplate":"The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.","Properties":{"EventId":{"Id":10103,"Name":"Microsoft.EntityFrameworkCore.Query.FirstWithoutOrderByAndFilterWarning"},"SourceContext":"Microsoft.EntityFrameworkCore.Query"}}
+{"Timestamp":"2021-04-13T08:17:10.8506424+02:00","Level":"Information","MessageTemplate":"Returning OPERA's Configurations."}
+{"Timestamp":"2021-04-13T08:17:10.8543920+02:00","Level":"Information","MessageTemplate":"Time Left to execute Hrms is : 0 Days , 16 Hours And 43 Minutes."}
+{"Timestamp":"2021-04-13T08:17:11.4844023+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:17:11.5154029+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:17:11.5187376+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:17:11.5242768+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:17:11.5277125+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:17:11.5303000+02:00","Level":"Warning","MessageTemplate":"The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.","Properties":{"EventId":{"Id":10103,"Name":"Microsoft.EntityFrameworkCore.Query.FirstWithoutOrderByAndFilterWarning"},"SourceContext":"Microsoft.EntityFrameworkCore.Query"}}
+{"Timestamp":"2021-04-13T08:17:11.5460616+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:17:11.5508858+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:17:11.5558080+02:00","Level":"Information","MessageTemplate":"Time Left to execute Hrms is : 17 Days , 16 Hours And 43 Minutes."}
+{"Timestamp":"2021-04-13T08:17:20.5435648+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:17:20.5598415+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:17:20.5686645+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:17:20.5742644+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:17:20.5896960+02:00","Level":"Information","MessageTemplate":"Reading HRMS Table.."}
+{"Timestamp":"2021-04-13T08:17:20.5906993+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:17:23.2207818+02:00","Level":"Information","MessageTemplate":"Inserting to Sun HDR.."}
+{"Timestamp":"2021-04-13T08:17:25.3588385+02:00","Level":"Information","MessageTemplate":"Inserting to Sun DETAIL.."}
+{"Timestamp":"2021-04-13T08:17:27.9858472+02:00","Level":"Information","MessageTemplate":"Saving the operation.."}
+{"Timestamp":"2021-04-13T08:17:28.2778831+02:00","Level":"Information","MessageTemplate":"HRMS has been executed successfully."}
+{"Timestamp":"2021-04-13T08:17:28.2891202+02:00","Level":"Information","MessageTemplate":"HTTP {RequestMethod} {RequestPath} responded {StatusCode} in {Elapsed:0.0000} ms","Properties":{"RequestMethod":"POST","RequestPath":"/HrmsManualExecute/Execute","StatusCode":200,"Elapsed":7808.1182,"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware"},"Renderings":{"Elapsed":[{"Format":"0.0000","Rendering":"7808.1182"}]}}
+{"Timestamp":"2021-04-13T08:17:32.4820547+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:17:32.4891606+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:17:32.5507533+02:00","Level":"Information","MessageTemplate":"HTTP {RequestMethod} {RequestPath} responded {StatusCode} in {Elapsed:0.0000} ms","Properties":{"RequestMethod":"GET","RequestPath":"/ExecutionHistory/Get","StatusCode":200,"Elapsed":81.554,"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware"},"Renderings":{"Elapsed":[{"Format":"0.0000","Rendering":"81.5540"}]}}
+{"Timestamp":"2021-04-13T08:17:41.4639327+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:17:41.4802615+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:17:41.5049829+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:17:41.5221290+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:17:41.5335052+02:00","Level":"Information","MessageTemplate":"Reading HRMS Table.."}
+{"Timestamp":"2021-04-13T08:17:41.5488853+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:17:41.5745623+02:00","Level":"Information","MessageTemplate":"Inserting to Sun HDR.."}
+{"Timestamp":"2021-04-13T08:17:41.6340211+02:00","Level":"Information","MessageTemplate":"Inserting to Sun DETAIL.."}
+{"Timestamp":"2021-04-13T08:17:43.6371340+02:00","Level":"Information","MessageTemplate":"Saving the operation.."}
+{"Timestamp":"2021-04-13T08:17:43.6639624+02:00","Level":"Information","MessageTemplate":"HRMS has been executed successfully."}
+{"Timestamp":"2021-04-13T08:17:43.6664730+02:00","Level":"Information","MessageTemplate":"HTTP {RequestMethod} {RequestPath} responded {StatusCode} in {Elapsed:0.0000} ms","Properties":{"RequestMethod":"POST","RequestPath":"/HrmsManualExecute/Execute","StatusCode":200,"Elapsed":2206.9445,"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware"},"Renderings":{"Elapsed":[{"Format":"0.0000","Rendering":"2206.9445"}]}}
+{"Timestamp":"2021-04-13T08:18:10.1682113+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:18:10.1851968+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:18:10.1912211+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:18:10.2006106+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:18:10.2046244+02:00","Level":"Information","MessageTemplate":"Reading HRMS Table.."}
+{"Timestamp":"2021-04-13T08:18:10.2059824+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:18:10.2214648+02:00","Level":"Information","MessageTemplate":"Inserting to Sun HDR.."}
+{"Timestamp":"2021-04-13T08:18:10.2699048+02:00","Level":"Information","MessageTemplate":"Inserting to Sun DETAIL.."}
+{"Timestamp":"2021-04-13T08:18:12.1473111+02:00","Level":"Information","MessageTemplate":"Saving the operation.."}
+{"Timestamp":"2021-04-13T08:18:12.1701222+02:00","Level":"Information","MessageTemplate":"HRMS has been executed successfully."}
+{"Timestamp":"2021-04-13T08:18:12.1712146+02:00","Level":"Information","MessageTemplate":"HTTP {RequestMethod} {RequestPath} responded {StatusCode} in {Elapsed:0.0000} ms","Properties":{"RequestMethod":"POST","RequestPath":"/HrmsManualExecute/Execute","StatusCode":200,"Elapsed":2007.3496,"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware"},"Renderings":{"Elapsed":[{"Format":"0.0000","Rendering":"2007.3496"}]}}
+{"Timestamp":"2021-04-13T08:18:21.7694377+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:18:21.7874232+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:18:21.8153298+02:00","Level":"Information","MessageTemplate":"HTTP {RequestMethod} {RequestPath} responded {StatusCode} in {Elapsed:0.0000} ms","Properties":{"RequestMethod":"GET","RequestPath":"/ExecutionHistory/Get","StatusCode":200,"Elapsed":48.6844,"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware"},"Renderings":{"Elapsed":[{"Format":"0.0000","Rendering":"48.6844"}]}}
+{"Timestamp":"2021-04-13T08:24:17.7899572+02:00","Level":"Information","MessageTemplate":"API Starting up"}
+{"Timestamp":"2021-04-13T08:24:19.2882818+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:24:20.7132632+02:00","Level":"Warning","MessageTemplate":"The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.","Properties":{"EventId":{"Id":10103,"Name":"Microsoft.EntityFrameworkCore.Query.FirstWithoutOrderByAndFilterWarning"},"SourceContext":"Microsoft.EntityFrameworkCore.Query"}}
+{"Timestamp":"2021-04-13T08:24:21.1180112+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:24:21.1241712+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:24:21.1296443+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:24:21.1338032+02:00","Level":"Information","MessageTemplate":"Returning OPERA's Configurations."}
+{"Timestamp":"2021-04-13T08:24:21.1353070+02:00","Level":"Warning","MessageTemplate":"The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.","Properties":{"EventId":{"Id":10103,"Name":"Microsoft.EntityFrameworkCore.Query.FirstWithoutOrderByAndFilterWarning"},"SourceContext":"Microsoft.EntityFrameworkCore.Query"}}
+{"Timestamp":"2021-04-13T08:24:21.1668228+02:00","Level":"Information","MessageTemplate":"Returning OPERA's Configurations."}
+{"Timestamp":"2021-04-13T08:24:21.1706284+02:00","Level":"Information","MessageTemplate":"Time Left to execute Hrms is : 0 Days , 16 Hours And 36 Minutes."}
+{"Timestamp":"2021-04-13T08:24:21.5235083+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:24:21.5745337+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:24:21.6035351+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:24:21.6150522+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:24:21.6197792+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:24:21.6319153+02:00","Level":"Warning","MessageTemplate":"The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.","Properties":{"EventId":{"Id":10103,"Name":"Microsoft.EntityFrameworkCore.Query.FirstWithoutOrderByAndFilterWarning"},"SourceContext":"Microsoft.EntityFrameworkCore.Query"}}
+{"Timestamp":"2021-04-13T08:24:21.6506969+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:24:21.6542968+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:24:21.6603106+02:00","Level":"Information","MessageTemplate":"Time Left to execute Hrms is : 17 Days , 16 Hours And 36 Minutes."}
+{"Timestamp":"2021-04-13T08:29:14.8907358+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:29:14.9142120+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:29:14.9194268+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:29:14.9253853+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:29:14.9708384+02:00","Level":"Information","MessageTemplate":"Reading HRMS Table.."}
+{"Timestamp":"2021-04-13T08:29:14.9735899+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:29:17.5077404+02:00","Level":"Information","MessageTemplate":"Inserting to Sun HDR.."}
+{"Timestamp":"2021-04-13T08:29:19.6328660+02:00","Level":"Information","MessageTemplate":"Inserting to Sun DETAIL.."}
+{"Timestamp":"2021-04-13T08:29:21.6919609+02:00","Level":"Information","MessageTemplate":"Saving the operation.."}
+{"Timestamp":"2021-04-13T08:29:21.9980080+02:00","Level":"Information","MessageTemplate":"HRMS has been executed successfully."}
+{"Timestamp":"2021-04-13T08:29:22.0029831+02:00","Level":"Information","MessageTemplate":"HTTP {RequestMethod} {RequestPath} responded {StatusCode} in {Elapsed:0.0000} ms","Properties":{"RequestMethod":"POST","RequestPath":"/HrmsManualExecute/Execute","StatusCode":200,"Elapsed":7174.8275,"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware"},"Renderings":{"Elapsed":[{"Format":"0.0000","Rendering":"7174.8275"}]}}
+{"Timestamp":"2021-04-13T08:29:44.0136955+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:29:44.0284487+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:29:44.0476400+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:29:44.0603196+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:29:44.0635170+02:00","Level":"Information","MessageTemplate":"Reading HRMS Table.."}
+{"Timestamp":"2021-04-13T08:29:44.0646551+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:29:44.0921902+02:00","Level":"Information","MessageTemplate":"Inserting to Sun HDR.."}
+{"Timestamp":"2021-04-13T08:29:44.1588516+02:00","Level":"Information","MessageTemplate":"Inserting to Sun DETAIL.."}
+{"Timestamp":"2021-04-13T08:29:46.4835900+02:00","Level":"Information","MessageTemplate":"Saving the operation.."}
+{"Timestamp":"2021-04-13T08:29:46.5072129+02:00","Level":"Information","MessageTemplate":"HRMS has been executed successfully."}
+{"Timestamp":"2021-04-13T08:29:46.5085292+02:00","Level":"Information","MessageTemplate":"HTTP {RequestMethod} {RequestPath} responded {StatusCode} in {Elapsed:0.0000} ms","Properties":{"RequestMethod":"POST","RequestPath":"/HrmsManualExecute/Execute","StatusCode":200,"Elapsed":2498.7249,"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware"},"Renderings":{"Elapsed":[{"Format":"0.0000","Rendering":"2498.7249"}]}}
+{"Timestamp":"2021-04-13T08:29:53.0589686+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:29:53.0883202+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:29:53.1152810+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:29:53.1553300+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:29:53.1627880+02:00","Level":"Information","MessageTemplate":"Reading Opera file.."}
+{"Timestamp":"2021-04-13T08:29:53.1664234+02:00","Level":"Information","MessageTemplate":"Returning OPERA's Configurations."}
+{"Timestamp":"2021-04-13T08:29:53.3426607+02:00","Level":"Information","MessageTemplate":"Inserting to Sun HDR.."}
+{"Timestamp":"2021-04-13T08:29:53.3918988+02:00","Level":"Information","MessageTemplate":"Inserting to Sun DETAIL.."}
+{"Timestamp":"2021-04-13T08:29:53.5792985+02:00","Level":"Information","MessageTemplate":"Saving the operation.."}
+{"Timestamp":"2021-04-13T08:29:53.6184695+02:00","Level":"Information","MessageTemplate":"Opera has been executed successfully."}
+{"Timestamp":"2021-04-13T08:29:53.6213171+02:00","Level":"Information","MessageTemplate":"HTTP {RequestMethod} {RequestPath} responded {StatusCode} in {Elapsed:0.0000} ms","Properties":{"RequestMethod":"POST","RequestPath":"/OperaManualExecute/Execute","StatusCode":200,"Elapsed":573.6008,"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware"},"Renderings":{"Elapsed":[{"Format":"0.0000","Rendering":"573.6008"}]}}
+{"Timestamp":"2021-04-13T08:29:55.0784088+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:29:55.0879052+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:29:55.0907834+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:29:55.0935524+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:29:55.0966654+02:00","Level":"Information","MessageTemplate":"Reading Opera file.."}
+{"Timestamp":"2021-04-13T08:29:55.0987424+02:00","Level":"Information","MessageTemplate":"Returning OPERA's Configurations."}
+{"Timestamp":"2021-04-13T08:29:55.1151321+02:00","Level":"Information","MessageTemplate":"Inserting to Sun HDR.."}
+{"Timestamp":"2021-04-13T08:29:55.1295525+02:00","Level":"Information","MessageTemplate":"Inserting to Sun DETAIL.."}
+{"Timestamp":"2021-04-13T08:29:55.3474806+02:00","Level":"Information","MessageTemplate":"Saving the operation.."}
+{"Timestamp":"2021-04-13T08:29:55.3734238+02:00","Level":"Information","MessageTemplate":"Opera has been executed successfully."}
+{"Timestamp":"2021-04-13T08:29:55.3763164+02:00","Level":"Information","MessageTemplate":"HTTP {RequestMethod} {RequestPath} responded {StatusCode} in {Elapsed:0.0000} ms","Properties":{"RequestMethod":"POST","RequestPath":"/OperaManualExecute/Execute","StatusCode":200,"Elapsed":298.7664,"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware"},"Renderings":{"Elapsed":[{"Format":"0.0000","Rendering":"298.7664"}]}}
+{"Timestamp":"2021-04-13T08:29:55.9373290+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:29:55.9466834+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:29:55.9562910+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:29:55.9623458+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:29:55.9697241+02:00","Level":"Information","MessageTemplate":"Reading Opera file.."}
+{"Timestamp":"2021-04-13T08:29:55.9719679+02:00","Level":"Information","MessageTemplate":"Returning OPERA's Configurations."}
+{"Timestamp":"2021-04-13T08:29:55.9959092+02:00","Level":"Information","MessageTemplate":"Inserting to Sun HDR.."}
+{"Timestamp":"2021-04-13T08:29:56.0140658+02:00","Level":"Information","MessageTemplate":"Inserting to Sun DETAIL.."}
+{"Timestamp":"2021-04-13T08:29:56.2024116+02:00","Level":"Information","MessageTemplate":"Saving the operation.."}
+{"Timestamp":"2021-04-13T08:29:56.4146687+02:00","Level":"Information","MessageTemplate":"Opera has been executed successfully."}
+{"Timestamp":"2021-04-13T08:29:56.4203174+02:00","Level":"Information","MessageTemplate":"HTTP {RequestMethod} {RequestPath} responded {StatusCode} in {Elapsed:0.0000} ms","Properties":{"RequestMethod":"POST","RequestPath":"/OperaManualExecute/Execute","StatusCode":200,"Elapsed":489.5331,"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware"},"Renderings":{"Elapsed":[{"Format":"0.0000","Rendering":"489.5331"}]}}
+{"Timestamp":"2021-04-13T08:29:57.0106859+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:29:57.0209349+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:29:57.0262713+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:29:57.0290842+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:29:57.0320310+02:00","Level":"Information","MessageTemplate":"Reading Opera file.."}
+{"Timestamp":"2021-04-13T08:29:57.0368988+02:00","Level":"Information","MessageTemplate":"Returning OPERA's Configurations."}
+{"Timestamp":"2021-04-13T08:29:57.0486155+02:00","Level":"Information","MessageTemplate":"Inserting to Sun HDR.."}
+{"Timestamp":"2021-04-13T08:29:57.0647451+02:00","Level":"Information","MessageTemplate":"Inserting to Sun DETAIL.."}
+{"Timestamp":"2021-04-13T08:29:57.3646110+02:00","Level":"Information","MessageTemplate":"Saving the operation.."}
+{"Timestamp":"2021-04-13T08:29:57.3882086+02:00","Level":"Information","MessageTemplate":"Opera has been executed successfully."}
+{"Timestamp":"2021-04-13T08:29:57.4238289+02:00","Level":"Information","MessageTemplate":"HTTP {RequestMethod} {RequestPath} responded {StatusCode} in {Elapsed:0.0000} ms","Properties":{"RequestMethod":"POST","RequestPath":"/OperaManualExecute/Execute","StatusCode":200,"Elapsed":413.951,"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware"},"Renderings":{"Elapsed":[{"Format":"0.0000","Rendering":"413.9510"}]}}
+{"Timestamp":"2021-04-13T08:30:02.4446476+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:30:02.4531103+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:30:02.5076310+02:00","Level":"Information","MessageTemplate":"HTTP {RequestMethod} {RequestPath} responded {StatusCode} in {Elapsed:0.0000} ms","Properties":{"RequestMethod":"GET","RequestPath":"/ExecutionHistory/Get","StatusCode":200,"Elapsed":68.0067,"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware"},"Renderings":{"Elapsed":[{"Format":"0.0000","Rendering":"68.0067"}]}}
+{"Timestamp":"2021-04-13T08:30:11.3206571+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:30:11.3246514+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:30:11.3285882+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:30:11.3314999+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:30:11.3373271+02:00","Level":"Information","MessageTemplate":"Reading HRMS Table.."}
+{"Timestamp":"2021-04-13T08:30:11.3379954+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:30:11.3623055+02:00","Level":"Information","MessageTemplate":"Inserting to Sun HDR.."}
+{"Timestamp":"2021-04-13T08:30:11.4145510+02:00","Level":"Information","MessageTemplate":"Inserting to Sun DETAIL.."}
+{"Timestamp":"2021-04-13T08:30:13.2278989+02:00","Level":"Information","MessageTemplate":"Saving the operation.."}
+{"Timestamp":"2021-04-13T08:30:13.2499632+02:00","Level":"Information","MessageTemplate":"HRMS has been executed successfully."}
+{"Timestamp":"2021-04-13T08:30:13.2529211+02:00","Level":"Information","MessageTemplate":"HTTP {RequestMethod} {RequestPath} responded {StatusCode} in {Elapsed:0.0000} ms","Properties":{"RequestMethod":"POST","RequestPath":"/HrmsManualExecute/Execute","StatusCode":200,"Elapsed":1933.8807,"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware"},"Renderings":{"Elapsed":[{"Format":"0.0000","Rendering":"1933.8807"}]}}
+{"Timestamp":"2021-04-13T08:30:16.6814622+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:30:16.7059354+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:30:16.7222268+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:30:16.7316915+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:30:16.7468895+02:00","Level":"Information","MessageTemplate":"Reading HRMS Table.."}
+{"Timestamp":"2021-04-13T08:30:16.7484252+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:30:16.7820848+02:00","Level":"Information","MessageTemplate":"Inserting to Sun HDR.."}
+{"Timestamp":"2021-04-13T08:30:16.8545988+02:00","Level":"Information","MessageTemplate":"Inserting to Sun DETAIL.."}
+{"Timestamp":"2021-04-13T08:30:19.1979333+02:00","Level":"Information","MessageTemplate":"Saving the operation.."}
+{"Timestamp":"2021-04-13T08:30:19.2260697+02:00","Level":"Information","MessageTemplate":"HRMS has been executed successfully."}
+{"Timestamp":"2021-04-13T08:30:19.2320625+02:00","Level":"Information","MessageTemplate":"HTTP {RequestMethod} {RequestPath} responded {StatusCode} in {Elapsed:0.0000} ms","Properties":{"RequestMethod":"POST","RequestPath":"/HrmsManualExecute/Execute","StatusCode":200,"Elapsed":2551.1644,"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware"},"Renderings":{"Elapsed":[{"Format":"0.0000","Rendering":"2551.1644"}]}}
+{"Timestamp":"2021-04-13T08:30:24.0513978+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:30:24.0633116+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:30:24.0765544+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:30:24.0793750+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:30:24.0840427+02:00","Level":"Information","MessageTemplate":"Reading HRMS Table.."}
+{"Timestamp":"2021-04-13T08:30:24.0860029+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:30:24.1196585+02:00","Level":"Information","MessageTemplate":"Inserting to Sun HDR.."}
+{"Timestamp":"2021-04-13T08:30:24.2054548+02:00","Level":"Information","MessageTemplate":"Inserting to Sun DETAIL.."}
+{"Timestamp":"2021-04-13T08:30:26.1711431+02:00","Level":"Information","MessageTemplate":"Saving the operation.."}
+{"Timestamp":"2021-04-13T08:30:26.1973748+02:00","Level":"Information","MessageTemplate":"HRMS has been executed successfully."}
+{"Timestamp":"2021-04-13T08:30:26.1981268+02:00","Level":"Information","MessageTemplate":"HTTP {RequestMethod} {RequestPath} responded {StatusCode} in {Elapsed:0.0000} ms","Properties":{"RequestMethod":"POST","RequestPath":"/HrmsManualExecute/Execute","StatusCode":200,"Elapsed":2150.562,"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware"},"Renderings":{"Elapsed":[{"Format":"0.0000","Rendering":"2150.5620"}]}}
+{"Timestamp":"2021-04-13T08:30:29.5899122+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:30:29.5984158+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:30:29.6191492+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:30:29.6258877+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:30:29.6340011+02:00","Level":"Information","MessageTemplate":"Reading HRMS Table.."}
+{"Timestamp":"2021-04-13T08:30:29.6351487+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:30:29.6473198+02:00","Level":"Information","MessageTemplate":"Inserting to Sun HDR.."}
+{"Timestamp":"2021-04-13T08:30:29.6912615+02:00","Level":"Information","MessageTemplate":"Inserting to Sun DETAIL.."}
+{"Timestamp":"2021-04-13T08:30:31.6013823+02:00","Level":"Information","MessageTemplate":"Saving the operation.."}
+{"Timestamp":"2021-04-13T08:30:31.6249229+02:00","Level":"Information","MessageTemplate":"HRMS has been executed successfully."}
+{"Timestamp":"2021-04-13T08:30:31.6279999+02:00","Level":"Information","MessageTemplate":"HTTP {RequestMethod} {RequestPath} responded {StatusCode} in {Elapsed:0.0000} ms","Properties":{"RequestMethod":"POST","RequestPath":"/HrmsManualExecute/Execute","StatusCode":200,"Elapsed":2038.8195,"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware"},"Renderings":{"Elapsed":[{"Format":"0.0000","Rendering":"2038.8195"}]}}
+{"Timestamp":"2021-04-13T08:30:33.5882928+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:30:33.6000936+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:30:33.6060706+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:30:33.6103558+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:30:33.6131318+02:00","Level":"Information","MessageTemplate":"Reading Opera file.."}
+{"Timestamp":"2021-04-13T08:30:33.6137661+02:00","Level":"Information","MessageTemplate":"Returning OPERA's Configurations."}
+{"Timestamp":"2021-04-13T08:30:33.6347012+02:00","Level":"Information","MessageTemplate":"Inserting to Sun HDR.."}
+{"Timestamp":"2021-04-13T08:30:33.6560095+02:00","Level":"Information","MessageTemplate":"Inserting to Sun DETAIL.."}
+{"Timestamp":"2021-04-13T08:30:33.8717517+02:00","Level":"Information","MessageTemplate":"Saving the operation.."}
+{"Timestamp":"2021-04-13T08:30:33.8898132+02:00","Level":"Information","MessageTemplate":"Opera has been executed successfully."}
+{"Timestamp":"2021-04-13T08:30:33.8910347+02:00","Level":"Information","MessageTemplate":"HTTP {RequestMethod} {RequestPath} responded {StatusCode} in {Elapsed:0.0000} ms","Properties":{"RequestMethod":"POST","RequestPath":"/OperaManualExecute/Execute","StatusCode":200,"Elapsed":303.2192,"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware"},"Renderings":{"Elapsed":[{"Format":"0.0000","Rendering":"303.2192"}]}}
+{"Timestamp":"2021-04-13T08:30:34.5593115+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:30:34.5883605+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:30:34.6023245+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:30:34.8134864+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:30:34.8423411+02:00","Level":"Information","MessageTemplate":"Reading Opera file.."}
+{"Timestamp":"2021-04-13T08:30:34.8465262+02:00","Level":"Information","MessageTemplate":"Returning OPERA's Configurations."}
+{"Timestamp":"2021-04-13T08:30:34.8918448+02:00","Level":"Information","MessageTemplate":"Inserting to Sun HDR.."}
+{"Timestamp":"2021-04-13T08:30:34.9051531+02:00","Level":"Information","MessageTemplate":"Inserting to Sun DETAIL.."}
+{"Timestamp":"2021-04-13T08:30:35.1718886+02:00","Level":"Information","MessageTemplate":"Saving the operation.."}
+{"Timestamp":"2021-04-13T08:30:35.2135385+02:00","Level":"Information","MessageTemplate":"Opera has been executed successfully."}
+{"Timestamp":"2021-04-13T08:30:35.2181106+02:00","Level":"Information","MessageTemplate":"HTTP {RequestMethod} {RequestPath} responded {StatusCode} in {Elapsed:0.0000} ms","Properties":{"RequestMethod":"POST","RequestPath":"/OperaManualExecute/Execute","StatusCode":200,"Elapsed":659.2821,"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware"},"Renderings":{"Elapsed":[{"Format":"0.0000","Rendering":"659.2821"}]}}
+{"Timestamp":"2021-04-13T08:30:35.6307800+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:30:35.6392072+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:30:35.6468040+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:30:35.6545267+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:30:35.6589911+02:00","Level":"Information","MessageTemplate":"Reading Opera file.."}
+{"Timestamp":"2021-04-13T08:30:35.6597579+02:00","Level":"Information","MessageTemplate":"Returning OPERA's Configurations."}
+{"Timestamp":"2021-04-13T08:30:35.6728042+02:00","Level":"Information","MessageTemplate":"Inserting to Sun HDR.."}
+{"Timestamp":"2021-04-13T08:30:35.6861962+02:00","Level":"Information","MessageTemplate":"Inserting to Sun DETAIL.."}
+{"Timestamp":"2021-04-13T08:30:35.9134938+02:00","Level":"Information","MessageTemplate":"Saving the operation.."}
+{"Timestamp":"2021-04-13T08:30:35.9335817+02:00","Level":"Information","MessageTemplate":"Opera has been executed successfully."}
+{"Timestamp":"2021-04-13T08:30:35.9346535+02:00","Level":"Information","MessageTemplate":"HTTP {RequestMethod} {RequestPath} responded {StatusCode} in {Elapsed:0.0000} ms","Properties":{"RequestMethod":"POST","RequestPath":"/OperaManualExecute/Execute","StatusCode":200,"Elapsed":304.5051,"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware"},"Renderings":{"Elapsed":[{"Format":"0.0000","Rendering":"304.5051"}]}}
+{"Timestamp":"2021-04-13T08:30:36.6424665+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:30:36.6541338+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:30:36.6713364+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:30:36.6803416+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:30:36.6883234+02:00","Level":"Information","MessageTemplate":"Reading Opera file.."}
+{"Timestamp":"2021-04-13T08:30:36.6897159+02:00","Level":"Information","MessageTemplate":"Returning OPERA's Configurations."}
+{"Timestamp":"2021-04-13T08:30:36.7103873+02:00","Level":"Information","MessageTemplate":"Inserting to Sun HDR.."}
+{"Timestamp":"2021-04-13T08:30:36.7389594+02:00","Level":"Information","MessageTemplate":"Inserting to Sun DETAIL.."}
+{"Timestamp":"2021-04-13T08:30:37.0277627+02:00","Level":"Information","MessageTemplate":"Saving the operation.."}
+{"Timestamp":"2021-04-13T08:30:37.0440324+02:00","Level":"Information","MessageTemplate":"Opera has been executed successfully."}
+{"Timestamp":"2021-04-13T08:30:37.0447659+02:00","Level":"Information","MessageTemplate":"HTTP {RequestMethod} {RequestPath} responded {StatusCode} in {Elapsed:0.0000} ms","Properties":{"RequestMethod":"POST","RequestPath":"/OperaManualExecute/Execute","StatusCode":200,"Elapsed":404.5586,"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware"},"Renderings":{"Elapsed":[{"Format":"0.0000","Rendering":"404.5586"}]}}
+{"Timestamp":"2021-04-13T08:30:37.6346156+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:30:37.6429638+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:30:37.6469616+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:30:37.6515385+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:30:37.6548965+02:00","Level":"Information","MessageTemplate":"Reading Opera file.."}
+{"Timestamp":"2021-04-13T08:30:37.6555873+02:00","Level":"Information","MessageTemplate":"Returning OPERA's Configurations."}
+{"Timestamp":"2021-04-13T08:30:37.6665689+02:00","Level":"Information","MessageTemplate":"Inserting to Sun HDR.."}
+{"Timestamp":"2021-04-13T08:30:37.6800920+02:00","Level":"Information","MessageTemplate":"Inserting to Sun DETAIL.."}
+{"Timestamp":"2021-04-13T08:30:37.8769932+02:00","Level":"Information","MessageTemplate":"Saving the operation.."}
+{"Timestamp":"2021-04-13T08:30:37.8950514+02:00","Level":"Information","MessageTemplate":"Opera has been executed successfully."}
+{"Timestamp":"2021-04-13T08:30:37.8957741+02:00","Level":"Information","MessageTemplate":"HTTP {RequestMethod} {RequestPath} responded {StatusCode} in {Elapsed:0.0000} ms","Properties":{"RequestMethod":"POST","RequestPath":"/OperaManualExecute/Execute","StatusCode":200,"Elapsed":261.6564,"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware"},"Renderings":{"Elapsed":[{"Format":"0.0000","Rendering":"261.6564"}]}}
+{"Timestamp":"2021-04-13T08:30:38.4449227+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:30:38.4623203+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:30:38.4648090+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:30:38.4732033+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:30:38.4760658+02:00","Level":"Information","MessageTemplate":"Reading Opera file.."}
+{"Timestamp":"2021-04-13T08:30:38.4767559+02:00","Level":"Information","MessageTemplate":"Returning OPERA's Configurations."}
+{"Timestamp":"2021-04-13T08:30:38.4933533+02:00","Level":"Information","MessageTemplate":"Inserting to Sun HDR.."}
+{"Timestamp":"2021-04-13T08:30:38.5050775+02:00","Level":"Information","MessageTemplate":"Inserting to Sun DETAIL.."}
+{"Timestamp":"2021-04-13T08:30:38.7853667+02:00","Level":"Information","MessageTemplate":"Saving the operation.."}
+{"Timestamp":"2021-04-13T08:30:38.8122433+02:00","Level":"Information","MessageTemplate":"Opera has been executed successfully."}
+{"Timestamp":"2021-04-13T08:30:38.8131397+02:00","Level":"Information","MessageTemplate":"HTTP {RequestMethod} {RequestPath} responded {StatusCode} in {Elapsed:0.0000} ms","Properties":{"RequestMethod":"POST","RequestPath":"/OperaManualExecute/Execute","StatusCode":200,"Elapsed":368.7436,"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware"},"Renderings":{"Elapsed":[{"Format":"0.0000","Rendering":"368.7436"}]}}
+{"Timestamp":"2021-04-13T08:30:39.3312730+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:30:39.3452845+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:30:39.3480006+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:30:39.3513918+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:30:39.3542825+02:00","Level":"Information","MessageTemplate":"Reading Opera file.."}
+{"Timestamp":"2021-04-13T08:30:39.3550046+02:00","Level":"Information","MessageTemplate":"Returning OPERA's Configurations."}
+{"Timestamp":"2021-04-13T08:30:39.3711926+02:00","Level":"Information","MessageTemplate":"Inserting to Sun HDR.."}
+{"Timestamp":"2021-04-13T08:30:39.3826133+02:00","Level":"Information","MessageTemplate":"Inserting to Sun DETAIL.."}
+{"Timestamp":"2021-04-13T08:30:39.5778691+02:00","Level":"Information","MessageTemplate":"Saving the operation.."}
+{"Timestamp":"2021-04-13T08:30:39.6045859+02:00","Level":"Information","MessageTemplate":"Opera has been executed successfully."}
+{"Timestamp":"2021-04-13T08:30:39.6053094+02:00","Level":"Information","MessageTemplate":"HTTP {RequestMethod} {RequestPath} responded {StatusCode} in {Elapsed:0.0000} ms","Properties":{"RequestMethod":"POST","RequestPath":"/OperaManualExecute/Execute","StatusCode":200,"Elapsed":284.3983,"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware"},"Renderings":{"Elapsed":[{"Format":"0.0000","Rendering":"284.3983"}]}}
+{"Timestamp":"2021-04-13T08:30:40.0947548+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:30:40.1057367+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:30:40.1099359+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:30:40.1140190+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:30:40.1205721+02:00","Level":"Information","MessageTemplate":"Reading Opera file.."}
+{"Timestamp":"2021-04-13T08:30:40.1213410+02:00","Level":"Information","MessageTemplate":"Returning OPERA's Configurations."}
+{"Timestamp":"2021-04-13T08:30:40.1334739+02:00","Level":"Information","MessageTemplate":"Inserting to Sun HDR.."}
+{"Timestamp":"2021-04-13T08:30:40.1433640+02:00","Level":"Information","MessageTemplate":"Inserting to Sun DETAIL.."}
+{"Timestamp":"2021-04-13T08:30:40.3400438+02:00","Level":"Information","MessageTemplate":"Saving the operation.."}
+{"Timestamp":"2021-04-13T08:30:40.3564904+02:00","Level":"Information","MessageTemplate":"Opera has been executed successfully."}
+{"Timestamp":"2021-04-13T08:30:40.3572058+02:00","Level":"Information","MessageTemplate":"HTTP {RequestMethod} {RequestPath} responded {StatusCode} in {Elapsed:0.0000} ms","Properties":{"RequestMethod":"POST","RequestPath":"/OperaManualExecute/Execute","StatusCode":200,"Elapsed":262.789,"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware"},"Renderings":{"Elapsed":[{"Format":"0.0000","Rendering":"262.7890"}]}}
+{"Timestamp":"2021-04-13T08:30:40.7608143+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:30:40.7704981+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:30:40.7748813+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:30:40.7782755+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:30:40.7812052+02:00","Level":"Information","MessageTemplate":"Reading Opera file.."}
+{"Timestamp":"2021-04-13T08:30:40.7834396+02:00","Level":"Information","MessageTemplate":"Returning OPERA's Configurations."}
+{"Timestamp":"2021-04-13T08:30:40.7941668+02:00","Level":"Information","MessageTemplate":"Inserting to Sun HDR.."}
+{"Timestamp":"2021-04-13T08:30:40.8066824+02:00","Level":"Information","MessageTemplate":"Inserting to Sun DETAIL.."}
+{"Timestamp":"2021-04-13T08:30:41.0654727+02:00","Level":"Information","MessageTemplate":"Saving the operation.."}
+{"Timestamp":"2021-04-13T08:30:41.1952882+02:00","Level":"Information","MessageTemplate":"Opera has been executed successfully."}
+{"Timestamp":"2021-04-13T08:30:41.1973871+02:00","Level":"Information","MessageTemplate":"HTTP {RequestMethod} {RequestPath} responded {StatusCode} in {Elapsed:0.0000} ms","Properties":{"RequestMethod":"POST","RequestPath":"/OperaManualExecute/Execute","StatusCode":200,"Elapsed":436.8902,"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware"},"Renderings":{"Elapsed":[{"Format":"0.0000","Rendering":"436.8902"}]}}
+{"Timestamp":"2021-04-13T08:30:41.5311453+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:30:41.5396717+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:30:41.5436759+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:30:41.5475306+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:30:41.5548447+02:00","Level":"Information","MessageTemplate":"Reading Opera file.."}
+{"Timestamp":"2021-04-13T08:30:41.5554524+02:00","Level":"Information","MessageTemplate":"Returning OPERA's Configurations."}
+{"Timestamp":"2021-04-13T08:30:41.5668166+02:00","Level":"Information","MessageTemplate":"Inserting to Sun HDR.."}
+{"Timestamp":"2021-04-13T08:30:41.5772890+02:00","Level":"Information","MessageTemplate":"Inserting to Sun DETAIL.."}
+{"Timestamp":"2021-04-13T08:30:41.7898527+02:00","Level":"Information","MessageTemplate":"Saving the operation.."}
+{"Timestamp":"2021-04-13T08:30:41.8083215+02:00","Level":"Information","MessageTemplate":"Opera has been executed successfully."}
+{"Timestamp":"2021-04-13T08:30:41.8091795+02:00","Level":"Information","MessageTemplate":"HTTP {RequestMethod} {RequestPath} responded {StatusCode} in {Elapsed:0.0000} ms","Properties":{"RequestMethod":"POST","RequestPath":"/OperaManualExecute/Execute","StatusCode":200,"Elapsed":278.4588,"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware"},"Renderings":{"Elapsed":[{"Format":"0.0000","Rendering":"278.4588"}]}}
+{"Timestamp":"2021-04-13T08:30:45.4379825+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:30:45.4479511+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T08:30:45.4596366+02:00","Level":"Information","MessageTemplate":"HTTP {RequestMethod} {RequestPath} responded {StatusCode} in {Elapsed:0.0000} ms","Properties":{"RequestMethod":"GET","RequestPath":"/ExecutionHistory/Get","StatusCode":200,"Elapsed":22.6868,"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware"},"Renderings":{"Elapsed":[{"Format":"0.0000","Rendering":"22.6868"}]}}
+{"Timestamp":"2021-04-13T10:04:05.6830892+02:00","Level":"Information","MessageTemplate":"API Starting up"}
+{"Timestamp":"2021-04-13T10:04:06.8122108+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T10:04:08.3718905+02:00","Level":"Warning","MessageTemplate":"The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.","Properties":{"EventId":{"Id":10103,"Name":"Microsoft.EntityFrameworkCore.Query.FirstWithoutOrderByAndFilterWarning"},"SourceContext":"Microsoft.EntityFrameworkCore.Query"}}
+{"Timestamp":"2021-04-13T10:04:08.8878459+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T10:04:08.8952718+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T10:04:08.9004983+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T10:04:08.9093709+02:00","Level":"Information","MessageTemplate":"Returning OPERA's Configurations."}
+{"Timestamp":"2021-04-13T10:04:08.9177535+02:00","Level":"Warning","MessageTemplate":"The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.","Properties":{"EventId":{"Id":10103,"Name":"Microsoft.EntityFrameworkCore.Query.FirstWithoutOrderByAndFilterWarning"},"SourceContext":"Microsoft.EntityFrameworkCore.Query"}}
+{"Timestamp":"2021-04-13T10:04:08.9717336+02:00","Level":"Information","MessageTemplate":"Returning OPERA's Configurations."}
+{"Timestamp":"2021-04-13T10:04:08.9750569+02:00","Level":"Information","MessageTemplate":"Time Left to execute Hrms is : 0 Days , 14 Hours And 56 Minutes."}
+{"Timestamp":"2021-04-13T10:04:09.4481270+02:00","Level":"Fatal","MessageTemplate":"Unable to start Kestrel.","Exception":"System.IO.IOException: Failed to bind to address https://127.0.0.1:5001: address already in use.\r\n ---> Microsoft.AspNetCore.Connections.AddressInUseException: Only one usage of each socket address (protocol/network address/port) is normally permitted.\r\n ---> System.Net.Sockets.SocketException (10048): Only one usage of each socket address (protocol/network address/port) is normally permitted.\r\n   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, String callerName)\r\n   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)\r\n   at System.Net.Sockets.Socket.Bind(EndPoint localEP)\r\n   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()\r\n   --- End of inner exception stack trace ---\r\n   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()\r\n   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)\r\n   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer.<>c__DisplayClass21_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context)\r\n   --- End of inner exception stack trace ---\r\n   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context)\r\n   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context)\r\n   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context)\r\n   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(IServerAddressesFeature addresses, KestrelServerOptions serverOptions, ILogger logger, Func`2 createBinding)\r\n   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)","Properties":{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel"}}
+{"Timestamp":"2021-04-13T10:04:09.6354332+02:00","Level":"Fatal","MessageTemplate":"API Faild to start.","Exception":"System.IO.IOException: Failed to bind to address https://127.0.0.1:5001: address already in use.\r\n ---> Microsoft.AspNetCore.Connections.AddressInUseException: Only one usage of each socket address (protocol/network address/port) is normally permitted.\r\n ---> System.Net.Sockets.SocketException (10048): Only one usage of each socket address (protocol/network address/port) is normally permitted.\r\n   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, String callerName)\r\n   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)\r\n   at System.Net.Sockets.Socket.Bind(EndPoint localEP)\r\n   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()\r\n   --- End of inner exception stack trace ---\r\n   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()\r\n   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)\r\n   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer.<>c__DisplayClass21_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context)\r\n   --- End of inner exception stack trace ---\r\n   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context)\r\n   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context)\r\n   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context)\r\n   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(IServerAddressesFeature addresses, KestrelServerOptions serverOptions, ILogger logger, Func`2 createBinding)\r\n   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)\r\n   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)\r\n   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)\r\n   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)\r\n   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)\r\n   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)\r\n   at ACT.Program.Main(String[] args) in C:\\Users\\omerw\\Documents\\GitHub\\ACT-API\\Backend\\ACT\\ACT\\Program.cs:line 33"}
+{"Timestamp":"2021-04-13T10:04:35.0337083+02:00","Level":"Information","MessageTemplate":"API Starting up"}
+{"Timestamp":"2021-04-13T10:04:35.9054721+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T10:04:37.3838754+02:00","Level":"Warning","MessageTemplate":"The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.","Properties":{"EventId":{"Id":10103,"Name":"Microsoft.EntityFrameworkCore.Query.FirstWithoutOrderByAndFilterWarning"},"SourceContext":"Microsoft.EntityFrameworkCore.Query"}}
+{"Timestamp":"2021-04-13T10:04:37.8034203+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T10:04:37.8102518+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T10:04:37.8145323+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T10:04:37.8208497+02:00","Level":"Information","MessageTemplate":"Returning OPERA's Configurations."}
+{"Timestamp":"2021-04-13T10:04:37.8221139+02:00","Level":"Warning","MessageTemplate":"The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.","Properties":{"EventId":{"Id":10103,"Name":"Microsoft.EntityFrameworkCore.Query.FirstWithoutOrderByAndFilterWarning"},"SourceContext":"Microsoft.EntityFrameworkCore.Query"}}
+{"Timestamp":"2021-04-13T10:04:37.8507271+02:00","Level":"Information","MessageTemplate":"Returning OPERA's Configurations."}
+{"Timestamp":"2021-04-13T10:04:37.8571507+02:00","Level":"Information","MessageTemplate":"Time Left to execute Hrms is : 0 Days , 14 Hours And 56 Minutes."}
+{"Timestamp":"2021-04-13T10:04:38.2437670+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T10:04:38.2864192+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T10:04:38.2907219+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T10:04:38.2954681+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T10:04:38.3010611+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T10:04:38.3027484+02:00","Level":"Warning","MessageTemplate":"The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.","Properties":{"EventId":{"Id":10103,"Name":"Microsoft.EntityFrameworkCore.Query.FirstWithoutOrderByAndFilterWarning"},"SourceContext":"Microsoft.EntityFrameworkCore.Query"}}
+{"Timestamp":"2021-04-13T10:04:38.3322294+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T10:04:38.3358429+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T10:04:38.3401941+02:00","Level":"Information","MessageTemplate":"Time Left to execute Hrms is : 17 Days , 14 Hours And 56 Minutes."}
+{"Timestamp":"2021-04-13T10:04:54.0563383+02:00","Level":"Information","MessageTemplate":"HTTP {RequestMethod} {RequestPath} responded {StatusCode} in {Elapsed:0.0000} ms","Properties":{"RequestMethod":"POST","RequestPath":"/Sun/LoadDefaults","StatusCode":200,"Elapsed":585.1614,"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware"},"Renderings":{"Elapsed":[{"Format":"0.0000","Rendering":"585.1614"}]}}
+{"Timestamp":"2021-04-13T10:05:05.0059635+02:00","Level":"Information","MessageTemplate":"Retuning SUN_DETAIL Columns..."}
+{"Timestamp":"2021-04-13T10:05:05.0468050+02:00","Level":"Information","MessageTemplate":"HTTP {RequestMethod} {RequestPath} responded {StatusCode} in {Elapsed:0.0000} ms","Properties":{"RequestMethod":"GET","RequestPath":"/Sun/Detail/GetColumns","StatusCode":200,"Elapsed":67.8755,"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware"},"Renderings":{"Elapsed":[{"Format":"0.0000","Rendering":"67.8755"}]}}
+{"Timestamp":"2021-04-13T10:05:15.4894574+02:00","Level":"Information","MessageTemplate":"Retuning SUN_HDR Columns..."}
+{"Timestamp":"2021-04-13T10:05:15.5085831+02:00","Level":"Information","MessageTemplate":"HTTP {RequestMethod} {RequestPath} responded {StatusCode} in {Elapsed:0.0000} ms","Properties":{"RequestMethod":"GET","RequestPath":"/Sun/HDR/GetColumns","StatusCode":200,"Elapsed":37.3475,"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware"},"Renderings":{"Elapsed":[{"Format":"0.0000","Rendering":"37.3475"}]}}
+{"Timestamp":"2021-04-13T10:50:47.1768370+02:00","Level":"Information","MessageTemplate":"API Starting up"}
+{"Timestamp":"2021-04-13T11:11:40.1775743+02:00","Level":"Information","MessageTemplate":"API Starting up"}
+{"Timestamp":"2021-04-13T11:11:41.4409886+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T11:11:42.5895275+02:00","Level":"Warning","MessageTemplate":"The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.","Properties":{"EventId":{"Id":10103,"Name":"Microsoft.EntityFrameworkCore.Query.FirstWithoutOrderByAndFilterWarning"},"SourceContext":"Microsoft.EntityFrameworkCore.Query"}}
+{"Timestamp":"2021-04-13T11:11:42.9242521+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T11:11:42.9299870+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T11:11:42.9333709+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T11:11:42.9378863+02:00","Level":"Information","MessageTemplate":"Returning OPERA's Configurations."}
+{"Timestamp":"2021-04-13T11:11:42.9403184+02:00","Level":"Warning","MessageTemplate":"The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.","Properties":{"EventId":{"Id":10103,"Name":"Microsoft.EntityFrameworkCore.Query.FirstWithoutOrderByAndFilterWarning"},"SourceContext":"Microsoft.EntityFrameworkCore.Query"}}
+{"Timestamp":"2021-04-13T11:11:42.9695151+02:00","Level":"Information","MessageTemplate":"Returning OPERA's Configurations."}
+{"Timestamp":"2021-04-13T11:11:42.9735216+02:00","Level":"Information","MessageTemplate":"Time Left to execute Hrms is : 0 Days , 13 Hours And 49 Minutes."}
+{"Timestamp":"2021-04-13T11:11:43.3006093+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T11:11:43.3368013+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T11:11:43.3398660+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T11:11:43.3428116+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T11:11:43.3467248+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T11:11:43.3480515+02:00","Level":"Warning","MessageTemplate":"The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.","Properties":{"EventId":{"Id":10103,"Name":"Microsoft.EntityFrameworkCore.Query.FirstWithoutOrderByAndFilterWarning"},"SourceContext":"Microsoft.EntityFrameworkCore.Query"}}
+{"Timestamp":"2021-04-13T11:11:43.3628587+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T11:11:43.3670685+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T11:11:43.3699133+02:00","Level":"Information","MessageTemplate":"Time Left to execute Hrms is : 17 Days , 13 Hours And 49 Minutes."}
+{"Timestamp":"2021-04-13T11:12:26.0825085+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T11:12:26.1278388+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T11:12:26.1318998+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T11:12:26.1352567+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T11:12:32.3730647+02:00","Level":"Information","MessageTemplate":"Reading HRMS Table.."}
+{"Timestamp":"2021-04-13T11:12:34.3703856+02:00","Level":"Information","MessageTemplate":"Returning sun's ConnectionString."}
+{"Timestamp":"2021-04-13T11:12:48.9986620+02:00","Level":"Information","MessageTemplate":"Inserting to Sun HDR.."}
+{"Timestamp":"2021-04-13T11:14:11.7012422+02:00","Level":"Information","MessageTemplate":"Inserting to Sun DETAIL.."}
+{"Timestamp":"2021-04-13T11:15:01.2976162+02:00","Level":"Information","MessageTemplate":"Saving the operation.."}
+{"Timestamp":"2021-04-13T11:15:01.5883301+02:00","Level":"Information","MessageTemplate":"HRMS has been executed successfully."}
+{"Timestamp":"2021-04-13T11:15:01.5934280+02:00","Level":"Information","MessageTemplate":"HTTP {RequestMethod} {RequestPath} responded {StatusCode} in {Elapsed:0.0000} ms","Properties":{"RequestMethod":"POST","RequestPath":"/HrmsManualExecute/Execute","StatusCode":200,"Elapsed":155571.2506,"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware"},"Renderings":{"Elapsed":[{"Format":"0.0000","Rendering":"155571.2506"}]}}
