@@ -58,6 +58,13 @@ export default function Home() {
         console.error("There was an error!", error.response.data);
       });
 
+      axios
+      .post(`${apiPath}Shutdown/blow-me-up`)
+      .then((res) => console.log(res.data))
+      .catch((error) => {
+        console.error("There was an error!", error.response.data);
+      });
+
   };
 
   return (

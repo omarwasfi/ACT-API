@@ -93,9 +93,9 @@ namespace ACT.Services.ApiDbAccess.SUN_DETAIL
                         g_HRMS_REPORT_SUN_DETAIL_s.Add(hRMS_REPORT_SUN_DETAIL_Model3);
                         break; 
                     case "datetime":
-                        OPERA_REPORT_SUN_DETAIL_Model oPERA_REPORT_SUN_DETAIL_Model4 = new OPERA_REPORT_SUN_DETAIL_Model() { SunAttribute = sUN_DETAIL_Column_Model.ColumnName, IsConst = true, ValueType = "datetime", DateTimeValue = new DateTime() };
+                        OPERA_REPORT_SUN_DETAIL_Model oPERA_REPORT_SUN_DETAIL_Model4 = new OPERA_REPORT_SUN_DETAIL_Model() { SunAttribute = sUN_DETAIL_Column_Model.ColumnName, IsConst = true, ValueType = "string", StringValue = "GETDATE()" };
                         g_OPERA_REPORT_SUN_DETAIL_s.Add(oPERA_REPORT_SUN_DETAIL_Model4);
-                        HRMS_REPORT_SUN_DETAIL_Model hRMS_REPORT_SUN_DETAIL_Model4 = new HRMS_REPORT_SUN_DETAIL_Model() { SunAttribute = sUN_DETAIL_Column_Model.ColumnName, IsConst = true, ValueType = "datetime", DateTimeValue = new DateTime() };
+                        HRMS_REPORT_SUN_DETAIL_Model hRMS_REPORT_SUN_DETAIL_Model4 = new HRMS_REPORT_SUN_DETAIL_Model() { SunAttribute = sUN_DETAIL_Column_Model.ColumnName, IsConst = true, ValueType = "string", StringValue = "GETDATE()" };
                         g_HRMS_REPORT_SUN_DETAIL_s.Add(hRMS_REPORT_SUN_DETAIL_Model4);
                         break;
                     case "double":
@@ -109,6 +109,12 @@ namespace ACT.Services.ApiDbAccess.SUN_DETAIL
                         g_OPERA_REPORT_SUN_DETAIL_s.Add(oPERA_REPORT_SUN_DETAIL_Model6);
                         HRMS_REPORT_SUN_DETAIL_Model hRMS_REPORT_SUN_DETAIL_Model6 = new HRMS_REPORT_SUN_DETAIL_Model() { SunAttribute = sUN_DETAIL_Column_Model.ColumnName, IsConst = true, ValueType = "short", ShortValue = 0 };
                         g_HRMS_REPORT_SUN_DETAIL_s.Add(hRMS_REPORT_SUN_DETAIL_Model6);
+                        break;
+                    default:
+                        OPERA_REPORT_SUN_DETAIL_Model oPERA_REPORT_SUN_DETAIL_Model7 = new OPERA_REPORT_SUN_DETAIL_Model() { SunAttribute = sUN_DETAIL_Column_Model.ColumnName, IsConst = true, ValueType = "string", StringValue = "0" };
+                        g_OPERA_REPORT_SUN_DETAIL_s.Add(oPERA_REPORT_SUN_DETAIL_Model7);
+                        HRMS_REPORT_SUN_DETAIL_Model hRMS_REPORT_SUN_DETAIL_Model7 = new HRMS_REPORT_SUN_DETAIL_Model() { SunAttribute = sUN_DETAIL_Column_Model.ColumnName, IsConst = true, ValueType = "short", StringValue = "0" };
+                        g_HRMS_REPORT_SUN_DETAIL_s.Add(hRMS_REPORT_SUN_DETAIL_Model7);
                         break;
                 }
             }

@@ -237,7 +237,6 @@ namespace ACT.Services.ApiDbAccess.SUN
                 _apiDbContext.SUN_HDR_Columns.RemoveRange(_apiDbContext.SUN_HDR_Columns);
             }
 
-
                 if (_apiDbContext.SUN_DETAIL_Columns.Count() > 0)
                 {
                     _apiDbContext.SUN_DETAIL_Columns.RemoveRange(_apiDbContext.SUN_DETAIL_Columns);

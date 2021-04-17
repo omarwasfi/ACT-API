@@ -94,9 +94,9 @@ namespace ACT.Services.ApiDbAccess.SUN_HDR
                         g_HRMS_REPORT_SUN_HDR_s.Add(hRMS_REPORT_SUN_HDR_Model3);
                         break;
                     case "datetime":
-                        OPERA_REPORT_SUN_HDR_Model oPERA_REPORT_SUN_HDR_Model4 = new OPERA_REPORT_SUN_HDR_Model() { SunAttribute = sUN_HDR_Column_Model.ColumnName, IsConst = true, ValueType = "datetime", DateTimeValue = new DateTime() };
+                        OPERA_REPORT_SUN_HDR_Model oPERA_REPORT_SUN_HDR_Model4 = new OPERA_REPORT_SUN_HDR_Model() { SunAttribute = sUN_HDR_Column_Model.ColumnName, IsConst = true, ValueType = "string", StringValue = "GETDATE()" };
                         g_OPERA_REPORT_SUN_HDR_s.Add(oPERA_REPORT_SUN_HDR_Model4);
-                        HRMS_REPORT_SUN_HDR_Model hRMS_REPORT_SUN_HDR_Model4 = new HRMS_REPORT_SUN_HDR_Model() { SunAttribute = sUN_HDR_Column_Model.ColumnName, IsConst = true, ValueType = "datetime", DateTimeValue = new DateTime() };
+                        HRMS_REPORT_SUN_HDR_Model hRMS_REPORT_SUN_HDR_Model4 = new HRMS_REPORT_SUN_HDR_Model() { SunAttribute = sUN_HDR_Column_Model.ColumnName, IsConst = true, ValueType = "string", StringValue = "GETDATE()" };
                         g_HRMS_REPORT_SUN_HDR_s.Add(hRMS_REPORT_SUN_HDR_Model4);
                         break;
                     case "double":
@@ -110,6 +110,12 @@ namespace ACT.Services.ApiDbAccess.SUN_HDR
                         g_OPERA_REPORT_SUN_HDR_s.Add(oPERA_REPORT_SUN_HDR_Model6);
                         HRMS_REPORT_SUN_HDR_Model hRMS_REPORT_SUN_HDR_Model6 = new HRMS_REPORT_SUN_HDR_Model() { SunAttribute = sUN_HDR_Column_Model.ColumnName, IsConst = true, ValueType = "short", ShortValue = 0 };
                         g_HRMS_REPORT_SUN_HDR_s.Add(hRMS_REPORT_SUN_HDR_Model6);
+                        break;
+                    default:
+                        OPERA_REPORT_SUN_HDR_Model oPERA_REPORT_SUN_HDR_Model7 = new OPERA_REPORT_SUN_HDR_Model() { SunAttribute = sUN_HDR_Column_Model.ColumnName, IsConst = true, ValueType = "string", StringValue = "0" };
+                        g_OPERA_REPORT_SUN_HDR_s.Add(oPERA_REPORT_SUN_HDR_Model7);
+                        HRMS_REPORT_SUN_HDR_Model hRMS_REPORT_SUN_HDR_Model7 = new HRMS_REPORT_SUN_HDR_Model() { SunAttribute = sUN_HDR_Column_Model.ColumnName, IsConst = true, ValueType = "string", StringValue = "0" };
+                        g_HRMS_REPORT_SUN_HDR_s.Add(hRMS_REPORT_SUN_HDR_Model7);
                         break;
                 }
             }

@@ -97,7 +97,7 @@ namespace ACT.Controllers
                     DoubleValue = o.DoubleValue,
                     MapWithHRMS = o.MapWithHRMS
                 };
-                hRMS_REPORT_SUN_DETAIL_s.Add(hRMS_REPORT_SUN_DETAIL);
+                       hRMS_REPORT_SUN_DETAIL_s.Add(hRMS_REPORT_SUN_DETAIL);
             }
             await _hRMS_REPORT_SUN_DETAIL.Update_HRMS_REPORT_SUN_DETAIL(hRMS_REPORT_SUN_DETAIL_s);
         }
