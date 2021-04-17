@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ACT</name>
+    </assembly>
+    <members>
+        <member name="M:ACT.Controllers.Logs.Get">
+            <summary>
+            Get all the logs 
+            </summary>
+        </member>
+        <member name="P:ACT.DataModels.HRMS_Configuration_Model.ConnectionsString">
+            <summary>
+            The Connections string of the HRMS Database
+            </summary>
+        </member>
+        <member name="P:ACT.DataModels.HRMS_Configuration_Model.CycleTime">
+            <summary>
+            Monthly based
+            We care about day , Hour and Min
+            </summary>
+        </member>
+        <member name="P:ACT.DataModels.OPERA_Configuration_Model.CycleTime">
+            <summary>
+            Daily Based
+            We care about Hour and Min
+            </summary>
+        </member>
+        <member name="M:ACT.Services.ApiDbAccess.HRMS.IHRMS_Configuration.UpdateConnectionString(System.String)">
+            <summary>
+            HRMLS database connection string
+            </summary>
+            <param name="ConnectionString"></param>
+        </member>
+        <member name="M:ACT.Services.ApiDbAccess.SUN.ISUN_Configuration.UpdateConnectionString(System.String)">
+            <summary>
+            Sun database connection string
+            </summary>
+            <param name="ConnectionString"></param>
+        </member>
+    </members>
+</doc>
