@@ -161,6 +161,9 @@ const mappingOperaToSunHDR = () => {
 
   const handleEdit = (sunAttribute, valueType, i) => {
     setIsEdited(true);
+
+    setType(valueType.charAt(0).toUpperCase() + valueType.slice(1));
+
     setSunAttribute(sunAttribute);
     setIdOfEditedColumn(sunAttribute);
   };
@@ -277,6 +280,7 @@ const mappingOperaToSunHDR = () => {
                     <select
                       name="columns"
                       id="columns"
+                      value={type}
                       onChange={(e) => handleTypeChange(e)}
                     >
                       {types.map((type, i) => (

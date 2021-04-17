@@ -1,7 +1,8 @@
 import React from "react";
 import Logo from "../../public/images/logo.png";
-import Shutdown from "../../public/images/shutdown.png";
+import Restart from "../../public/images/restart.png";
 import Docs from "../../public/images/docs.svg";
+import axios from "axios";
 
 import { useRouter } from "next/router";
 import Link from "next/link";
@@ -16,7 +17,7 @@ const Header = () => {
   };
 
   const handleShutdown = () => {
-    axios(`${apiPath}Shutdown/blow-me-up`, Config)
+    axios(`${apiPath}Shutdown/blow-me-up`)
       .then((res) => {
         console.log(res.data);
       })
@@ -32,7 +33,7 @@ const Header = () => {
     <header>
       <div className="container-lo">
         <div>
-        <Link href="/">
+          <Link href="/">
             <a>
               <img src={Logo} alt="logo" />
             </a>
@@ -48,10 +49,11 @@ const Header = () => {
               </a>
             </Link>
             <img
-              src={Shutdown}
+              src={Restart}
               className="shutdown"
-              alt="shutdown"
+              alt="Restart"
               onClick={handleShutdown}
+              style={{ width: "30px", height: "30px" }}
             />
           </div>
         </div>
