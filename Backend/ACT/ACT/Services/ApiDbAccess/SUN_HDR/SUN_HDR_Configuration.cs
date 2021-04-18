@@ -53,7 +53,6 @@ namespace ACT.Services.ApiDbAccess.SUN_HDR
 
             }
 
-            await regenerateTheMappingDefaults();
         }
 
         private async Task regenerateTheMappingDefaults()

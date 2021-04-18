@@ -12,6 +12,11 @@ namespace ACT.Services.ApiDbAccess.OPERA_SUN
 
         public Task Update_OPERA_REPORT_SUN_DETAIL(List<OPERA_REPORT_SUN_DETAIL_Model> oPERA_REPORT_SUN_DETAIL_s);
 
+        public Task InsertRow(OPERA_REPORT_SUN_DETAIL_Model oPERA_REPORT_SUN_DETAIL);
+
+        public Task UpdateRow(OPERA_REPORT_SUN_DETAIL_Model oPERA_REPORT_SUN_DETAIL);
+        public Task DeleteRow(int Id);
+
         public Task LoadDefaults();
     }
 }

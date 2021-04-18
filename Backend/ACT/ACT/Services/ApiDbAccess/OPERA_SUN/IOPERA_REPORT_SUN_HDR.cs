@@ -12,6 +12,12 @@ namespace ACT.Services.ApiDbAccess.OPERA_SUN
 
         public Task Update_OPERA_REPORT_SUN_HDR(List<OPERA_REPORT_SUN_HDR_Model> oPERA_REPORT_SUN_HDR_s);
 
+        public Task InsertRow(OPERA_REPORT_SUN_HDR_Model oPERA_REPORT_SUN_HDR);
+
+        public Task UpdateRow(OPERA_REPORT_SUN_HDR_Model oPERA_REPORT_SUN_HDR);
+        public Task DeleteRow(int Id);
+
+
         public Task LoadDefaults();
 
     }

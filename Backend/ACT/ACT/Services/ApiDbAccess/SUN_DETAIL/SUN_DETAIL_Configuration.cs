@@ -51,8 +51,6 @@ namespace ACT.Services.ApiDbAccess.SUN_DETAIL
 
             }
 
-            await regenerateTheMappingDefaults();
-
         }
 
         private async Task regenerateTheMappingDefaults()

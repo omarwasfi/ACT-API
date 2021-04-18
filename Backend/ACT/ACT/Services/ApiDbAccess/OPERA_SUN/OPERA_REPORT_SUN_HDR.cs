@@ -37,6 +37,25 @@ namespace ACT.Services.ApiDbAccess.OPERA_SUN
             await _apiDbContext.SaveChangesAsync();
         }
 
+        public async Task InsertRow(OPERA_REPORT_SUN_HDR_Model oPERA_REPORT_SUN_HDR)
+        {
+            _apiDbContext.OPERA_REPORT_SUN_HDRS.Add(oPERA_REPORT_SUN_HDR);
+            await _apiDbContext.SaveChangesAsync();
+        }
+
+
+        public async Task UpdateRow(OPERA_REPORT_SUN_HDR_Model oPERA_REPORT_SUN_HDR)
+        {
+            _apiDbContext.Update(oPERA_REPORT_SUN_HDR);
+            await _apiDbContext.SaveChangesAsync();
+        }
+
+        public async Task DeleteRow(int Id)
+        {
+            OPERA_REPORT_SUN_HDR_Model oPERA_REPORT_SUN_HDR_Model = _apiDbContext.OPERA_REPORT_SUN_HDRS.Where(x => x.Id == Id).FirstOrDefault();
+            _apiDbContext.OPERA_REPORT_SUN_HDRS.Remove(oPERA_REPORT_SUN_HDR_Model);
+            await _apiDbContext.SaveChangesAsync();
+        }
 
         public async Task LoadDefaults()
         {
@@ -89,6 +108,6 @@ namespace ACT.Services.ApiDbAccess.OPERA_SUN
 
         }
 
-
+    
     }
 }

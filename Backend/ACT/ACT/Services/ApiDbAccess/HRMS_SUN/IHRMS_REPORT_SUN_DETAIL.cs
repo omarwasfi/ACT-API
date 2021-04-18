@@ -12,6 +12,11 @@ namespace ACT.Services.ApiDbAccess.HRMS_SUN
 
         public Task Update_HRMS_REPORT_SUN_DETAIL(List<HRMS_REPORT_SUN_DETAIL_Model> hRMS_REPORT_SUN_DETAIL_s);
 
+        public Task InsertRow(HRMS_REPORT_SUN_DETAIL_Model HRMS_REPORT_SUN_DETAIL);
+
+        public Task UpdateRow(HRMS_REPORT_SUN_DETAIL_Model HRMS_REPORT_SUN_DETAIL);
+        public Task DeleteRow(int Id);
+
         public Task LoadDefaults();
     }
 }

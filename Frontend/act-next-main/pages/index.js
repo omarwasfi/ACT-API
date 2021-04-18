@@ -57,6 +57,7 @@ export default function Home() {
       .catch((error) => {
         console.error("There was an error!", error.response.data);
       });
+
   };
 
   return (

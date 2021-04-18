@@ -23,14 +23,14 @@ namespace ACT.Services.ApiDbAccess.HRMS_SUN
 
 
 
-        public async Task Update_HRMS_REPORT_SUN_HDR(List<HRMS_REPORT_SUN_HDR_Model> oPERA_REPORT_SUN_HDR_s)
+        public async Task Update_HRMS_REPORT_SUN_HDR(List<HRMS_REPORT_SUN_HDR_Model> HRMS_REPORT_SUN_HDR_s)
         {
             if (_apiDbContext.HRMS_REPORT_SUN_HDRS.Count() > 0)
             {
                 _apiDbContext.HRMS_REPORT_SUN_HDRS.RemoveRange(_apiDbContext.HRMS_REPORT_SUN_HDRS);
             }
 
-            foreach (HRMS_REPORT_SUN_HDR_Model HRMS_REPORT_SUN_HDR_Model in oPERA_REPORT_SUN_HDR_s)
+            foreach (HRMS_REPORT_SUN_HDR_Model HRMS_REPORT_SUN_HDR_Model in HRMS_REPORT_SUN_HDR_s)
             {
                 _apiDbContext.HRMS_REPORT_SUN_HDRS.Add(HRMS_REPORT_SUN_HDR_Model);
             }
@@ -38,6 +38,25 @@ namespace ACT.Services.ApiDbAccess.HRMS_SUN
             await _apiDbContext.SaveChangesAsync();
         }
 
+        public async Task InsertRow(HRMS_REPORT_SUN_HDR_Model HRMS_REPORT_SUN_HDR)
+        {
+            _apiDbContext.HRMS_REPORT_SUN_HDRS.Add(HRMS_REPORT_SUN_HDR);
+            await _apiDbContext.SaveChangesAsync();
+        }
+
+
+        public async Task UpdateRow(HRMS_REPORT_SUN_HDR_Model HRMS_REPORT_SUN_HDR)
+        {
+            _apiDbContext.Update(HRMS_REPORT_SUN_HDR);
+            await _apiDbContext.SaveChangesAsync();
+        }
+
+        public async Task DeleteRow(int Id)
+        {
+            HRMS_REPORT_SUN_HDR_Model HRMS_REPORT_SUN_HDR_Model = _apiDbContext.HRMS_REPORT_SUN_HDRS.Where(x => x.Id == Id).FirstOrDefault();
+            _apiDbContext.HRMS_REPORT_SUN_HDRS.Remove(HRMS_REPORT_SUN_HDR_Model);
+            await _apiDbContext.SaveChangesAsync();
+        }
 
         public async Task LoadDefaults()
         {
