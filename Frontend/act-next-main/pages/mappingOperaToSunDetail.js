@@ -159,7 +159,7 @@ const mappingOperaToSunDetail = () => {
 
   const handleEdit = (sunAttribute, valueType, i) => {
     setIsEdited(true);
-    setType(valueType);
+    setType(valueType.charAt(0).toUpperCase() + valueType.slice(1));
     setSunAttribute(sunAttribute);
     setIdOfEditedColumn(sunAttribute);
   };

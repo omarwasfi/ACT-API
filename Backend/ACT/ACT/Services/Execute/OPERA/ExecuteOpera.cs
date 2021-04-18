@@ -25,7 +25,7 @@ namespace ACT.Services.Execute
         private ApiDbContext _apiDbContext;
 
         private IMap_OPERA_REPORT_SUN_HDR _map_OPERA_REPORT_SUN_HDR;
-        private IMap_OPERA_REPORT_SUN_DERAIL _map_OPERA_REPORT_SUN_DERAIL;
+        private IMap_OPERA_REPORT_SUN_DETAIL _map_OPERA_REPORT_SUN_DERAIL;
         private IRead_OPERA_REPORT _read_OPERA_REPORT;
         
         private IOPERA_Configuration _opera_Configuration;

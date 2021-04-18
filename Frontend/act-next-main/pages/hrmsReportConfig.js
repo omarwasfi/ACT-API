@@ -77,7 +77,7 @@ const HRMSReportConfig = () => {
   const handleEdit = (name, type, i) => {
     setIsEdited(true);
     setName(name);
-    setType(type);
+    setType(type.charAt(0).toUpperCase() + type.slice(1));
     setIdOfEditedColumn(name);
   };
 

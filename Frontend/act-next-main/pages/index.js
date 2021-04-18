@@ -4,6 +4,7 @@ import axios from "axios";
 import { apiPath } from "../components/apiPath/apiPath";
 
 import Group from "../public/images/group.png";
+import SubLogo from "../public/images/subLogo.svg";
 import num from "../public/images/98.png";
 import Link from "next/link";
 
@@ -17,13 +18,12 @@ export default function Home() {
         console.error("There was an error!", error.response.data);
       });
 
-      axios
+    axios
       .post(`${apiPath}Hrms/LoadDefaults`)
       .then((res) => console.log(res.status))
       .catch((error) => {
-        console.error("There was an error!", error );
+        console.error("There was an error!", error);
       });
-  
 
     axios
       .post(`${apiPath}Opera/LoadDefaults`)
@@ -32,7 +32,7 @@ export default function Home() {
         console.error("There was an error!", error.response.data);
       });
 
-      axios
+    axios
       .post(`${apiPath}Mapping/HrmsToSun/ReportToDetail/LoadDefaults`)
       .then((res) => console.log(res.data))
       .catch((error) => {
@@ -57,14 +57,6 @@ export default function Home() {
       .catch((error) => {
         console.error("There was an error!", error.response.data);
       });
-
-      axios
-      .post(`${apiPath}Shutdown/blow-me-up`)
-      .then((res) => console.log(res.data))
-      .catch((error) => {
-        console.error("There was an error!", error.response.data);
-      });
-
   };
 
   return (

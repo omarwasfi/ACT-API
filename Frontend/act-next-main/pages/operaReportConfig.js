@@ -102,7 +102,7 @@ const operaReportConfig = () => {
   const handleEdit = (name, type, i, startPos, endPos) => {
     setIsEdited(true);
     setName(name);
-    setType(type);
+    setType(type.charAt(0).toUpperCase() + type.slice(1));
     setStartPos(startPos);
     setEndPos(endPos);
     setIdOfEditedColumn(name);
