@@ -46,9 +46,9 @@ namespace ACT.Services.OPERA.Reader
                 foreach (DataColumn column in OperaTable.Columns)
                 {
                     int startPOS = oPERA_Configuration.Columns.Find(x => x.ColumnName == column.ColumnName).StartPOS;
-                    int endPOS =  oPERA_Configuration.Columns.Find(x => x.ColumnName == column.ColumnName).EndPOS - startPOS;
+                    int length =  oPERA_Configuration.Columns.Find(x => x.ColumnName == column.ColumnName).EndPOS - startPOS;
 
-                    row[column.ColumnName] = line.Substring(startPOS - 1, endPOS );
+                    row[column.ColumnName] = line.Substring(startPOS - 1, length );
                 }
 
                 OperaTable.Rows.Add(row);
