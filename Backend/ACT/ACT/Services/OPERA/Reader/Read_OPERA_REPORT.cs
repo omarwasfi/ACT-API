@@ -16,7 +16,7 @@ namespace ACT.Services.OPERA.Reader
             // Read the textFile
             foreach (var o in oPERA_Configuration.Columns)
             {
-                switch (o.Type)
+                switch (o.Type.ToLower())
                 {
                     case "int":
                         OperaTable.Columns.Add(new DataColumn(columnName: o.ColumnName, dataType: typeof(int)));

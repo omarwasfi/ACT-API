@@ -18,7 +18,7 @@ namespace ACT.Services.OPERA.Mapper
 
             foreach (OPERA_REPORT_SUN_HDR_Model c in oPERA_REPORT_SUN_HDR_s)
             {
-                switch (c.ValueType)
+                switch (c.ValueType.ToLower())
                 {
                     case "int":
                         sunHDRResult.Columns.Add(new DataColumn(columnName: c.SunAttribute, typeof(int)));
@@ -53,7 +53,7 @@ namespace ACT.Services.OPERA.Mapper
                 OPERA_REPORT_SUN_HDR_Model oPERA_REPORT_SUN_HDR = oPERA_REPORT_SUN_HDR_s.Find(x => x.SunAttribute == columnName);
                 if (oPERA_REPORT_SUN_HDR.IsConst)
                 {
-                    switch (oPERA_REPORT_SUN_HDR.ValueType)
+                    switch (oPERA_REPORT_SUN_HDR.ValueType.ToLower())
                     {
                         case "int":
                             dataRow[columnName] = oPERA_REPORT_SUN_HDR.IntValue;

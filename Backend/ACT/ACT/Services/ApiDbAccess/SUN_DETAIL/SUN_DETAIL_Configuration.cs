@@ -70,7 +70,7 @@ namespace ACT.Services.ApiDbAccess.SUN_DETAIL
 
             foreach (SUN_DETAIL_Column_Model sUN_DETAIL_Column_Model in _apiDbContext.SUN_DETAIL_Columns)
             {
-                switch (sUN_DETAIL_Column_Model.Type)
+                switch (sUN_DETAIL_Column_Model.Type.ToLower())
                 {
                     case "int":
                         OPERA_REPORT_SUN_DETAIL_Model oPERA_REPORT_SUN_DETAIL_Model = new OPERA_REPORT_SUN_DETAIL_Model() { SunAttribute = sUN_DETAIL_Column_Model.ColumnName, IsConst = true , ValueType="int" , IntValue=0 };

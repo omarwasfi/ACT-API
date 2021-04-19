@@ -16,7 +16,7 @@ namespace ACT.Services.OPERA.Mapper
             foreach (OPERA_REPORT_SUN_DETAIL_Model c in oPERA_REPORT_SUN_DETAIL_s)
             {
 
-                switch (c.ValueType)
+                switch (c.ValueType.ToLower())
                 {
                     case "int":
                         sunDetailResult.Columns.Add(new DataColumn(columnName: c.SunAttribute, typeof(int)));
@@ -52,7 +52,7 @@ namespace ACT.Services.OPERA.Mapper
                     OPERA_REPORT_SUN_DETAIL_Model oPERA_REPORT_SUN_DETAIL = oPERA_REPORT_SUN_DETAIL_s.Find(x => x.SunAttribute == columnName);
                     if (oPERA_REPORT_SUN_DETAIL.IsConst)
                     {
-                        switch (oPERA_REPORT_SUN_DETAIL.ValueType)
+                        switch (oPERA_REPORT_SUN_DETAIL.ValueType.ToLower())
                         {
                             case "int":
                                 dataRow[columnName] = oPERA_REPORT_SUN_DETAIL.IntValue;

@@ -15,7 +15,7 @@ namespace ACT.Services.HRMS.Mapper
 
             foreach (HRMS_REPORT_SUN_HDR_Model c in hRMS_REPORT_SUN_HDR_s)
             {
-                switch (c.ValueType)
+                switch (c.ValueType.ToLower())
                 {
                     case "int":
                         sunHDRResult.Columns.Add(new DataColumn(columnName: c.SunAttribute, typeof(int)));
@@ -50,7 +50,7 @@ namespace ACT.Services.HRMS.Mapper
                 HRMS_REPORT_SUN_HDR_Model hRMS_REPORT_SUN_HDR = hRMS_REPORT_SUN_HDR_s.Find(x => x.SunAttribute == columnName);
                 if (hRMS_REPORT_SUN_HDR.IsConst)
                 {
-                    switch (hRMS_REPORT_SUN_HDR.ValueType)
+                    switch (hRMS_REPORT_SUN_HDR.ValueType.ToLower())
                     {
                         case "int":
                             dataRow[columnName] = hRMS_REPORT_SUN_HDR.IntValue;

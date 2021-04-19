@@ -14,7 +14,7 @@ namespace ACT.Services.HRMS.Reader
         {
             int currentYear = DateTime.Now.Year;
             int currentMonth = DateTime.Now.Month;
-            string query = "SELECT * FROM JV_Report_Details_Tbl WHERE The_Year= 2015 and The_Month = 4 and User_ID = 1 ;";
+            string query = "SELECT * FROM JV_Report_Details_Tbl WHERE The_Year= 2015 and The_Month =" + currentMonth + "and User_ID = 1 ;";
             using (SqlConnection con = new SqlConnection(hRMS_Configuration.ConnectionsString))
             {
                 using (var schemaCommand = new SqlCommand(query, con))

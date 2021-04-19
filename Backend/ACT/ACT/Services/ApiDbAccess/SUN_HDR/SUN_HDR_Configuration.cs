@@ -72,7 +72,7 @@ namespace ACT.Services.ApiDbAccess.SUN_HDR
 
             foreach (SUN_HDR_Column_Model sUN_HDR_Column_Model in _apiDbContext.SUN_HDR_Columns)
             {
-                switch (sUN_HDR_Column_Model.Type)
+                switch (sUN_HDR_Column_Model.Type.ToLower())
                 {
                     case "int":
                         OPERA_REPORT_SUN_HDR_Model oPERA_REPORT_SUN_HDR_Model = new OPERA_REPORT_SUN_HDR_Model() { SunAttribute = sUN_HDR_Column_Model.ColumnName, IsConst = true, ValueType = "int", IntValue = 0 };
