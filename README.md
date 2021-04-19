@@ -1,6 +1,6 @@
 # ACT-API
 
-#Api Featurs:
+Api Featurs:
 
 1- easy to be integrated and installed
 
