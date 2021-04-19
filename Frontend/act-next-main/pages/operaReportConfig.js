@@ -229,39 +229,43 @@ const operaReportConfig = () => {
 
               <div className="table">
                 <table>
-                  <tr>
-                    <th>Name</th>
-                    <th>Start pos</th>
-                    <th>End pos</th>
-                    <th>Type</th>
-                    <th>Settings</th>
-                  </tr>
-                  {columns.map(({ name, type, id, startPOS, endPOS }, i) => (
-                    <tr key={i}>
-                      <td>
-                        {name}
-                        {"  "}
-                      </td>
-                      <td>{startPOS}</td>
-                      <td>{endPOS}</td>
-                      <td>{type}</td>
-                      <td>
-                        <img
-                          src={Trash}
-                          alt="Delete"
-                          onClick={() => handleDelete(name)}
-                        />
-
-                        <img
-                          src={Edit}
-                          alt="Edit"
-                          onClick={() =>
-                            handleEdit(name, type, i, startPOS, endPOS)
-                          }
-                        />
-                      </td>
+                  <tbody>
+                    <tr>
+                      <th>Name</th>
+                      <th>Start pos</th>
+                      <th>End pos</th>
+                      <th>Type</th>
+                      <th>Settings</th>
                     </tr>
-                  ))}
+                  </tbody>
+                  <tbody>
+                    {columns.map(({ name, type, id, startPOS, endPOS }, i) => (
+                      <tr key={i}>
+                        <td>
+                          {name}
+                          {"  "}
+                        </td>
+                        <td>{startPOS}</td>
+                        <td>{endPOS}</td>
+                        <td>{type}</td>
+                        <td>
+                          <img
+                            src={Trash}
+                            alt="Delete"
+                            onClick={() => handleDelete(name)}
+                          />
+
+                          <img
+                            src={Edit}
+                            alt="Edit"
+                            onClick={() =>
+                              handleEdit(name, type, i, startPOS, endPOS)
+                            }
+                          />
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
                 </table>
               </div>
             </div>
