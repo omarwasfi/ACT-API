@@ -31,6 +31,8 @@ Download Link: https://dotnet.microsoft.com/download/dotnet/3.1
 
 ###### SSL 
 
+Using CMD:
+
 - dotnet dev-certs https --help
 
 To install the ssl:
