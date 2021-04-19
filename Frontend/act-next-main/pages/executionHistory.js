@@ -65,29 +65,33 @@ const executionHistory = () => {
             <div className="container">
               <div className="table">
                 <table>
-                  <tr>
-                    <th>Id</th>
-                    <th>Date</th>
-                    <th>Type</th>
-                    <th>Settings</th>
-                  </tr>
-                  {columns.map(({ id, dateTime, type, hdrId }, i) => (
-                    <tr key={i}>
-                      <td>
-                        {hdrId}
-                        {"  "}
-                      </td>
-                      <td>{dateTime}</td>
-                      <td>{type}</td>
-                      <td>
-                        <img
-                          src={Trash}
-                          alt="Delete"
-                          onClick={() => handleDelete(id)}
-                        />
-                      </td>
+                  <tbody>
+                    <tr>
+                      <th>Id</th>
+                      <th>Date</th>
+                      <th>Type</th>
+                      <th>Settings</th>
                     </tr>
-                  ))}
+                  </tbody>
+                  <tbody>
+                    {columns.map(({ id, dateTime, type, hdrId }, i) => (
+                      <tr key={i}>
+                        <td>
+                          {hdrId}
+                          {"  "}
+                        </td>
+                        <td>{dateTime}</td>
+                        <td>{type}</td>
+                        <td>
+                          <img
+                            src={Trash}
+                            alt="Delete"
+                            onClick={() => handleDelete(id)}
+                          />
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
                 </table>
               </div>
             </div>

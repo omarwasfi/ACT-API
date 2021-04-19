@@ -199,34 +199,37 @@ const sunHDRConfig = () => {
               </form>
               <div className="table">
                 <table>
-                  <tr>
-                    <th>Name</th>
-                    <th>Type</th>
-                    <th>Settings</th>
-                  </tr>
-
-                  {columns.map(({ name, type, id }, i) => (
-                    <tr key={i}>
-                      <td>
-                        {name}
-                        {"  "}
-                      </td>
-                      <td>{type}</td>
-                      <td>
-                        <img
-                          src={Trash}
-                          alt="Delete"
-                          onClick={() => handleDelete(name)}
-                        />
-
-                        <img
-                          src={Edit}
-                          alt="Edit"
-                          onClick={() => handleEdit(name, type, i)}
-                        />
-                      </td>
+                  <tbody>
+                    <tr>
+                      <th>Name</th>
+                      <th>Type</th>
+                      <th>Settings</th>
                     </tr>
-                  ))}
+                  </tbody>
+                  <tbody>
+                    {columns.map(({ name, type, id }, i) => (
+                      <tr key={i}>
+                        <td>
+                          {name}
+                          {"  "}
+                        </td>
+                        <td>{type}</td>
+                        <td>
+                          <img
+                            src={Trash}
+                            alt="Delete"
+                            onClick={() => handleDelete(name)}
+                          />
+
+                          <img
+                            src={Edit}
+                            alt="Edit"
+                            onClick={() => handleEdit(name, type, i)}
+                          />
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
                 </table>
               </div>
             </div>
