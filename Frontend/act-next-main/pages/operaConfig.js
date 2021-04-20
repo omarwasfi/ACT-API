@@ -10,6 +10,8 @@ import BreadCrumb from "../components/breadCrumb/breadCrumb";
 
 import Checked from "../public/images/checked.svg";
 import NotChecked from "../public/images/notChecked.svg";
+import Loader from "../public/images/loader.gif";
+
 import Link from "next/link";
 
 import { apiPath } from "../components/apiPath/apiPath";
@@ -38,6 +40,8 @@ const OperaConfig = () => {
   }, []);
 
   const router = useRouter();
+
+  const [loading, setLoading] = useState(false);
 
   const {
     value: hour,
@@ -84,6 +88,7 @@ const OperaConfig = () => {
 
   const handleConfig = (e) => {
     e.preventDefault();
+    setLoading(true);
     axios
       .post(`${apiPath}Opera/UpdateFilePath?FilePath=${filePath}`)
       .then((res) => console.log(res))
@@ -98,7 +103,21 @@ const OperaConfig = () => {
     };
 
     axios(`${apiPath}Opera/UpdateCycleTime`, cycleTimeConfig)
-      .then((res) => console.log(res))
+      .then((res) => {
+        if (res.status === 200) {
+          console.log("config cycle time is done");
+          axios(`${apiPath}Shutdown/blow-me-up`)
+            .then((res) => {
+              if (res.status === 200) {
+                console.log("shut down is done");
+                setLoading(false);
+              }
+            })
+            .catch((error) => {
+              console.error("There was an error!", error);
+            });
+        }
+      })
       .catch((error) => {
         console.error("There was an error!", error);
       });
@@ -106,9 +125,24 @@ const OperaConfig = () => {
 
   const handleLoadDefaults = (e) => {
     e.preventDefault();
+    setLoading(true);
     axios
       .post(`${apiPath}Opera/LoadDefaults`)
-      .then((res) => console.log(res.data))
+      .then((res) => {
+        if (res.status === 200) {
+          console.log("load defaults is done");
+          axios(`${apiPath}Shutdown/blow-me-up`)
+            .then((res) => {
+              if (res.status === 200) {
+                console.log("shut down is done");
+                setLoading(false);
+              }
+            })
+            .catch((error) => {
+              console.error("There was an error!", error);
+            });
+        }
+      })
       .catch((error) => {
         console.error("There was an error!", error.response.data);
       });
@@ -118,17 +152,15 @@ const OperaConfig = () => {
     e.preventDefault();
     axios
       .post(
-        `${apiPath}Opera/UpdateNumberOfLinesToBeIgnored?NumberOfLinesToBeIgnoredAtTheBeginning=${parseInt(fromStart)}&NumberOfLinesToBeIgnoredAtTheEnd=${parseInt(fromEnd)}`
+        `${apiPath}Opera/UpdateNumberOfLinesToBeIgnored?NumberOfLinesToBeIgnoredAtTheBeginning=${parseInt(
+          fromStart
+        )}&NumberOfLinesToBeIgnoredAtTheEnd=${parseInt(fromEnd)}`
       )
       .then((res) => console.log(res))
       .catch((error) => {
         console.error("There was an error!", error.response.data);
       });
-
-    
   };
-
-  ;
 
   const handleDone = (e) => {
     e.preventDefault();
@@ -144,7 +176,11 @@ const OperaConfig = () => {
       </Head>
       <Header />
       <SideNav />
-
+      {loading && (
+        <div className="loader">
+          <img src={Loader} alt="loader" />
+        </div>
+      )}
       <main className="main-sun-config">
         <div className="container">
           <div className="main_sun_head">
@@ -156,7 +192,7 @@ const OperaConfig = () => {
             </div>
             <BreadCrumb path="operaConfig" page="Opera Configraution" />
           </div>
-          <div className="main_sun_body">
+          <div className={`main_sun_body ${loading && "loading"}`}>
             <div className="container">
               <div className="links">
                 <div className="active">

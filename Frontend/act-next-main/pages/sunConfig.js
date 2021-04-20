@@ -57,16 +57,7 @@ const sunConfig = () => {
       .then((res) => {
         if (res.status === 200) {
           console.log("load defaults is done");
-          axios(`${apiPath}Shutdown/blow-me-up`)
-            .then((res) => {
-              if (res.status === 200) {
-                console.log("shut down is done");
-                setLoading(false);
-              }
-            })
-            .catch((error) => {
-              console.error("There was an error!", error);
-            });
+          setLoading(false);
         }
       })
       .catch((error) => {

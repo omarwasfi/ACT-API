@@ -26,6 +26,7 @@ namespace ACT.Controllers
         [HttpGet("blow-me-up")]
         public IActionResult BlowMeUp()
         {
+            System.Threading.Thread.Sleep(1000);
 
             applicationLifetime.StopApplication();
             return new EmptyResult();

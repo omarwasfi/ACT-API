@@ -9592,7 +9592,7 @@ header > .container-lo > div .shutdown {
   margin-top: 24px;
   padding-top: 5px;
   height: 85%;
-  transition: all 1s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .loader {
@@ -9602,9 +9602,21 @@ header > .container-lo > div .shutdown {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 99;
 }
 
 .main-sun-config .main_sun_body.loading {
+  opacity: 0.5;
+  z-index: 1;
+}
+
+main.main {
+  transition: all 0.5s ease-in-out;
+}
+
+main.loading {
+  opacity: 0.5;
+  z-index: 1;
 }
 
 .main-sun-config .main_sun_body .details {
@@ -9931,6 +9943,12 @@ main {
 
 #all-content {
   height: 100%;
+  transition: all 1s ease-in-out;
+}
+
+#all-content.loading {
+  opacity: 0.5;
+  z-index: 1;
 }
 
 #all-content h1 {

@@ -10,6 +10,8 @@ import BreadCrumb from "../components/breadCrumb/breadCrumb";
 
 import Checked from "../public/images/checked.svg";
 import NotChecked from "../public/images/notChecked.svg";
+import Loader from "../public/images/loader.gif";
+
 import Link from "next/link";
 
 import { apiPath } from "../components/apiPath/apiPath";
@@ -18,6 +20,7 @@ const HRMSConfig = () => {
   const router = useRouter();
 
   // const [disable, setDisable] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   const {
     value: day,
@@ -70,6 +73,7 @@ const HRMSConfig = () => {
 
   const handleConfig = (e) => {
     e.preventDefault();
+    setLoading(true);
     axios
       .post(
         `${apiPath}Hrms/UpdateConnectionString?ConnectionString=${connectionString}`
@@ -86,13 +90,52 @@ const HRMSConfig = () => {
     };
 
     axios(`${apiPath}Hrms/UpdateCycleTime`, cycleTimeConfig)
-      .then((res) => console.log(res))
+      .then((res) => {
+        if (res.status === 200) {
+          console.log("config cycle time is done");
+          axios(`${apiPath}Shutdown/blow-me-up`)
+            .then((res) => {
+              if (res.status === 200) {
+                console.log("shut down is done");
+                setLoading(false);
+              }
+            })
+            .catch((error) => {
+              console.error("There was an error!", error);
+            });
+        }
+      })
       .catch((error) => {
         console.error("There was an error!", error);
       });
     router.push({
       pathname: `/hrmsReportConfig`,
     });
+  };
+
+  const handleLoadDefaults = (e) => {
+    e.preventDefault();
+    setLoading(true);
+    axios
+      .post(`${apiPath}Hrms/LoadDefaults`)
+      .then((res) => {
+        if (res.status === 200) {
+          console.log("load defaults is done");
+          axios(`${apiPath}Shutdown/blow-me-up`)
+            .then((res) => {
+              if (res.status === 200) {
+                console.log("shut down is done");
+                setLoading(false);
+              }
+            })
+            .catch((error) => {
+              console.error("There was an error!", error);
+            });
+        }
+      })
+      .catch((error) => {
+        console.error("There was an error!", error.response.data);
+      });
   };
 
   return (
@@ -103,14 +146,23 @@ const HRMSConfig = () => {
 
       <Header />
       <SideNav />
-
+      {loading && (
+        <div className="loader">
+          <img src={Loader} alt="loader" />
+        </div>
+      )}
       <main className="main-sun-config">
         <div className="container">
           <div className="main_sun_head">
-            <h5>HRMS Configraution</h5>
+            <div className="head">
+              <h5>HRMS Configraution</h5>
+              <span type="button" onClick={handleLoadDefaults}>
+                Load Defaults
+              </span>
+            </div>
             <BreadCrumb path="hrmsConfig" page="HRMS Configraution" />
           </div>
-          <div className="main_sun_body">
+          <div className={`main_sun_body ${loading && "loading"}`}>
             <div className="container">
               <div className="links">
                 <div className="active">

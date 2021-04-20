@@ -9,10 +9,12 @@ import BreadCrumb from "../components/breadCrumb/breadCrumb";
 
 import Trash from "../public/images/trash.svg";
 import Edit from "../public/images/edit.svg";
+import Loader from "../public/images/loader.gif";
 
 import { apiPath } from "../components/apiPath/apiPath";
 
 const mappingOperaToSunDetail = () => {
+  const [loading, setLoading] = useState(false);
   const {
     value: sunAttribute,
     resetValue: resetSunAttribute,
@@ -223,9 +225,15 @@ const mappingOperaToSunDetail = () => {
 
   const handleLoadDefaults = (e) => {
     e.preventDefault();
+    setLoading(true);
     axios
       .post(`${apiPath}Mapping/OperaToSun/ReportToDetail/LoadDefaults`)
-      .then((res) => console.log(res.data))
+      .then((res) => {
+        if (res.status === 200) {
+          console.log("load defaults is done");
+          setLoading(false);
+        }
+      })
       .catch((error) => {
         console.error("There was an error!", error.response.data);
       });
@@ -239,7 +247,11 @@ const mappingOperaToSunDetail = () => {
 
       <Header />
       <SideNav />
-
+      {loading && (
+        <div className="loader">
+          <img src={Loader} alt="loader" />
+        </div>
+      )}
       <main className="main-sun-config">
         <div className="container">
           <div className="main_sun_head">
@@ -256,7 +268,7 @@ const mappingOperaToSunDetail = () => {
             />
           </div>
 
-          <div className="main_sun_body scrollable">
+          <div className={`main_sun_body scrollable ${loading && "loading"}`}>
             <div className="container">
               <form
                 onSubmit={isEdited ? handleUpdate : handleSubmit}

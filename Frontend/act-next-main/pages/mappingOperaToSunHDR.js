@@ -2,21 +2,19 @@ import React, { useEffect, useRef, useState } from "react";
 import Head from "next/head";
 import axios from "axios";
 import useInput from "../components/hooks/useInput";
-import { useRouter } from "next/router";
 
 import Header from "../components/header/header.js";
 import SideNav from "../components/sideNav/sideNav";
 import BreadCrumb from "../components/breadCrumb/breadCrumb";
 
-import Checked from "../public/images/checked.svg";
-import NotChecked from "../public/images/notChecked.svg";
 import Trash from "../public/images/trash.svg";
 import Edit from "../public/images/edit.svg";
-import Link from "next/link";
+import Loader from "../public/images/loader.gif";
 
 import { apiPath } from "../components/apiPath/apiPath";
 
 const mappingOperaToSunHDR = () => {
+  const [loading, setLoading] = useState(false);
   const {
     value: sunAttribute,
     resetValue: resetSunAttribute,
@@ -230,9 +228,15 @@ const mappingOperaToSunHDR = () => {
 
   const handleLoadDefaults = (e) => {
     e.preventDefault();
+    setLoading(true);
     axios
       .post(`${apiPath}Mapping/OperaToSun/ReportToHDR/LoadDefaults`)
-      .then((res) => console.log(res.data))
+      .then((res) => {
+        if (res.status === 200) {
+          console.log("load defaults is done");
+          setLoading(false);
+        }
+      })
       .catch((error) => {
         console.error("There was an error!", error.response.data);
       });
@@ -246,6 +250,11 @@ const mappingOperaToSunHDR = () => {
 
       <Header />
       <SideNav />
+      {loading && (
+        <div className="loader">
+          <img src={Loader} alt="loader" />
+        </div>
+      )}
 
       <main className="main-sun-config">
         <div className="container">
@@ -262,7 +271,7 @@ const mappingOperaToSunHDR = () => {
             />
           </div>
 
-          <div className="main_sun_body scrollable">
+          <div className={`main_sun_body scrollable ${loading && "loading"}`}>
             <div className="container">
               <form
                 onSubmit={isEdited ? handleUpdate : handleSubmit}
@@ -281,7 +290,7 @@ const mappingOperaToSunHDR = () => {
                       name="columns"
                       id="columns"
                       value={type}
-                      onChange={(e) => handleTypeChange(e)}
+                      onChange={(e) => setType(e.target.value)}
                     >
                       {types.map((type, i) => (
                         <option key={i} value={type}>
@@ -299,6 +308,7 @@ const mappingOperaToSunHDR = () => {
                         name="condition"
                         onChange={(e) => handleCondition(e)}
                         value="isConst"
+                        required
                       />
                       <label htmlFor="isConst">isConst</label>
                     </div>
@@ -310,6 +320,7 @@ const mappingOperaToSunHDR = () => {
                         name="condition"
                         onChange={(e) => handleCondition(e)}
                         value="isAuto"
+                        required
                       />
                       <label htmlFor="isAuto">isAuto</label>
                     </div>
@@ -320,6 +331,7 @@ const mappingOperaToSunHDR = () => {
                         name="condition"
                         onChange={(e) => handleCondition(e)}
                         value="mapWithOpera"
+                        required
                       />
                       <label htmlFor="mapWithOpera">mapWithOpera</label>
                     </div>
@@ -353,13 +365,9 @@ const mappingOperaToSunHDR = () => {
 
                   <div>
                     {isEdited ? (
-                      <button type="button" onClick={handleUpdate}>
-                        Update Column
-                      </button>
+                      <button type="submit">Update Column</button>
                     ) : (
-                      <button type="button" onClick={handleSubmit}>
-                        Submit
-                      </button>
+                      <button type="submit">Submit</button>
                     )}
                   </div>
                 </div>
