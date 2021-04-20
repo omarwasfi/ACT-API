@@ -1,17 +1,6 @@
 # ACT-API
 
-## Api Featurs:
-
-1- easy to be integrated and installed
-
-2- multi platform (Frontend and backend)
-
-3- two interfaces: 
- - first ont is the frontend (gui) interface
- - the second one is the api commands that could be executed anywhere (fully documented)
-
-
-## installation :
+## Installation :
 
 ### Backend (API):
 
@@ -49,3 +38,30 @@ Documentations: https://localhost:5001/swagger/index.html
 
 
 ### Frontend (React GUI):
+
+#### Required to be pre installed:
+
+- npm
+- VSCode
+
+#### Running the frontend:
+
+- open the folder using vscode act-next-main
+
+- using the vscode terminal run :
+ npm i 
+ 
+ - using the vscode terminal run :
+ npm run dev 
+
+
+
+## Api Featurs:
+
+1- easy to be integrated and installed
+
+2- multi platform (Frontend and backend)
+
+3- two interfaces: 
+ - first ont is the frontend (gui) interface
+ - the second one is the api commands that could be executed anywhere (fully documented)
